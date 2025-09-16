@@ -2,7 +2,7 @@ streamlit==1.37.0
 gtts==2.5.1
 Pillow==10.4.0
 pillow-avif-plugin==1.4.6
-googletrans==3.1.0a0
+googletrans-py==4.0.2
 markdown==3.6
 deep-translator==1.11.4
 python-dotenv==1.0.1
