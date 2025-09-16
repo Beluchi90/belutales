@@ -1,0 +1,3746 @@
+{
+  "nina-and-the-night-sky": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Nina",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "Nina",
+      "explanation": "The title hints that Nina is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "ruby-and-the-glow-worms": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Bedtime",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Ruby",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "Ruby",
+      "explanation": "The title hints that Ruby is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "sophie-and-the-gentle-giant": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Sophie",
+        "Zara"
+      ],
+      "answer": "Sophie",
+      "explanation": "The title hints that Sophie is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-balloon-that-knew-the-way": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-bee-and-the-birthday-wish": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Sea / Ocean",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-bee-and-the-sunflower": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Nature",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-boy-who-could-speak-colors": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-boy-who-danced-with-fireflies": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-dragon-who-found-his-fire": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-flying-elephant": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Adventure",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-and-the-magic-mirror": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Castle / Fantasy",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-and-the-magic-violin": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-bottled-sunshine": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-collected-raindrops": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-painted-music": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-painted-stars": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Friendship",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Sea / Ocean"
+      ],
+      "answer": "Space",
+      "explanation": "Words in the story point to a space setting."
+    }
+  ],
+  "the-girl-who-read-by-moonlight": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-girl-who-spoke-to-dreams": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-hidden-door": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-invisible-thread": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-island-of-lost-balloons": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-lantern-maker-s-secret": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Friendship",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-lost-button-s-journey": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Space",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-melody-of-the-moonlight": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-paper-swan-s-wish": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-sandcastle-king-s-crown": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-squirrel-s-mischievous-quest": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Space",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-star-who-felt-lonely": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-tale-of-the-talking-teacup": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-tree-that-wrote-poems": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-umbrella-that-carried-wishes": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-umbrella-that-knew-the-weather": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-whispering-willow-tree": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-lion-who-lost-his-roar": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-shoes-that-danced-without-feet": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Space",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-who-found-a-poem-in-the-rain": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Friendship",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-boy-who-collected-echoes": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-who-hugged-the-wind": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-bridge-across-the-sun": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-turned-shadows-into-light": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Space",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-fox-who-forgot-how-to-sneak": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-mermaid-who-loved-the-stars": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-boy-and-the-book-that-could-fly": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Adventure",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Castle / Fantasy"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-teddy-bear-s-secret-mission": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-talking-tortoise": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-star-in-the-jar": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-secret-suitcase": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "City / Village"
+      ],
+      "answer": "Castle / Fantasy",
+      "explanation": "Words in the story point to a castle / fantasy setting."
+    }
+  ],
+  "the-secret-of-snowflake": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-robot-with-a-heart": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-painter-of-forgotten-dreams": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-mirror-that-showed-tomorrow": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-mermaid-s-forgotten-song": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Bedtime",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-magical-paintbrush": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-little-llama-who-learned-to-dance": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Friendship",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-lantern-that-floated-upward": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Fantasy",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-with-the-moon-on-her-dress": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-with-the-feathered-hat": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-girl-with-lantern-eyes": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-woke-the-mountains": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Bedtime",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-whistled-to-the-wind": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Sea / Ocean"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-girl-who-traded-wishes": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-grew-rainbows": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-found-time": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Sea / Ocean",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-danced-with-the-wind": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Adventure",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Castle / Fantasy",
+        "City / Village"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-could-speak-to-animals": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-collected-echoes": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Space",
+      "explanation": "Words in the story point to a space setting."
+    }
+  ],
+  "the-fox-who-couldn-t-lie": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Friendship",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-forest-that-remembered": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-cloud-catcher-s-kite": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-boy-who-befriended-a-cloud": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-boy-who-borrowed-the-moon": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Friendship",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-boy-who-sketched-the-wind": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Fantasy",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Space",
+        "City / Village"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-cat-who-rode-the-wind": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Fantasy",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-clockmaker-s-magical-hourglass": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Friendship",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Castle / Fantasy",
+        "Space"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-candy-lab-that-got-carried-away": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Castle / Fantasy",
+        "Space"
+      ],
+      "answer": "Castle / Fantasy",
+      "explanation": "Words in the story point to a castle / fantasy setting."
+    }
+  ],
+  "the-boy-who-could-hear-stars": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Friendship",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Castle / Fantasy",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-and-the-map-of-dreams": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Space",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-pebble-that-changed-the-world": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-forest-that-sang-back": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-caught-the-sunlight": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-kite-that-knew-the-way": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-secret-that-lived-in-the-tree": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-wrote-letters-to-the-stars": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Adventure",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-mountain-that-could-feel-feelings": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Nature",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-library-of-invisible-books": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Fantasy",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Castle / Fantasy",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-who-brought-colors-to-the-sky": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-song-the-wind-carried": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-bridge-that-only-appeared-at-sunset": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-cloud-that-carried-wishes": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Friendship",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "City / Village",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-feather-that-waited": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Fantasy",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "City / Village",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-could-see-music": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Adventure",
+        "Bedtime",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Sea / Ocean",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-garden-of-forgotten-things": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Castle / Fantasy",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-moon-that-waited": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Castle / Fantasy",
+        "Space"
+      ],
+      "answer": "Space",
+      "explanation": "Words in the story point to a space setting."
+    }
+  ],
+  "the-girl-who-wrote-the-sky": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Friendship",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Space",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-rain-that-remembered-her-name": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Nature",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-sandcastle-that-stayed": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "City / Village"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-memory-tree": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Nature",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-star-that-followed-her-home": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Sea / Ocean"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-voice-that-could-calm-storms": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "Sea / Ocean",
+      "explanation": "Words in the story point to a sea / ocean setting."
+    }
+  ],
+  "the-girl-and-the-dream-that-never-faded": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Sea / Ocean",
+        "Space"
+      ],
+      "answer": "Space",
+      "explanation": "Words in the story point to a space setting."
+    }
+  ],
+  "the-pencil-that-could-draw-the-future": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Nature",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-blanket-that-remembered-stories": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Zara",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "City / Village",
+        "Castle / Fantasy"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-boy-and-the-night-that-wouldn-t-end": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Friendship",
+        "Other"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-mirror-that-showed-who-you-could-be": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Space",
+        "Forest / Nature"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-treehouse-at-the-end-of-the-rainbow": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Bedtime",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-and-the-feather-that-floated-forever": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Sea / Ocean",
+        "Castle / Fantasy",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-cloud-that-wanted-a-name": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "City / Village",
+        "Sea / Ocean"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-who-painted-with-butterflies": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Fantasy",
+        "Other",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-secret-of-the-singing-stones": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Bedtime"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Space",
+        "City / Village"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-girl-who-wrote-to-the-wind": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Fantasy",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Forest / Nature",
+      "explanation": "Words in the story point to a forest / nature setting."
+    }
+  ],
+  "the-boy-who-taught-the-stars-to-dance": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Other",
+        "Adventure"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "The",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Forest / Nature",
+        "Space"
+      ],
+      "answer": "Space",
+      "explanation": "Words in the story point to a space setting."
+    }
+  ],
+  "the-letter-the-moon-never-sent": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Adventure",
+        "Nature"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "The",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Forest / Nature",
+        "Sea / Ocean"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-girl-who-found-the-ending": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Nature",
+        "Other",
+        "Fantasy"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Zara",
+        "Milo",
+        "The"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Castle / Fantasy",
+        "Sea / Ocean"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-cool-selfie": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Bedtime",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "City / Village",
+        "Castle / Fantasy",
+        "Sea / Ocean"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "the-light-bulb-who-thought-too-much": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Other",
+        "Nature",
+        "Friendship"
+      ],
+      "answer": "Other",
+      "explanation": "The main theme matches “Other”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Milo",
+        "Zara"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Forest / Nature",
+        "Castle / Fantasy",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ],
+  "katleho-the-kid-from-outer-space": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Bedtime",
+        "Adventure",
+        "Fantasy"
+      ],
+      "answer": "Adventure",
+      "explanation": "The main theme matches “Adventure”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "Milo",
+        "Katleho",
+        "Zara"
+      ],
+      "answer": "Katleho",
+      "explanation": "The title hints that Katleho is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Space",
+        "Sea / Ocean",
+        "Forest / Nature"
+      ],
+      "answer": "Space",
+      "explanation": "Words in the story point to a space setting."
+    }
+  ],
+  "the-silver-star-and-the-golden-bell": [
+    {
+      "question": "What is this story mostly about?",
+      "options": [
+        "Friendship",
+        "Nature",
+        "Fantasy"
+      ],
+      "answer": "Friendship",
+      "explanation": "The main theme matches “Friendship”."
+    },
+    {
+      "question": "Who seems to be the main character?",
+      "options": [
+        "The",
+        "Zara",
+        "Milo"
+      ],
+      "answer": "The",
+      "explanation": "The title hints that The is the main character."
+    },
+    {
+      "question": "Where does most of the story happen?",
+      "options": [
+        "Castle / Fantasy",
+        "Sea / Ocean",
+        "City / Village"
+      ],
+      "answer": "City / Village",
+      "explanation": "Words in the story point to a city / village setting."
+    }
+  ]
+}

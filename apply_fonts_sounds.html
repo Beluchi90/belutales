@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply BeluTales Fonts & Sounds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1b4b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        .step {
+            background: rgba(255,255,255,0.05);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .code {
+            background: #2d3748;
+            color: #90cdf4;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow-x: auto;
+            margin: 10px 0;
+            white-space: pre;
+        }
+        button {
+            background: linear-gradient(135deg, #facc15, #38bdf8);
+            color: #1e1b4b;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .warning {
+            background: rgba(255, 165, 0, 0.2);
+            border-left: 4px solid orange;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .success {
+            background: rgba(0, 255, 0, 0.2);
+            border-left: 4px solid green;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 BeluTales Fonts & Sounds Fixer</h1>
+        <p>This will apply enhanced fonts and sounds to ANY BeluTales page, regardless of port!</p>
+        
+        <div class="step">
+            <h2>📋 Step 1: Copy the Code</h2>
+            <p>Click the button below to copy the enhancement code:</p>
+            <button onclick="copyEnhancementCode()">📋 Copy Enhancement Code</button>
+            
+            <div class="code" id="enhancementCode">// BeluTales Universal Enhancement Script
+console.log('🚀 Applying BeluTales Enhancements...');
+
+// 1. Add Google Fonts
+const fontLink = document.createElement('link');
+fontLink.href = 'https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap';
+fontLink.rel = 'stylesheet';
+document.head.appendChild(fontLink);
+
+// 2. Apply Enhanced Fonts
+const fontStyles = document.createElement('style');
+fontStyles.textContent = `
+/* FORCE enhanced fonts on everything */
+*, html, body, div, span, p, h1, h2, h3, h4, h5, h6, button, input, select,
+.stApp, .stApp *, 
+[data-testid="stMarkdownContainer"], [data-testid="stMarkdownContainer"] *,
+[data-testid="stSidebar"], [data-testid="stSidebar"] * {
+    font-family: 'Nunito', Arial, sans-serif !important;
+}
+
+/* Headings use Baloo 2 */
+h1, h2, h3, h4, h5, h6,
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+[data-testid="stMarkdownContainer"] h1, [data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3, [data-testid="stMarkdownContainer"] h4,
+[data-testid="stMarkdownContainer"] h5, [data-testid="stMarkdownContainer"] h6 {
+    font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* Enhanced buttons */
+.stButton > button {
+    font-family: 'Baloo 2', cursive, sans-serif !important;
+    font-weight: 700 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease !important;
+}
+
+/* Success indicator */
+.enhancement-success {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #34d399, #38bdf8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Baloo 2', cursive, sans-serif !important;
+    font-weight: 700;
+    font-size: 12px;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+`;
+document.head.appendChild(fontStyles);
+
+// 3. Audio System
+class UniversalAudio {
+    constructor() {
+        this.enabled = true;
+        this.volume = 0.7;
+        this.clickAudio = null;
+        this.init();
+    }
+    
+    init() {
+        // Try to load click.mp3
+        try {
+            this.clickAudio = new Audio('audio/click.mp3');
+            this.clickAudio.volume = this.volume;
+            this.clickAudio.preload = 'auto';
+            console.log('✅ Loaded click.mp3');
+        } catch (e) {
+            console.log('⚠️ click.mp3 not found, using fallback');
+        }
+        
+        this.addIndicator();
+    }
+    
+    addIndicator() {
+        const indicator = document.createElement('div');
+        indicator.className = 'enhancement-success';
+        indicator.textContent = '✨ Fonts + Sounds Applied!';
+        document.body.appendChild(indicator);
+        
+        indicator.addEventListener('click', () => {
+            this.playSound();
+        });
+        
+        setTimeout(() => {
+            if (this.clickAudio) {
+                indicator.textContent = '✅ Full Enhancement Active';
+            } else {
+                indicator.textContent = '⚠️ Fonts + Beep Sounds';
+            }
+        }, 2000);
+    }
+    
+    playSound() {
+        if (!this.enabled) return;
+        
+        // Try MP3 first
+        if (this.clickAudio) {
+            try {
+                this.clickAudio.currentTime = 0;
+                this.clickAudio.play().then(() => {
+                    console.log('🔊 MP3 sound played');
+                }).catch(() => {
+                    this.playBeep();
+                });
+                return;
+            } catch (e) {
+                console.log('MP3 failed:', e);
+            }
+        }
+        
+        this.playBeep();
+    }
+    
+    playBeep() {
+        try {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+            oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+            
+            gainNode.gain.setValueAtTime(this.volume, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+            
+            oscillator.type = 'sine';
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.1);
+            
+            console.log('🔊 Beep sound played');
+        } catch (e) {
+            console.log('All audio failed:', e);
+        }
+    }
+}
+
+// Initialize the system
+const audioSystem = new UniversalAudio();
+
+// Add click listeners to all buttons
+function addSounds() {
+    document.querySelectorAll('button').forEach(btn => {
+        if (!btn.hasAttribute('data-enhanced-audio')) {
+            btn.addEventListener('click', () => {
+                setTimeout(() => audioSystem.playSound(), 50);
+            });
+            btn.setAttribute('data-enhanced-audio', 'true');
+        }
+    });
+}
+
+// 4. Initialize everything
+setTimeout(() => {
+    addSounds();
+    console.log('🎉 BeluTales Enhancement Complete!');
+    
+    // Test the system
+    setTimeout(() => {
+        audioSystem.playSound();
+    }, 1000);
+}, 1000);
+
+// Keep adding sounds to new buttons
+setInterval(addSounds, 3000);
+
+// Global test function
+window.testBeluTales = () => audioSystem.playSound();
+
+console.log('✨ BeluTales Universal Enhancement Applied!');
+console.log('💡 Test: click buttons or run testBeluTales()');
+            </div>
+        </div>
+        
+        <div class="step">
+            <h2>🌐 Step 2: Open BeluTales Console</h2>
+            <p>On your BeluTales page (ANY port):</p>
+            <ul>
+                <li>Press <strong>F12</strong> to open Developer Tools</li>
+                <li>Click the <strong>Console</strong> tab</li>
+                <li>Paste the copied code</li>
+                <li>Press <strong>Enter</strong></li>
+            </ul>
+            
+            <div class="warning">
+                <strong>Note:</strong> This works on ANY BeluTales port (8501, 8506, 8508, 8509, etc.)
+            </div>
+        </div>
+        
+        <div class="step">
+            <h2>✅ Step 3: Verify Success</h2>
+            <p>You should immediately see:</p>
+            <ul>
+                <li>✅ <strong>Green indicator</strong> in top-right corner</li>
+                <li>✅ <strong>Different fonts</strong> (more playful)</li>
+                <li>✅ <strong>Click sounds</strong> when pressing buttons</li>
+                <li>✅ <strong>Console messages</strong> showing success</li>
+            </ul>
+            
+            <div class="success">
+                <strong>Success!</strong> Click the green indicator to test sounds, or run <code>testBeluTales()</code> in console.
+            </div>
+        </div>
+        
+        <div class="step">
+            <h2>🔧 Troubleshooting</h2>
+            <p>If it doesn't work:</p>
+            <ul>
+                <li>Make sure you're on a BeluTales page</li>
+                <li>Check for console errors (red text)</li>
+                <li>Try refreshing the page and running again</li>
+                <li>The fonts may take a few seconds to load</li>
+            </ul>
+        </div>
+        
+        <button onclick="testHere()">🧪 Test Enhancement Here</button>
+    </div>
+
+    <script>
+        function copyEnhancementCode() {
+            const code = document.getElementById('enhancementCode').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('✅ Code copied! Now paste it in BeluTales console (F12)');
+            }).catch(() => {
+                alert('❌ Copy failed. Please manually select and copy the code.');
+            });
+        }
+        
+        function testHere() {
+            // Run the enhancement on this page for testing
+            eval(document.getElementById('enhancementCode').textContent);
+        }
+    </script>
+</body>
+</html>
+

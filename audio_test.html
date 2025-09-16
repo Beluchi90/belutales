@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BeluTales Audio Test</title>
+</head>
+<body>
+    <h1>BeluTales Audio Test</h1>
+    <p>This page can be used to test audio functionality locally.</p>
+    
+    <h2>Sound Effects</h2>
+
+    <button onclick="playSound('success')">Play success</button><br>
+
+    <button onclick="playSound('error')">Play error</button><br>
+
+    <button onclick="playSound('notification')">Play notification</button><br>
+
+    <button onclick="playSound('button_hover')">Play button_hover</button><br>
+
+    <button onclick="playSound('page_turn')">Play page_turn</button><br>
+
+    <button onclick="playSound('quiz_complete')">Play quiz_complete</button><br>
+
+    <button onclick="playSound('perfect_score')">Play perfect_score</button><br>
+
+    
+    <h2>Ambience Tracks</h2>
+
+    <button onclick="playSound('ambience_forest')">Play forest</button><br>
+
+    <button onclick="playSound('ambience_rain')">Play rain</button><br>
+
+    <button onclick="playSound('ambience_ocean')">Play ocean</button><br>
+
+    <button onclick="playSound('ambience_night')">Play night</button><br>
+
+    <button onclick="playSound('ambience_birds')">Play birds</button><br>
+
+    
+    <script>
+    function playSound(soundName) {
+        const audio = new Audio(`audio/${soundName}.mp3`);
+        audio.play().catch(e => {
+            console.log('Audio play prevented or file missing:', e);
+            alert(`Audio file audio/${soundName}.mp3 not found or browser prevented playback`);
+        });
+    }
+    </script>
+</body>
+</html>

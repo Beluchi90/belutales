@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BeluTales Font & Sound Injector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1b4b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .injection-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        button {
+            background: linear-gradient(135deg, #facc15, #38bdf8);
+            color: #1e1b4b;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .code-box {
+            background: #2d3748;
+            border: 1px solid #4a5568;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 BeluTales Direct Injector</h1>
+    <div class="injection-box">
+        <h2>Step 1: Copy This Code</h2>
+        <p>Copy the JavaScript code below and paste it into your browser's console on the BeluTales page:</p>
+        
+        <div class="code-box" id="injection-code">
+// BeluTales Font & Sound Direct Injection
+console.log('🚀 Starting BeluTales Enhancement...');
+
+// Add Google Fonts
+const fontLink = document.createElement('link');
+fontLink.href = 'https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap';
+fontLink.rel = 'stylesheet';
+document.head.appendChild(fontLink);
+
+// Add CSS styles
+const style = document.createElement('style');
+style.textContent = `
+/* Force fonts on everything */
+*, .stApp, .stApp *, [data-testid="stMarkdownContainer"] * {
+    font-family: 'Nunito', Arial, sans-serif !important;
+}
+
+/* Headings use Baloo 2 */
+h1, h2, h3, h4, h5, h6, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+    font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* Visual indicator */
+.enhancement-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #34d399, #38bdf8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Baloo 2', cursive, sans-serif !important;
+    font-weight: 700;
+    font-size: 12px;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+`;
+document.head.appendChild(style);
+
+// Add indicator
+const indicator = document.createElement('div');
+indicator.className = 'enhancement-indicator';
+indicator.id = 'enhancement-status';
+indicator.textContent = '✨ Enhanced Features Loading...';
+document.body.appendChild(indicator);
+
+// Sound system
+class DirectAudio {
+    constructor() {
+        this.enabled = true;
+        this.volume = 0.3;
+        this.audioContext = null;
+        this.init();
+    }
+    
+    init() {
+        try {
+            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            console.log('✅ Audio initialized');
+        } catch (e) {
+            console.log('❌ Audio failed:', e);
+        }
+    }
+    
+    playSound() {
+        if (!this.enabled) return;
+        
+        try {
+            // Use your existing click.mp3 file
+            const audio = new Audio('./audio/click.mp3');
+            audio.volume = this.volume;
+            audio.play().then(() => {
+                indicator.textContent = '🔊 Click Sound Played!';
+                setTimeout(() => {
+                    indicator.textContent = '✅ Enhanced Features Active';
+                }, 1500);
+            }).catch((e) => {
+                console.log('MP3 failed, trying backup sound:', e);
+                // Fallback to generated sound if MP3 fails
+                this.playFallbackSound();
+            });
+            
+        } catch (e) {
+            console.log('Sound error:', e);
+            this.playFallbackSound();
+        }
+    }
+    
+    playFallbackSound() {
+        try {
+            if (!this.audioContext) {
+                this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            
+            const oscillator = this.audioContext.createOscillator();
+            const gainNode = this.audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(this.audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(800, this.audioContext.currentTime);
+            oscillator.frequency.exponentialRampToValueAtTime(400, this.audioContext.currentTime + 0.1);
+            
+            gainNode.gain.setValueAtTime(this.volume, this.audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, this.audioContext.currentTime + 0.1);
+            
+            oscillator.type = 'sine';
+            oscillator.start(this.audioContext.currentTime);
+            oscillator.stop(this.audioContext.currentTime + 0.1);
+            
+        } catch (e) {
+            console.log('All audio methods failed:', e);
+        }
+    }
+}
+
+const audioSystem = new DirectAudio();
+
+// Add click listeners
+function addSounds() {
+    document.querySelectorAll('button').forEach(btn => {
+        if (!btn.hasAttribute('data-enhanced')) {
+            btn.addEventListener('click', () => audioSystem.playSound());
+            btn.setAttribute('data-enhanced', 'true');
+        }
+    });
+}
+
+// Check fonts
+setTimeout(() => {
+    const testEl = document.createElement('div');
+    testEl.style.fontFamily = 'Baloo 2, cursive';
+    testEl.style.position = 'absolute';
+    testEl.style.visibility = 'hidden';
+    testEl.textContent = 'Test';
+    document.body.appendChild(testEl);
+    
+    const computed = window.getComputedStyle(testEl);
+    const fontFamily = computed.fontFamily.toLowerCase();
+    
+    if (fontFamily.includes('baloo')) {
+        indicator.textContent = '✅ Fonts + Sounds Active';
+        indicator.style.background = 'linear-gradient(135deg, #34d399, #38bdf8)';
+    } else {
+        indicator.textContent = '⚠️ Fonts Loading...';
+        indicator.style.background = 'linear-gradient(135deg, #f59e0b, #ef4444)';
+    }
+    
+    document.body.removeChild(testEl);
+    
+    // Test sound
+    setTimeout(() => audioSystem.playSound(), 1000);
+}, 2000);
+
+// Initialize
+addSounds();
+setInterval(addSounds, 3000);
+
+console.log('🎉 BeluTales Enhancement Complete!');
+        </div>
+        
+        <button onclick="copyCode()">📋 Copy Code</button>
+        
+        <h2>Step 2: Open Browser Console</h2>
+        <p>On your BeluTales page, press <strong>F12</strong> or <strong>Ctrl+Shift+I</strong> to open Developer Tools, then click the <strong>Console</strong> tab.</p>
+        
+        <h2>Step 3: Paste & Execute</h2>
+        <p>Paste the copied code into the console and press <strong>Enter</strong>. You should immediately see an indicator in the top-right corner!</p>
+        
+        <button onclick="testHere()">🧪 Test Here First</button>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeElement = document.getElementById('injection-code');
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            
+            try {
+                document.execCommand('copy');
+                alert('✅ Code copied! Now paste it in the BeluTales console.');
+            } catch (err) {
+                alert('❌ Copy failed. Please manually select and copy the code.');
+            }
+            
+            window.getSelection().removeAllRanges();
+        }
+        
+        function testHere() {
+            // Execute the injection code on this page for testing
+            eval(document.getElementById('injection-code').textContent);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BeluTales Enhanced Features Demo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-family: 'Baloo 2', cursive, sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #facc15, #38bdf8, #f472b6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #d1d5db;
+            font-style: italic;
+        }
+        
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        h2 {
+            font-family: 'Baloo 2', cursive, sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #facc15;
+        }
+        
+        .button {
+            background: linear-gradient(135deg, #facc15, #38bdf8);
+            color: #1e1b4b;
+            border: none;
+            border-radius: 16px;
+            padding: 15px 30px;
+            font-family: 'Baloo 2', cursive, sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4);
+            background: linear-gradient(135deg, #38bdf8, #f472b6);
+        }
+        
+        .button:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+        
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .button:hover::before {
+            left: 100%;
+        }
+        
+        .story-text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            font-weight: 500;
+            margin: 20px 0;
+            text-align: justify;
+            text-indent: 20px;
+            letter-spacing: 0.3px;
+        }
+        
+        .status {
+            background: rgba(52, 211, 153, 0.2);
+            border: 1px solid rgba(52, 211, 153, 0.5);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        
+        .error {
+            background: rgba(248, 113, 113, 0.2);
+            border-color: rgba(248, 113, 113, 0.5);
+        }
+        
+        .font-example {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .volume-control {
+            margin: 20px 0;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #facc15;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🦉 BeluTales Enhanced</h1>
+        <p class="subtitle">Premium fonts and magical click sounds</p>
+    </div>
+    
+    <div class="demo-section">
+        <h2>🎨 Font Demonstration</h2>
+        <div class="font-example">
+            <h3 style="font-family: 'Baloo 2', cursive; font-size: 1.8rem; font-weight: 700;">This is Baloo 2 Font (Headings)</h3>
+            <p style="font-size: 0.9rem; color: #d1d5db; margin-bottom: 15px;">Rounded, playful, kid-friendly font for titles and buttons</p>
+            
+            <div class="story-text">
+                This is Nunito font for story text. In the quiet village of Starhollow, where lanterns blinked like sleepy eyes and rooftops sighed under stardust, lived a curious little girl named Nina. She was the kind of child who always asked questions that made grown-ups smile awkwardly.
+            </div>
+            <p style="font-size: 0.9rem; color: #d1d5db;">Clean, readable font perfect for long story texts</p>
+        </div>
+        
+        <div id="font-status" class="status">
+            ✅ Google Fonts loaded successfully!
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>🔊 Click Sound System</h2>
+        <p style="margin-bottom: 20px;">Click these buttons to hear the magical click sounds:</p>
+        
+        <button class="button" onclick="playClickSound()">🎵 Test Click Sound</button>
+        <button class="button" onclick="playSuccessSound()">🎉 Test Success Sound</button>
+        <button class="button" onclick="playNavigationSound()">🧭 Test Navigation Sound</button>
+        
+        <div class="volume-control">
+            <label for="volume">🔊 Volume: <span id="volume-display">30%</span></label>
+            <input type="range" id="volume" class="slider" min="0" max="100" value="30" oninput="updateVolume(this.value)">
+        </div>
+        
+        <div id="sound-status" class="status">
+            Ready to test sounds...
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>✨ This is what BeluTales should look and sound like!</h2>
+        <p class="story-text">
+            If you can see the rounded fonts above and hear sounds when clicking the buttons, 
+            then your browser supports all the enhanced features I've added to BeluTales!
+        </p>
+        
+        <button class="button" onclick="testEverything()">🚀 Test Everything!</button>
+    </div>
+
+    <script>
+        let currentVolume = 0.3;
+        
+        function updateVolume(value) {
+            currentVolume = value / 100;
+            document.getElementById('volume-display').textContent = value + '%';
+        }
+        
+        function playClickSound() {
+            updateStatus('Playing click sound...', false);
+            
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                // Pleasant click sound
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+                
+                gainNode.gain.setValueAtTime(currentVolume, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+                
+                oscillator.type = 'sine';
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+                
+                setTimeout(() => updateStatus('✅ Click sound played successfully!', false), 200);
+            } catch (e) {
+                updateStatus('❌ Sound failed: ' + e.message, true);
+            }
+        }
+        
+        function playSuccessSound() {
+            updateStatus('Playing success sound...', false);
+            
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                // Success sound (higher pitched)
+                oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(900, audioContext.currentTime + 0.15);
+                
+                gainNode.gain.setValueAtTime(currentVolume, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.15);
+                
+                oscillator.type = 'sine';
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.15);
+                
+                setTimeout(() => updateStatus('✅ Success sound played!', false), 200);
+            } catch (e) {
+                updateStatus('❌ Sound failed: ' + e.message, true);
+            }
+        }
+        
+        function playNavigationSound() {
+            updateStatus('Playing navigation sound...', false);
+            
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                // Navigation sound
+                oscillator.frequency.setValueAtTime(500, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(700, audioContext.currentTime + 0.08);
+                
+                gainNode.gain.setValueAtTime(currentVolume * 0.8, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.08);
+                
+                oscillator.type = 'sine';
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.08);
+                
+                setTimeout(() => updateStatus('✅ Navigation sound played!', false), 200);
+            } catch (e) {
+                updateStatus('❌ Sound failed: ' + e.message, true);
+            }
+        }
+        
+        function updateStatus(message, isError) {
+            const statusEl = document.getElementById('sound-status');
+            statusEl.textContent = message;
+            statusEl.className = isError ? 'status error' : 'status';
+        }
+        
+        function testEverything() {
+            updateStatus('Testing all features...', false);
+            
+            // Test fonts
+            const heading = document.querySelector('h1');
+            const computed = window.getComputedStyle(heading);
+            const fontFamily = computed.fontFamily;
+            
+            setTimeout(() => {
+                if (fontFamily.toLowerCase().includes('baloo')) {
+                    document.getElementById('font-status').innerHTML = '✅ Baloo 2 font loaded perfectly!';
+                } else {
+                    document.getElementById('font-status').innerHTML = '❌ Baloo 2 not detected. Font: ' + fontFamily;
+                    document.getElementById('font-status').className = 'status error';
+                }
+            }, 500);
+            
+            // Test sound
+            setTimeout(() => playClickSound(), 1000);
+        }
+        
+        // Auto-test on load
+        window.onload = function() {
+            setTimeout(() => {
+                const heading = document.querySelector('h1');
+                const computed = window.getComputedStyle(heading);
+                const fontFamily = computed.fontFamily;
+                
+                if (fontFamily.toLowerCase().includes('baloo')) {
+                    updateStatus('✅ All features working! Fonts and sounds ready.', false);
+                } else {
+                    document.getElementById('font-status').innerHTML = '⚠️ Font fallback in use: ' + fontFamily;
+                }
+            }, 2000);
+        };
+    </script>
+</body>
+</html>
+

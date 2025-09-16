@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BeluTales Simple Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1b4b;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .test-box {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        button {
+            background: linear-gradient(135deg, #facc15, #38bdf8);
+            color: #1e1b4b;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 15px;
+            display: block;
+            width: 300px;
+            margin: 15px auto;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .result {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: monospace;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>🔊 BeluTales Audio Test</h1>
+        <p>Click these buttons to test different sounds:</p>
+        
+        <button onclick="testClick()">🎵 Test Click Sound</button>
+        <button onclick="testBeep()">🔔 Test Beep Sound</button>
+        <button onclick="applyToBeluTales()">✨ Apply to BeluTales</button>
+        
+        <div class="result" id="result">Ready to test...</div>
+    </div>
+
+    <script>
+        const result = document.getElementById('result');
+        
+        function log(message) {
+            result.textContent += message + '\n';
+            console.log(message);
+        }
+        
+        function testClick() {
+            log('🎵 Testing click.mp3...');
+            try {
+                const audio = new Audio('audio/click.mp3');
+                audio.volume = 0.7;
+                audio.play().then(() => {
+                    log('✅ click.mp3 worked!');
+                }).catch(error => {
+                    log('❌ click.mp3 failed: ' + error.message);
+                });
+            } catch (error) {
+                log('❌ Error loading click.mp3: ' + error.message);
+            }
+        }
+        
+        function testBeep() {
+            log('🔔 Testing generated beep...');
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+                
+                oscillator.type = 'sine';
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+                
+                log('✅ Generated beep worked!');
+            } catch (error) {
+                log('❌ Generated beep failed: ' + error.message);
+            }
+        }
+        
+        function applyToBeluTales() {
+            log('✨ Opening BeluTales enhancement...');
+            
+            // This will open BeluTales in a new tab with enhancements
+            const enhancementCode = `
+                // Add fonts
+                const fontLink = document.createElement('link');
+                fontLink.href = 'https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap';
+                fontLink.rel = 'stylesheet';
+                document.head.appendChild(fontLink);
+                
+                // Apply font styles
+                const style = document.createElement('style');
+                style.textContent = \`
+                *, .stApp, .stApp * {
+                    font-family: 'Nunito', Arial, sans-serif !important;
+                }
+                h1, h2, h3, h4, h5, h6, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+                    font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif !important;
+                    font-weight: 700 !important;
+                }
+                .enhancement-active {
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    background: linear-gradient(135deg, #34d399, #38bdf8);
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    font-family: 'Baloo 2', cursive, sans-serif !important;
+                    font-weight: 700;
+                    font-size: 12px;
+                    z-index: 9999;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                }
+                \`;
+                document.head.appendChild(style);
+                
+                // Add indicator
+                const indicator = document.createElement('div');
+                indicator.className = 'enhancement-active';
+                indicator.textContent = '✅ Enhanced!';
+                document.body.appendChild(indicator);
+                
+                // Add click sounds
+                function playSound() {
+                    try {
+                        const audio = new Audio('audio/click.mp3');
+                        audio.volume = 0.7;
+                        audio.play().catch(() => {
+                            // Fallback beep
+                            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                            const oscillator = audioContext.createOscillator();
+                            const gainNode = audioContext.createGain();
+                            oscillator.connect(gainNode);
+                            gainNode.connect(audioContext.destination);
+                            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                            oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+                            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                            gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+                            oscillator.type = 'sine';
+                            oscillator.start(audioContext.currentTime);
+                            oscillator.stop(audioContext.currentTime + 0.1);
+                        });
+                    } catch (e) {
+                        console.log('Sound failed:', e);
+                    }
+                }
+                
+                // Add to all buttons
+                document.querySelectorAll('button').forEach(btn => {
+                    btn.addEventListener('click', playSound);
+                });
+                
+                console.log('✅ BeluTales Enhanced!');
+            `;
+            
+            // Try to open BeluTales and apply enhancement
+            const beluTalesWindow = window.open('http://localhost:8501', '_blank');
+            
+            if (beluTalesWindow) {
+                setTimeout(() => {
+                    try {
+                        beluTalesWindow.eval(enhancementCode);
+                        log('✅ Enhancement applied to BeluTales!');
+                    } catch (e) {
+                        log('❌ Could not auto-apply. Copy the code below and paste it in BeluTales console (F12):');
+                        log(enhancementCode);
+                    }
+                }, 2000);
+            } else {
+                log('❌ Could not open BeluTales. Please open localhost:8501 manually.');
+            }
+        }
+    </script>
+</body>
+</html>
+
