@@ -2607,8 +2607,7 @@ else:
                             if thumbnail_bytes:
                                 st.image(thumbnail_bytes, use_container_width=True)
                             else:
-                                # Fallback to original image if thumbnail generation fails
-                                show_image_resilient(full_cover_path)
+                                st.warning("No thumbnail available.")
                     
                     with col2:
                         # Translate title and category
