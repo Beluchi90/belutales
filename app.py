@@ -2601,36 +2601,11 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Show cover image thumbnail with proper fallback handling
-                        import os
-                        
-                        # Try to get the first image (cover_image) from the story
+                        # Show cover image thumbnail - each story uses its own cover image
                         cover_image = story.get("cover_image", "")
                         if cover_image:
                             thumbnail_path = f"images/{cover_image}"
-                        else:
-                            # Fallback: try cover_path if cover_image is not available
-                            cover_path = story.get("cover_path", "")
-                            thumbnail_path = f"images/{cover_path}" if cover_path else ""
-                        
-                        # Load thumbnail with proper fallback logic
-                        if thumbnail_path and os.path.exists(thumbnail_path):
-                            try:
-                                st.image(thumbnail_path, use_container_width=True)
-                            except Exception:
-                                # If image exists but fails to load, try fallback
-                                fallback = "assets/images/default_thumbnail.png"
-                                if os.path.exists(fallback):
-                                    st.image(fallback, use_container_width=True)
-                                else:
-                                    st.warning("Default thumbnail missing.")
-                        else:
-                            # Story image doesn't exist, use fallback
-                            fallback = "assets/images/default_thumbnail.png"
-                            if os.path.exists(fallback):
-                                st.image(fallback, use_container_width=True)
-                            else:
-                                st.warning("Default thumbnail missing.")
+                            st.image(thumbnail_path, use_container_width=True)
                     
                     with col2:
                         # Translate title and category
