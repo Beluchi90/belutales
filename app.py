@@ -2606,8 +2606,7 @@ else:
                         
                         def slugify(title):
                             slug = title.lower()
-                            slug = re.sub(r'[^a-z0-9 ]', '', slug)  # keep only letters, numbers, spaces
-                            slug = re.sub(r'\s+', '-', slug.strip())  # spaces -> hyphens
+                            slug = re.sub(r'[^a-z0-9-]', '', slug.replace(" ", "-"))
                             return slug
                         
                         slug = slugify(story["title"])
@@ -2616,7 +2615,7 @@ else:
                         if os.path.exists(thumbnail_path):
                             st.image(thumbnail_path, use_container_width=True)
                         else:
-                            st.warning(f"Thumbnail missing for {story['title']}")
+                            st.warning(f"Thumbnail not found: {thumbnail_path}")
                     
                     with col2:
                         # Translate title and category
