@@ -83,6 +83,9 @@ def capture_paypal_if_returned():
             st.query_params.clear()
         else:
             st.error("❌ Payment verification failed. Please try again.")
+    except requests.exceptions.RequestException as e:
+        st.warning("⚠️ PayPal backend is not available. Premium unlock may not work right now.")
+        st.error(f"❌ Could not verify payment: Connection error")
     except Exception as e:
         st.error(f"❌ Could not verify payment: {e}")
 
@@ -643,7 +646,7 @@ def ensure_backend_running():
     """Ensure backend is running, start if needed"""
     if not check_backend_health():
         if not start_backend_server():
-            st.warning("⚠️ PayPal backend server is not available. Premium features may not work.")
+            st.warning("⚠️ PayPal backend is not available. Premium unlock may not work right now.")
             return False
     return True
 

@@ -34,8 +34,13 @@ print("PayPal ENV:", PAYPAL_ENV)
 print("PayPal Client ID loaded:", bool(PAYPAL_CLIENT_ID))
 print("PayPal Secret loaded:", bool(PAYPAL_SECRET))
 
+# Check for missing credentials and log warnings instead of crashing
 if not PAYPAL_CLIENT_ID or not PAYPAL_SECRET:
-    raise ValueError("PAYPAL_CLIENT_ID and PAYPAL_SECRET must be set in environment variables")
+    logger.warning("⚠️ PayPal credentials missing! PAYPAL_CLIENT_ID and PAYPAL_SECRET must be set in .env file")
+    logger.warning("PayPal integration will not work until credentials are configured")
+    PAYPAL_CONFIGURED = False
+else:
+    PAYPAL_CONFIGURED = True
 
 # PayPal API URLs
 PAYPAL_BASE_URL = {
@@ -66,6 +71,9 @@ class CaptureOrderRequest(BaseModel):
 # PayPal API helpers
 async def get_paypal_access_token() -> str:
     """Get access token from PayPal"""
+    if not PAYPAL_CONFIGURED:
+        raise HTTPException(status_code=502, detail="PayPal credentials not configured")
+    
     url = f"{PAYPAL_BASE_URL}/v1/oauth2/token"
     
     headers = {
@@ -75,50 +83,65 @@ async def get_paypal_access_token() -> str:
     
     data = "grant_type=client_credentials"
     
-    async with httpx.AsyncClient() as client:
-        response = await client.post(
-            url,
-            headers=headers,
-            data=data,
-            auth=(PAYPAL_CLIENT_ID, PAYPAL_SECRET)
-        )
-        
-        if response.status_code != 200:
-            logger.error(f"Failed to get PayPal access token: {response.text}")
-            raise HTTPException(status_code=500, detail="Failed to authenticate with PayPal")
-        
-        token_data = response.json()
-        return token_data["access_token"]
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            response = await client.post(
+                url,
+                headers=headers,
+                data=data,
+                auth=(PAYPAL_CLIENT_ID, PAYPAL_SECRET)
+            )
+            
+            if response.status_code != 200:
+                logger.error(f"Failed to get PayPal access token: {response.text}")
+                raise HTTPException(status_code=502, detail="Failed to authenticate with PayPal")
+            
+            token_data = response.json()
+            return token_data["access_token"]
+    except httpx.RequestError as e:
+        logger.error(f"PayPal authentication request failed: {str(e)}")
+        raise HTTPException(status_code=502, detail=f"PayPal backend unavailable: {str(e)}")
+    except httpx.TimeoutException:
+        logger.error("PayPal authentication request timed out")
+        raise HTTPException(status_code=502, detail="PayPal backend unavailable: timeout")
 
 async def make_paypal_request(method: str, endpoint: str, data: Dict = None) -> Dict[str, Any]:
     """Make authenticated request to PayPal API"""
-    access_token = await get_paypal_access_token()
-    
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {access_token}",
-        "Accept": "application/json",
-        "PayPal-Request-Id": f"belutales-{datetime.now().isoformat()}"
-    }
-    
-    url = f"{PAYPAL_BASE_URL}{endpoint}"
-    
-    async with httpx.AsyncClient() as client:
-        if method.upper() == "POST":
-            response = await client.post(url, headers=headers, json=data)
-        elif method.upper() == "GET":
-            response = await client.get(url, headers=headers)
-        else:
-            raise ValueError(f"Unsupported HTTP method: {method}")
+    try:
+        access_token = await get_paypal_access_token()
         
-        if response.status_code not in [200, 201]:
-            logger.error(f"PayPal API error: {response.status_code} - {response.text}")
-            raise HTTPException(
-                status_code=response.status_code,
-                detail=f"PayPal API error: {response.text}"
-            )
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {access_token}",
+            "Accept": "application/json",
+            "PayPal-Request-Id": f"belutales-{datetime.now().isoformat()}"
+        }
         
-        return response.json()
+        url = f"{PAYPAL_BASE_URL}{endpoint}"
+        
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            if method.upper() == "POST":
+                response = await client.post(url, headers=headers, json=data)
+            elif method.upper() == "GET":
+                response = await client.get(url, headers=headers)
+            else:
+                raise ValueError(f"Unsupported HTTP method: {method}")
+            
+            response.raise_for_status()
+            return response.json()
+            
+    except httpx.RequestError as e:
+        logger.error(f"PayPal API request failed: {str(e)}")
+        raise HTTPException(status_code=502, detail=f"PayPal backend unavailable: {str(e)}")
+    except httpx.TimeoutException:
+        logger.error("PayPal API request timed out")
+        raise HTTPException(status_code=502, detail="PayPal backend unavailable: timeout")
+    except httpx.HTTPStatusError as e:
+        logger.error(f"PayPal API error: {e.response.status_code} - {e.response.text}")
+        raise HTTPException(
+            status_code=502,
+            detail=f"PayPal backend unavailable: HTTP {e.response.status_code}"
+        )
 
 # API Routes
 @app.get("/")
@@ -130,6 +153,9 @@ async def root():
 async def create_paypal_order(request: CreateOrderRequest):
     """Create a PayPal order for premium access"""
     try:
+        if not PAYPAL_CONFIGURED:
+            raise HTTPException(status_code=502, detail="PayPal credentials not configured")
+            
         order_data = {
             "intent": "CAPTURE",
             "purchase_units": [
@@ -163,14 +189,19 @@ async def create_paypal_order(request: CreateOrderRequest):
             "links": result.get("links", [])
         }
         
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Error creating PayPal order: {e}")
-        raise HTTPException(status_code=500, detail="Failed to create PayPal order")
+        raise HTTPException(status_code=502, detail=f"PayPal backend unavailable: {str(e)}")
 
 @app.post("/paypal/capture-order/{order_id}")
 async def capture_paypal_order(order_id: str):
     """Capture a PayPal order after approval"""
     try:
+        if not PAYPAL_CONFIGURED:
+            raise HTTPException(status_code=502, detail="PayPal credentials not configured")
+            
         result = await make_paypal_request("POST", f"/v2/checkout/orders/{order_id}/capture")
         
         logger.info(f"Captured PayPal order: {order_id}")
@@ -191,7 +222,7 @@ async def capture_paypal_order(order_id: str):
         raise
     except Exception as e:
         logger.error(f"Error capturing PayPal order {order_id}: {e}")
-        raise HTTPException(status_code=500, detail="Failed to capture PayPal order")
+        raise HTTPException(status_code=502, detail=f"PayPal backend unavailable: {str(e)}")
 
 @app.post("/paypal/webhook")
 async def handle_paypal_webhook(request: Request):
@@ -255,11 +286,16 @@ async def handle_paypal_webhook(request: Request):
 async def get_order_details(order_id: str):
     """Get details of a PayPal order"""
     try:
+        if not PAYPAL_CONFIGURED:
+            raise HTTPException(status_code=502, detail="PayPal credentials not configured")
+            
         result = await make_paypal_request("GET", f"/v2/checkout/orders/{order_id}")
         return result
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Error getting order details for {order_id}: {e}")
-        raise HTTPException(status_code=500, detail="Failed to get order details")
+        raise HTTPException(status_code=502, detail=f"PayPal backend unavailable: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
