@@ -2602,20 +2602,18 @@ else:
                     
                     with col1:
                         # Show cover image thumbnail
-                        import re, os
+                        import os
                         
-                        def slugify(title):
-                            slug = title.lower()
-                            slug = re.sub(r'[^a-z0-9-]', '', slug.replace(" ", "-"))
-                            return slug
-                        
-                        slug = slugify(story["title"])
-                        thumbnail_path = f"images/{slug}_1.png"
-                        
-                        if os.path.exists(thumbnail_path):
-                            st.image(thumbnail_path, use_container_width=True)
+                        # Use the cover_image field from story JSON
+                        if 'cover_image' in story and story['cover_image']:
+                            thumbnail_path = f"images/{story['cover_image']}"
+                            
+                            if os.path.exists(thumbnail_path):
+                                st.image(thumbnail_path, use_container_width=True)
+                            else:
+                                st.warning(f"Thumbnail missing for {story['title']}")
                         else:
-                            st.warning(f"Thumbnail not found: {thumbnail_path}")
+                            st.warning(f"No thumbnail specified for {story['title']}")
                     
                     with col2:
                         # Translate title and category
