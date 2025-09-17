@@ -2324,9 +2324,17 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
+        import os
+
         thumb_name = story.get("thumbnail")
         if thumb_name:
-            show_image_resilient(f"images/{thumb_name}", caption="📖 Story Cover")
+            thumb_path = os.path.join("images", thumb_name)
+            if os.path.exists(thumb_path):
+                st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
+            else:
+                st.warning(f"Thumbnail not found: {thumb_path}")
+        else:
+            st.warning(f"No thumbnail specified for {story.get('title','Untitled')}")
         
         st.markdown("---")
         
@@ -2601,19 +2609,17 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # --- Thumbnail render (final, filename-driven) ---
                         import os
-                        thumb_name = story.get("thumbnail")  # e.g., "nina-and-the-night-sky_1.png"
+
+                        thumb_name = story.get("thumbnail")
                         if thumb_name:
                             thumb_path = os.path.join("images", thumb_name)
                             if os.path.exists(thumb_path):
-                                st.image(thumb_path, use_container_width=True)
+                                st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
                             else:
                                 st.warning(f"Thumbnail not found: {thumb_path}")
                         else:
                             st.warning(f"No thumbnail specified for {story.get('title','Untitled')}")
-                        
-                        # --- end thumbnail render ---
                     
                     with col2:
                         # Translate title and category
