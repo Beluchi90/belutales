@@ -2324,9 +2324,9 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        cover_image = story.get("cover_image", "")
-        if cover_image:
-            show_image_resilient(f"images/{cover_image}", caption="📖 Story Cover")
+        thumb_name = story.get("thumbnail")
+        if thumb_name:
+            show_image_resilient(f"images/{thumb_name}", caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2601,17 +2601,19 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Show cover image thumbnail
+                        # --- Thumbnail render (final, filename-driven) ---
                         import os
-                        
-                        if "thumbnail" in story:
-                            thumbnail_path = f"images/{story['thumbnail']}"
-                            if os.path.exists(thumbnail_path):
-                                st.image(thumbnail_path, use_container_width=True)
+                        thumb_name = story.get("thumbnail")  # e.g., "nina-and-the-night-sky_1.png"
+                        if thumb_name:
+                            thumb_path = os.path.join("images", thumb_name)
+                            if os.path.exists(thumb_path):
+                                st.image(thumb_path, use_container_width=True)
                             else:
-                                st.warning(f"Thumbnail not found: {thumbnail_path}")
+                                st.warning(f"Thumbnail not found: {thumb_path}")
                         else:
-                            st.warning(f"No thumbnail specified for {story['title']}")
+                            st.warning(f"No thumbnail specified for {story.get('title','Untitled')}")
+                        
+                        # --- end thumbnail render ---
                     
                     with col2:
                         # Translate title and category
