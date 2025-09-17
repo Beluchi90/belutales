@@ -29,6 +29,17 @@ from utils.performance import (
     clear_cache, PAGE_SIZE
 )
 
+# Safe image loading helper function
+def safe_show_image(img_name, caption=None):
+    if img_name:
+        img_path = os.path.join("images", img_name)
+        if os.path.exists(img_path):
+            st.image(img_path, use_container_width=True, caption=caption)
+        else:
+            st.warning(f"🚨 Missing image file: {img_path}")
+    else:
+        st.info("No image available")
+
 # Development helper function for cache management
 def reset_cache():
     """
@@ -1775,20 +1786,29 @@ def load_image(image_path: str, size=(800, 600)):
 
 # get_thumbnail function moved to utils/performance.py for better organization
 
-def show_image_resilient(path_or_bytes, caption=None):
-    """Display image with robust error handling and fallback"""
-    img = load_image_safe(path_or_bytes)
-    if img is None:
-        # Use fallback and log a warning in the UI (not a crash)
-        fallback_path = Path("assets/fallback.png")
-        try:
-            fallback = Image.open(fallback_path)
-            st.warning("Some illustrations couldn't be decoded. Showing a placeholder instead.")
-            st.image(fallback, use_container_width=True, caption=caption)
-        except Exception:
-            st.warning("Image failed to load and no fallback available.")
-        return
-    st.image(img, use_container_width=True, caption=caption)
+def show_image_resilient(image_path, caption=""):
+    """
+    Show an image if it exists, else fallback to placeholder.png.
+    Prevents Streamlit crashes from missing/invalid images.
+    """
+    try:
+        if image_path and os.path.exists(image_path):
+            img = Image.open(image_path)
+            st.image(img, use_container_width=True, caption=caption)
+        else:
+            placeholder = "images/placeholder.png"
+            if os.path.exists(placeholder):
+                img = Image.open(placeholder)
+                st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
+            else:
+                st.warning("🖼 Illustration coming soon")
+    except Exception:
+        placeholder = "images/placeholder.png"
+        if os.path.exists(placeholder):
+            img = Image.open(placeholder)
+            st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
+        else:
+            st.warning("🖼 Illustration coming soon")
 
 @st.cache_data
 def translate_text(text: str, target_language: str) -> str:
@@ -2324,17 +2344,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        import os
-        
-        thumb_name = story.get("thumbnail")
-        if thumb_name:
-            thumb_path = os.path.join("images", thumb_name)
-            if os.path.exists(thumb_path):
-                st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
-            else:
-                st.write("🖼️ No thumbnail available")
-        else:
-            st.write("🖼️ No thumbnail available")
+        safe_show_image(story.get("cover_image"), caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2415,9 +2425,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                mid_image = story.get("mid_image", "")
-                if mid_image:
-                    show_image_resilient(f"images/{mid_image}", caption="🎨 Mid-story Illustration")
+                safe_show_image(story.get("mid_image"), caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2431,9 +2439,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            end_image = story.get("end_image", "")
-            if end_image:
-                show_image_resilient(f"images/{end_image}", caption="🌟 Story Ending")
+            safe_show_image(story.get("end_image"), caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2609,18 +2615,8 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Display story thumbnail with graceful fallback
-                        import os
-                        
-                        thumb_name = story.get("thumbnail")
-                        if thumb_name:
-                            thumb_path = os.path.join("images", thumb_name)
-                            if os.path.exists(thumb_path):
-                                st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
-                            else:
-                                st.write("🖼️ No thumbnail available")
-                        else:
-                            st.write("🖼️ No thumbnail available")
+                        # Display story thumbnail
+                        safe_show_image(story.get("thumbnail"), caption="📖 Story Cover")
                     
                     with col2:
                         # Translate title and category
