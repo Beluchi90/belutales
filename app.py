@@ -29,6 +29,10 @@ from utils.performance import (
     clear_cache, PAGE_SIZE
 )
 
+# Image path helper function for Streamlit Cloud deployment
+def get_image_path(filename):
+    return os.path.join("belutales", "images", filename)
+
 # Safe image loading helper function
 def safe_show_image(img_path, caption=""):
     """
@@ -42,14 +46,14 @@ def safe_show_image(img_path, caption=""):
             img = Image.open(img_path)
             st.image(img, use_container_width=True, caption=caption)
         else:
-            placeholder = "images/placeholder.png"
+            placeholder = get_image_path("placeholder.png")
             if os.path.exists(placeholder):
                 img = Image.open(placeholder)
                 st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
             else:
                 st.warning("🖼 Illustration coming soon")
     except Exception:
-        placeholder = "images/placeholder.png"
+        placeholder = get_image_path("placeholder.png")
         if os.path.exists(placeholder):
             img = Image.open(placeholder)
             st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
@@ -2362,7 +2366,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         # Show cover image
         cover_image = story.get("cover_image")
         if cover_image:
-            safe_show_image(f"images/{cover_image}", caption="📖 Story Cover")
+            safe_show_image(get_image_path(cover_image), caption="📖 Story Cover")
         else:
             safe_show_image(None, caption="📖 Story Cover")
         
@@ -2447,7 +2451,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 # Show mid image
                 mid_image = story.get("mid_image")
                 if mid_image:
-                    safe_show_image(f"images/{mid_image}", caption="🎨 Mid-story Illustration")
+                    safe_show_image(get_image_path(mid_image), caption="🎨 Mid-story Illustration")
                 else:
                     safe_show_image(None, caption="🎨 Mid-story Illustration")
                 
@@ -2465,7 +2469,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
             # Show end image
             end_image = story.get("end_image")
             if end_image:
-                safe_show_image(f"images/{end_image}", caption="🌟 Story Ending")
+                safe_show_image(get_image_path(end_image), caption="🌟 Story Ending")
             else:
                 safe_show_image(None, caption="🌟 Story Ending")
         
@@ -2646,7 +2650,7 @@ else:
                         # Display story thumbnail
                         thumbnail = story.get("thumbnail")
                         if thumbnail:
-                            safe_show_image(thumbnail, caption="📖 Story Cover")
+                            safe_show_image(get_image_path(thumbnail), caption="📖 Story Cover")
                         else:
                             safe_show_image(None, caption="📖 Story Cover")
                     

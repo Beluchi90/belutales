@@ -1,0 +1,3884 @@
+{
+  "summary": {
+    "stories_checked": 117,
+    "total_image_paths_checked": 468,
+    "missing_files": 120,
+    "invalid_images": 0,
+    "small_files": 0
+  },
+  "details": [
+    {
+      "story_index": 0,
+      "story_id": "katleho-the-kid-from-other-space",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "katleho-the-kid-from-outer-space_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\katleho-the-kid-from-outer-space_1.png",
+          "size_bytes": 3196865,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "katleho-the-kid-from-outer-space_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\katleho-the-kid-from-outer-space_2.png",
+          "size_bytes": 2268078,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "katleho-the-kid-from-outer-space_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\katleho-the-kid-from-outer-space_3.png",
+          "size_bytes": 2082016,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/logo.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/logo.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 1,
+      "story_id": "nina-and-the-night-sky",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "nina-and-the-night-sky_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\nina-and-the-night-sky_1.png",
+          "size_bytes": 2735441,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "nina-and-the-night-sky_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\nina-and-the-night-sky_2.png",
+          "size_bytes": 2549293,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "nina-and-the-night-sky_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\nina-and-the-night-sky_3.png",
+          "size_bytes": 3191892,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/nina-and-the-night-sky_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/nina-and-the-night-sky_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 2,
+      "story_id": "the-blanket-that-remembered-stories",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-blanket-that-remembered-stories_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-blanket-that-remembered-stories_1.png",
+          "size_bytes": 3132448,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-blanket-that-remembered-stories_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-blanket-that-remembered-stories_2.png",
+          "size_bytes": 2273210,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-blanket-that-remembered-stories_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-blanket-that-remembered-stories_3.png",
+          "size_bytes": 2194341,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-blanket-that-remembered-stories_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-blanket-that-remembered-stories_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 3,
+      "story_id": "the-boy-who-collected-echoes",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-collected-echoes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-collected-echoes_1.png",
+          "size_bytes": 3185942,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-collected-echoes_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-collected-echoes_2.png",
+          "size_bytes": 1850415,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-collected-echoes_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-collected-echoes_3.png",
+          "size_bytes": 1992822,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-collected-echoes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-collected-echoes_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 4,
+      "story_id": "the-boy-who-could-hear-stars",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-could-hear-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-could-hear-stars_1.png",
+          "size_bytes": 2892687,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-could-hear-stars_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-could-hear-stars_2.png",
+          "size_bytes": 3173603,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-could-hear-stars_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-could-hear-stars_3.png",
+          "size_bytes": 2905224,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-could-hear-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-could-hear-stars_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 5,
+      "story_id": "the-boy-who-sketched-the-wind",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-sketched-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-sketched-the-wind_1.png",
+          "size_bytes": 3233155,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-sketched-the-wind_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-sketched-the-wind_2.png",
+          "size_bytes": 2342206,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-sketched-the-wind_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-sketched-the-wind_3.png",
+          "size_bytes": 3149289,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-sketched-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-sketched-the-wind_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 6,
+      "story_id": "the-boy-who-taught-the-stars-to-dance",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-taught-the-stars-to-dance_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-taught-the-stars-to-dance_1.png",
+          "size_bytes": 3568742,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-taught-the-stars-to-dance_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-taught-the-stars-to-dance_2.png",
+          "size_bytes": 3407547,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-taught-the-stars-to-dance_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-taught-the-stars-to-dance_3.png",
+          "size_bytes": 3143626,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-taught-the-stars-to-dance_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-taught-the-stars-to-dance_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 7,
+      "story_id": "the-boy-and-the-book-that-could-fly",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-and-the-book-that-could-fly_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-and-the-book-that-could-fly_1.png",
+          "size_bytes": 3190516,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-and-the-book-that-could-fly_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-and-the-book-that-could-fly_2.png",
+          "size_bytes": 2264836,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-and-the-book-that-could-fly_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-and-the-book-that-could-fly_3.png",
+          "size_bytes": 2222589,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-and-the-book-that-could-fly_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-and-the-book-that-could-fly_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 8,
+      "story_id": "the-boy-and-the-night-that-wouldnt-end",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-and-the-night-that-wouldnt-end_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-and-the-night-that-wouldnt-end_1.png",
+          "size_bytes": 2910940,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-and-the-night-that-wouldnt-end_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-and-the-night-that-wouldnt-end_2.png",
+          "size_bytes": 3203272,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-and-the-night-that-wouldnt-end_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-and-the-night-that-wouldnt-end_3.png",
+          "size_bytes": 2058028,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-and-the-night-that-wouldnt-end_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-and-the-night-that-wouldnt-end_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 9,
+      "story_id": "the-bridge-across-the-sun",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-bridge-across-the-sun_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bridge-across-the-sun_1.png",
+          "size_bytes": 3304949,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-bridge-across-the-sun_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bridge-across-the-sun_2.png",
+          "size_bytes": 2970057,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-bridge-across-the-sun_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bridge-across-the-sun_3.png",
+          "size_bytes": 2093987,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-bridge-across-the-sun_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-bridge-across-the-sun_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 10,
+      "story_id": "the-bridge-that-only-appeared-at-sunset",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-bridge-that-only-appeared-at-sunset_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bridge-that-only-appeared-at-sunset_1.png",
+          "size_bytes": 3281066,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-bridge-that-only-appeared-at-sunset_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bridge-that-only-appeared-at-sunset_2.png",
+          "size_bytes": 3058314,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-bridge-that-only-appeared-at-sunset_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bridge-that-only-appeared-at-sunset_3.png",
+          "size_bytes": 1730936,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-bridge-that-only-appeared-at-sunset_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-bridge-that-only-appeared-at-sunset_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 11,
+      "story_id": "the-candy-lab-that-got-carried-away",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-candy-lab-that-got-carried-away_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-candy-lab-that-got-carried-away_1.png",
+          "size_bytes": 3603598,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-candy-lab-that-got-carried-away_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-candy-lab-that-got-carried-away_2.png",
+          "size_bytes": 3173390,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-candy-lab-that-got-carried-away_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-candy-lab-that-got-carried-away_3.png",
+          "size_bytes": 3146435,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-candy-lab-that-got-carried-away_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-candy-lab-that-got-carried-away_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 12,
+      "story_id": "the-cat-who-rode-the-wind",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-cat-who-rode-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cat-who-rode-the-wind_1.png",
+          "size_bytes": 2984506,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-cat-who-rode-the-wind_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cat-who-rode-the-wind_2.png",
+          "size_bytes": 3227049,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-cat-who-rode-the-wind_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cat-who-rode-the-wind_3.png",
+          "size_bytes": 2018036,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-cat-who-rode-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-cat-who-rode-the-wind_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 13,
+      "story_id": "the-clockmakers-magical-hourglass",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-clockmakers-magical-hourglass_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-clockmakers-magical-hourglass_1.png",
+          "size_bytes": 2970742,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-clockmakers-magical-hourglass_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-clockmakers-magical-hourglass_2.png",
+          "size_bytes": 2948149,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-clockmakers-magical-hourglass_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-clockmakers-magical-hourglass_3.png",
+          "size_bytes": 3248662,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-clockmakers-magical-hourglass_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-clockmakers-magical-hourglass_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 14,
+      "story_id": "the-cloud-catchers-kite",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-cloud-catchers-kite_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-catchers-kite_1.png",
+          "size_bytes": 3084768,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-cloud-catchers-kite_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-catchers-kite_2.png",
+          "size_bytes": 2196740,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-cloud-catchers-kite_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-catchers-kite_3.png",
+          "size_bytes": 1929245,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-cloud-catchers-kite_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-cloud-catchers-kite_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 15,
+      "story_id": "the-cloud-that-carried-wishes",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-cloud-that-carried-wishes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-that-carried-wishes_1.png",
+          "size_bytes": 2968826,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-cloud-that-carried-wishes_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-that-carried-wishes_2.png",
+          "size_bytes": 2940448,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-cloud-that-carried-wishes_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-that-carried-wishes_3.png",
+          "size_bytes": 3448758,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-cloud-that-carried-wishes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-cloud-that-carried-wishes_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 16,
+      "story_id": "the-cloud-that-wanted-a-name",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-cloud-that-wanted-a-name_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-that-wanted-a-name_1.png",
+          "size_bytes": 3239922,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-cloud-that-wanted-a-name_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-that-wanted-a-name_2.png",
+          "size_bytes": 3443102,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-cloud-that-wanted-a-name_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cloud-that-wanted-a-name_3.png",
+          "size_bytes": 3176976,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-cloud-that-wanted-a-name_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-cloud-that-wanted-a-name_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 17,
+      "story_id": "the-cool-selfie",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-cool-selfie_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cool-selfie_1.png",
+          "size_bytes": 2980084,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-cool-selfie_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cool-selfie_2.png",
+          "size_bytes": 2426860,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-cool-selfie_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-cool-selfie_3.png",
+          "size_bytes": 3709089,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-cool-selfie_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-cool-selfie_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 18,
+      "story_id": "the-dragon-who-found-his-fire",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-dragon-who-found-his-fire_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-dragon-who-found-his-fire_1.png",
+          "size_bytes": 2213336,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-dragon-who-found-his-fire_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-dragon-who-found-his-fire_2.png",
+          "size_bytes": 1990934,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-dragon-who-found-his-fire_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-dragon-who-found-his-fire_3.png",
+          "size_bytes": 2015258,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-dragon-who-found-his-fire_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-dragon-who-found-his-fire_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 19,
+      "story_id": "the-feather-that-waited",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-feather-that-waited_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-feather-that-waited_1.png",
+          "size_bytes": 3261501,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-feather-that-waited_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-feather-that-waited_2.png",
+          "size_bytes": 2362347,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-feather-that-waited_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-feather-that-waited_3.png",
+          "size_bytes": 2139669,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-feather-that-waited_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-feather-that-waited_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 20,
+      "story_id": "the-flying-elephant",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-flying-elephant_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-flying-elephant_1.png",
+          "size_bytes": 1926502,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-flying-elephant_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-flying-elephant_2.png",
+          "size_bytes": 2376139,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-flying-elephant_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-flying-elephant_3.png",
+          "size_bytes": 2188613,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-flying-elephant_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-flying-elephant_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 21,
+      "story_id": "the-forest-that-remembered",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-forest-that-remembered_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-forest-that-remembered_1.png",
+          "size_bytes": 2164818,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-forest-that-remembered_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-forest-that-remembered_2.png",
+          "size_bytes": 2142786,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-forest-that-remembered_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-forest-that-remembered_3.png",
+          "size_bytes": 2099157,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-forest-that-remembered_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-forest-that-remembered_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 22,
+      "story_id": "the-forest-that-sang-back",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-forest-that-sang-back_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-forest-that-sang-back_1.png",
+          "size_bytes": 3078124,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-forest-that-sang-back_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-forest-that-sang-back_2.png",
+          "size_bytes": 1875043,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-forest-that-sang-back_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-forest-that-sang-back_3.png",
+          "size_bytes": 2855421,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-forest-that-sang-back_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-forest-that-sang-back_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 23,
+      "story_id": "the-fox-who-couldnt-lie",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-fox-who-couldnt-lie_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-fox-who-couldnt-lie_1.png",
+          "size_bytes": 3178033,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-fox-who-couldnt-lie_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-fox-who-couldnt-lie_2.png",
+          "size_bytes": 2852313,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-fox-who-couldnt-lie_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-fox-who-couldnt-lie_3.png",
+          "size_bytes": 2009221,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-fox-who-couldnt-lie_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-fox-who-couldnt-lie_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 24,
+      "story_id": "the-fox-who-forgot-how-to-sneak",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-fox-who-forgot-how-to-sneak_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-fox-who-forgot-how-to-sneak_1.png",
+          "size_bytes": 3305061,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-fox-who-forgot-how-to-sneak_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-fox-who-forgot-how-to-sneak_2.png",
+          "size_bytes": 2150772,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-fox-who-forgot-how-to-sneak_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-fox-who-forgot-how-to-sneak_3.png",
+          "size_bytes": 3362059,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-fox-who-forgot-how-to-sneak_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-fox-who-forgot-how-to-sneak_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 25,
+      "story_id": "the-garden-of-forgotten-things",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-garden-of-forgotten-things_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-garden-of-forgotten-things_1.png",
+          "size_bytes": 3398543,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-garden-of-forgotten-things_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-garden-of-forgotten-things_2.png",
+          "size_bytes": 2138617,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-garden-of-forgotten-things_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-garden-of-forgotten-things_3.png",
+          "size_bytes": 1850379,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-garden-of-forgotten-things_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-garden-of-forgotten-things_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 26,
+      "story_id": "the-girl-who-bottled-sunshine",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-bottled-sunshine_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-bottled-sunshine_1.png",
+          "size_bytes": 2788102,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-bottled-sunshine_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-bottled-sunshine_2.png",
+          "size_bytes": 2241963,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-bottled-sunshine_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-bottled-sunshine_3.png",
+          "size_bytes": 2235019,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-bottled-sunshine_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-bottled-sunshine_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 27,
+      "story_id": "the-girl-who-brought-colors-to-the-sky",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-brought-colors-to-the-sky_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-brought-colors-to-the-sky_1.png",
+          "size_bytes": 3235651,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-brought-colors-to-the-sky_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-brought-colors-to-the-sky_2.png",
+          "size_bytes": 2245639,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-brought-colors-to-the-sky_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-brought-colors-to-the-sky_3.png",
+          "size_bytes": 2355363,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-brought-colors-to-the-sky_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-brought-colors-to-the-sky_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 28,
+      "story_id": "the-girl-who-caught-the-sunlight",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-caught-the-sunlight_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-caught-the-sunlight_1.png",
+          "size_bytes": 2730263,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-caught-the-sunlight_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-caught-the-sunlight_2.png",
+          "size_bytes": 3246863,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-caught-the-sunlight_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-caught-the-sunlight_3.png",
+          "size_bytes": 3139986,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-caught-the-sunlight_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-caught-the-sunlight_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 29,
+      "story_id": "the-girl-who-collected-echoes",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-collected-echoes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-collected-echoes_1.png",
+          "size_bytes": 1983200,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-collected-echoes_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-collected-echoes_2.png",
+          "size_bytes": 2780462,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-collected-echoes_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-collected-echoes_3.png",
+          "size_bytes": 3047554,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-collected-echoes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-collected-echoes_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 30,
+      "story_id": "the-girl-who-collected-raindrops",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-collected-raindrops_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-collected-raindrops_1.png",
+          "size_bytes": 1950982,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-collected-raindrops_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-collected-raindrops_2.png",
+          "size_bytes": 3306842,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-collected-raindrops_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-collected-raindrops_3.png",
+          "size_bytes": 2843344,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-collected-raindrops_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-collected-raindrops_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 31,
+      "story_id": "the-girl-who-could-see-music",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-could-see-music_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-could-see-music_1.png",
+          "size_bytes": 3374143,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-could-see-music_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-could-see-music_2.png",
+          "size_bytes": 2091072,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-could-see-music_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-could-see-music_3.png",
+          "size_bytes": 2154554,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-could-see-music_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-could-see-music_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 32,
+      "story_id": "the-girl-who-could-speak-to-animals",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-could-speak-to-animals_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-could-speak-to-animals_1.png",
+          "size_bytes": 3021058,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-could-speak-to-animals_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-could-speak-to-animals_2.png",
+          "size_bytes": 2297357,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-could-speak-to-animals_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-could-speak-to-animals_3.png",
+          "size_bytes": 2363995,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-could-speak-to-animals_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-could-speak-to-animals_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 33,
+      "story_id": "the-girl-who-danced-with-the-wind",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-danced-with-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-danced-with-the-wind_1.png",
+          "size_bytes": 2959443,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-danced-with-the-wind_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-danced-with-the-wind_2.png",
+          "size_bytes": 2319710,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-danced-with-the-wind_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-danced-with-the-wind_3.png",
+          "size_bytes": 3333421,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-danced-with-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-danced-with-the-wind_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 34,
+      "story_id": "the-girl-who-found-time",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-found-time_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-time_1.png",
+          "size_bytes": 3148305,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-found-time_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-time_2.png",
+          "size_bytes": 3410648,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-found-time_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-time_3.png",
+          "size_bytes": 3153087,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-found-time_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-found-time_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 35,
+      "story_id": "the-girl-who-found-a-poem-in-the-rain",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-found-a-poem-in-the-rain_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-a-poem-in-the-rain_1.png",
+          "size_bytes": 2918211,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-found-a-poem-in-the-rain_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-a-poem-in-the-rain_2.png",
+          "size_bytes": 3072442,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-found-a-poem-in-the-rain_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-a-poem-in-the-rain_3.png",
+          "size_bytes": 2491497,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-found-a-poem-in-the-rain_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-found-a-poem-in-the-rain_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 36,
+      "story_id": "the-girl-who-found-the-ending",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-found-the-ending_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-the-ending_1.png",
+          "size_bytes": 3050241,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-found-the-ending_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-the-ending_2.png",
+          "size_bytes": 1909355,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-found-the-ending_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-found-the-ending_3.png",
+          "size_bytes": 1783277,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-found-the-ending_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-found-the-ending_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 37,
+      "story_id": "the-girl-who-grew-rainbows",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-grew-rainbows_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-grew-rainbows_1.png",
+          "size_bytes": 3443447,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-grew-rainbows_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-grew-rainbows_2.png",
+          "size_bytes": 3047801,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-grew-rainbows_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-grew-rainbows_3.png",
+          "size_bytes": 3161281,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-grew-rainbows_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-grew-rainbows_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 38,
+      "story_id": "the-girl-who-hugged-the-wind",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-hugged-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-hugged-the-wind_1.png",
+          "size_bytes": 3147093,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-hugged-the-wind_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-hugged-the-wind_2.png",
+          "size_bytes": 2434497,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-hugged-the-wind_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-hugged-the-wind_3.png",
+          "size_bytes": 2487727,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-hugged-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-hugged-the-wind_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 39,
+      "story_id": "the-girl-who-painted-music",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-painted-music_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-music_1.png",
+          "size_bytes": 3046734,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-painted-music_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-music_2.png",
+          "size_bytes": 2515376,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-painted-music_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-music_3.png",
+          "size_bytes": 3710144,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-painted-music_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-painted-music_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 40,
+      "story_id": "the-girl-who-painted-stars",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-painted-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-stars_1.png",
+          "size_bytes": 3325305,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-painted-stars_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-stars_2.png",
+          "size_bytes": 2351009,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-painted-stars_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-stars_3.png",
+          "size_bytes": 3188943,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-painted-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-painted-stars_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 41,
+      "story_id": "the-girl-who-painted-with-butterflies",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-painted-with-butterflies_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-with-butterflies_1.png",
+          "size_bytes": 3405913,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-painted-with-butterflies_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-with-butterflies_2.png",
+          "size_bytes": 3342344,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-painted-with-butterflies_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-painted-with-butterflies_3.png",
+          "size_bytes": 3194000,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-painted-with-butterflies_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-painted-with-butterflies_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 42,
+      "story_id": "the-girl-who-read-by-moonlight",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-read-by-moonlight_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-read-by-moonlight_1.png",
+          "size_bytes": 2654197,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-read-by-moonlight_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-read-by-moonlight_2.png",
+          "size_bytes": 2841213,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-read-by-moonlight_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-read-by-moonlight_3.png",
+          "size_bytes": 2840057,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-read-by-moonlight_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-read-by-moonlight_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 43,
+      "story_id": "the-girl-who-spoke-to-dreams",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-spoke-to-dreams_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-spoke-to-dreams_1.png",
+          "size_bytes": 3025092,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-spoke-to-dreams_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-spoke-to-dreams_2.png",
+          "size_bytes": 2911620,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-spoke-to-dreams_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-spoke-to-dreams_3.png",
+          "size_bytes": 2900089,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-spoke-to-dreams_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-spoke-to-dreams_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 44,
+      "story_id": "the-girl-who-traded-wishes",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-traded-wishes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-traded-wishes_1.png",
+          "size_bytes": 3297053,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-traded-wishes_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-traded-wishes_2.png",
+          "size_bytes": 2910818,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-traded-wishes_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-traded-wishes_3.png",
+          "size_bytes": 2891062,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-traded-wishes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-traded-wishes_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 45,
+      "story_id": "the-girl-who-turned-shadows-into-light",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-turned-shadows-into-light_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-turned-shadows-into-light_1.png",
+          "size_bytes": 3223972,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-turned-shadows-into-light_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-turned-shadows-into-light_2.png",
+          "size_bytes": 2534491,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-turned-shadows-into-light_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-turned-shadows-into-light_3.png",
+          "size_bytes": 2886872,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-turned-shadows-into-light_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-turned-shadows-into-light_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 46,
+      "story_id": "the-girl-who-whistled-to-the-wind",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-whistled-to-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-whistled-to-the-wind_1.png",
+          "size_bytes": 3122406,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-whistled-to-the-wind_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-whistled-to-the-wind_2.png",
+          "size_bytes": 2961317,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-whistled-to-the-wind_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-whistled-to-the-wind_3.png",
+          "size_bytes": 2745756,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-whistled-to-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-whistled-to-the-wind_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 47,
+      "story_id": "the-girl-who-woke-the-mountains",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-woke-the-mountains_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-woke-the-mountains_1.png",
+          "size_bytes": 3183630,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-woke-the-mountains_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-woke-the-mountains_2.png",
+          "size_bytes": 2191099,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-woke-the-mountains_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-woke-the-mountains_3.png",
+          "size_bytes": 2286866,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-woke-the-mountains_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-woke-the-mountains_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 48,
+      "story_id": "the-girl-who-wrote-letters-to-the-stars",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-wrote-letters-to-the-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-letters-to-the-stars_1.png",
+          "size_bytes": 3041227,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-wrote-letters-to-the-stars_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-letters-to-the-stars_2.png",
+          "size_bytes": 3006868,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-wrote-letters-to-the-stars_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-letters-to-the-stars_3.png",
+          "size_bytes": 3143270,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-wrote-letters-to-the-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-wrote-letters-to-the-stars_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 49,
+      "story_id": "the-girl-who-wrote-the-sky",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-wrote-the-sky_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-the-sky_1.png",
+          "size_bytes": 2970484,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-wrote-the-sky_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-the-sky_2.png",
+          "size_bytes": 2892450,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-wrote-the-sky_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-the-sky_3.png",
+          "size_bytes": 3065477,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-wrote-the-sky_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-wrote-the-sky_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 50,
+      "story_id": "the-girl-who-wrote-to-the-wind",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-who-wrote-to-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-to-the-wind_1.png",
+          "size_bytes": 3113739,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-who-wrote-to-the-wind_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-to-the-wind_2.png",
+          "size_bytes": 3179622,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-who-wrote-to-the-wind_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-who-wrote-to-the-wind_3.png",
+          "size_bytes": 3250407,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-who-wrote-to-the-wind_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-who-wrote-to-the-wind_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 51,
+      "story_id": "the-girl-and-the-dream-that-never-faded",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-and-the-dream-that-never-faded_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-dream-that-never-faded_1.png",
+          "size_bytes": 3594716,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-and-the-dream-that-never-faded_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-dream-that-never-faded_2.png",
+          "size_bytes": 2869123,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-and-the-dream-that-never-faded_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-dream-that-never-faded_3.png",
+          "size_bytes": 1823205,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-and-the-dream-that-never-faded_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-and-the-dream-that-never-faded_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 52,
+      "story_id": "the-girl-and-the-feather-that-floated-forever",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-and-the-feather-that-floated-forever_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-feather-that-floated-forever_1.png",
+          "size_bytes": 3089760,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-and-the-feather-that-floated-forever_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-feather-that-floated-forever_2.png",
+          "size_bytes": 1842117,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-and-the-feather-that-floated-forever_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-feather-that-floated-forever_3.png",
+          "size_bytes": 3177750,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-and-the-feather-that-floated-forever_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-and-the-feather-that-floated-forever_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 53,
+      "story_id": "the-girl-and-the-magic-mirror",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-and-the-magic-mirror_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-magic-mirror_1.png",
+          "size_bytes": 2846366,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-and-the-magic-mirror_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-magic-mirror_2.png",
+          "size_bytes": 3158740,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-and-the-magic-mirror_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-magic-mirror_3.png",
+          "size_bytes": 2994015,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-and-the-magic-mirror_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-and-the-magic-mirror_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 54,
+      "story_id": "the-girl-and-the-magic-violin",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-and-the-magic-violin_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-magic-violin_1.png",
+          "size_bytes": 2734545,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-and-the-magic-violin_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-magic-violin_2.png",
+          "size_bytes": 3052628,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-and-the-magic-violin_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-magic-violin_3.png",
+          "size_bytes": 2836154,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-and-the-magic-violin_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-and-the-magic-violin_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 55,
+      "story_id": "the-girl-and-the-map-of-dreams",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-and-the-map-of-dreams_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-map-of-dreams_1.png",
+          "size_bytes": 2880926,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-and-the-map-of-dreams_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-map-of-dreams_2.png",
+          "size_bytes": 2674489,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-and-the-map-of-dreams_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-and-the-map-of-dreams_3.png",
+          "size_bytes": 3202291,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-and-the-map-of-dreams_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-and-the-map-of-dreams_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 56,
+      "story_id": "the-girl-with-lantern-eyes",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-with-lantern-eyes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-lantern-eyes_1.png",
+          "size_bytes": 2735422,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-with-lantern-eyes_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-lantern-eyes_2.png",
+          "size_bytes": 2393990,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-with-lantern-eyes_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-lantern-eyes_3.png",
+          "size_bytes": 1890708,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-with-lantern-eyes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-with-lantern-eyes_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 57,
+      "story_id": "the-girl-with-the-feathered-hat",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-with-the-feathered-hat_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-the-feathered-hat_1.png",
+          "size_bytes": 3622224,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-with-the-feathered-hat_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-the-feathered-hat_2.png",
+          "size_bytes": 3072907,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-with-the-feathered-hat_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-the-feathered-hat_3.png",
+          "size_bytes": 3110022,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-with-the-feathered-hat_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-with-the-feathered-hat_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 58,
+      "story_id": "the-girl-with-the-moon-on-her-dress",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-girl-with-the-moon-on-her-dress_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-the-moon-on-her-dress_1.png",
+          "size_bytes": 3020402,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-girl-with-the-moon-on-her-dress_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-the-moon-on-her-dress_2.png",
+          "size_bytes": 3350828,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-girl-with-the-moon-on-her-dress_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-girl-with-the-moon-on-her-dress_3.png",
+          "size_bytes": 2966451,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-girl-with-the-moon-on-her-dress_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-girl-with-the-moon-on-her-dress_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 59,
+      "story_id": "the-hidden-door",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-hidden-door_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-hidden-door_1.png",
+          "size_bytes": 3054366,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-hidden-door_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-hidden-door_2.png",
+          "size_bytes": 3028269,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-hidden-door_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-hidden-door_3.png",
+          "size_bytes": 3150243,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-hidden-door_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-hidden-door_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 60,
+      "story_id": "the-invisible-thread",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-invisible-thread_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-invisible-thread_1.png",
+          "size_bytes": 2761760,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-invisible-thread_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-invisible-thread_2.png",
+          "size_bytes": 3089512,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-invisible-thread_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-invisible-thread_3.png",
+          "size_bytes": 2698578,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-invisible-thread_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-invisible-thread_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 61,
+      "story_id": "the-island-of-lost-balloons",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-island-of-lost-balloons_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-island-of-lost-balloons_1.png",
+          "size_bytes": 2868086,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-island-of-lost-balloons_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-island-of-lost-balloons_2.png",
+          "size_bytes": 2967032,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-island-of-lost-balloons_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-island-of-lost-balloons_3.png",
+          "size_bytes": 3204743,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-island-of-lost-balloons_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-island-of-lost-balloons_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 62,
+      "story_id": "the-kite-that-knew-the-way",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-kite-that-knew-the-way_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-kite-that-knew-the-way_1.png",
+          "size_bytes": 3293666,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-kite-that-knew-the-way_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-kite-that-knew-the-way_2.png",
+          "size_bytes": 3301281,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-kite-that-knew-the-way_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-kite-that-knew-the-way_3.png",
+          "size_bytes": 3247092,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-kite-that-knew-the-way_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-kite-that-knew-the-way_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 63,
+      "story_id": "the-lantern-makers-secret",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-lantern-makers-secret_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lantern-makers-secret_1.png",
+          "size_bytes": 1949345,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-lantern-makers-secret_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lantern-makers-secret_2.png",
+          "size_bytes": 1740690,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-lantern-makers-secret_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lantern-makers-secret_3.png",
+          "size_bytes": 1587105,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-lantern-makers-secret_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-lantern-makers-secret_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 64,
+      "story_id": "the-lantern-that-floated-upward",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-lantern-that-floated-upward_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lantern-that-floated-upward_1.png",
+          "size_bytes": 3117140,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-lantern-that-floated-upward_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lantern-that-floated-upward_2.png",
+          "size_bytes": 2850534,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-lantern-that-floated-upward_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lantern-that-floated-upward_3.png",
+          "size_bytes": 3153789,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-lantern-that-floated-upward_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-lantern-that-floated-upward_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 65,
+      "story_id": "the-letter-the-moon-never-sent",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-letter-the-moon-never-sent_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-letter-the-moon-never-sent_1.png",
+          "size_bytes": 2817330,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-letter-the-moon-never-sent_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-letter-the-moon-never-sent_2.png",
+          "size_bytes": 2667511,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-letter-the-moon-never-sent_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-letter-the-moon-never-sent_3.png",
+          "size_bytes": 2654068,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-letter-the-moon-never-sent_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-letter-the-moon-never-sent_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 66,
+      "story_id": "the-library-of-invisible-books",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-library-of-invisible-books_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-library-of-invisible-books_1.png",
+          "size_bytes": 2815829,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-library-of-invisible-books_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-library-of-invisible-books_2.png",
+          "size_bytes": 1914726,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-library-of-invisible-books_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-library-of-invisible-books_3.png",
+          "size_bytes": 2915761,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-library-of-invisible-books_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-library-of-invisible-books_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 67,
+      "story_id": "the-light-bulb-who-thought-too-much",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-light-bulb-who-thought-too-much_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-light-bulb-who-thought-too-much_1.png",
+          "size_bytes": 3090215,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-light-bulb-who-thought-too-much_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-light-bulb-who-thought-too-much_2.png",
+          "size_bytes": 2098163,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-light-bulb-who-thought-too-much_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-light-bulb-who-thought-too-much_3.png",
+          "size_bytes": 3150079,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-light-bulb-who-thought-too-much_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-light-bulb-who-thought-too-much_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 68,
+      "story_id": "the-lion-who-lost-his-roar",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-lion-who-lost-his-roar_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lion-who-lost-his-roar_1.png",
+          "size_bytes": 3041910,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-lion-who-lost-his-roar_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lion-who-lost-his-roar_2.png",
+          "size_bytes": 3093576,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-lion-who-lost-his-roar_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lion-who-lost-his-roar_3.png",
+          "size_bytes": 1861594,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-lion-who-lost-his-roar_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-lion-who-lost-his-roar_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 69,
+      "story_id": "the-little-llama-who-learned-to-dance",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-little-llama-who-learned-to-dance_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-little-llama-who-learned-to-dance_1.png",
+          "status": "missing"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-little-llama-who-learned-to-dance_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-little-llama-who-learned-to-dance_2.png",
+          "status": "missing"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-little-llama-who-learned-to-dance_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-little-llama-who-learned-to-dance_3.png",
+          "status": "missing"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/logo.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/logo.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 70,
+      "story_id": "the-lost-buttons-journey",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-lost-buttons-journey_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lost-buttons-journey_1.png",
+          "size_bytes": 3406025,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-lost-buttons-journey_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lost-buttons-journey_2.png",
+          "size_bytes": 3312256,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-lost-buttons-journey_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-lost-buttons-journey_3.png",
+          "size_bytes": 2114379,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-lost-buttons-journey_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-lost-buttons-journey_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 71,
+      "story_id": "the-magical-paintbrush",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-magical-paintbrush_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-magical-paintbrush_1.png",
+          "size_bytes": 3406606,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-magical-paintbrush_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-magical-paintbrush_2.png",
+          "size_bytes": 2173089,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-magical-paintbrush_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-magical-paintbrush_3.png",
+          "size_bytes": 3424603,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-magical-paintbrush_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-magical-paintbrush_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 72,
+      "story_id": "the-melody-of-the-moonlight",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-melody-of-the-moonlight_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-melody-of-the-moonlight_1.png",
+          "size_bytes": 2797313,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-melody-of-the-moonlight_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-melody-of-the-moonlight_2.png",
+          "size_bytes": 2153127,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-melody-of-the-moonlight_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-melody-of-the-moonlight_3.png",
+          "size_bytes": 3266538,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-melody-of-the-moonlight_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-melody-of-the-moonlight_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 73,
+      "story_id": "the-memory-tree",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-memory-tree_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-memory-tree_1.png",
+          "size_bytes": 3046259,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-memory-tree_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-memory-tree_2.png",
+          "size_bytes": 2023300,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-memory-tree_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-memory-tree_3.png",
+          "size_bytes": 3207378,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-memory-tree_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-memory-tree_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 74,
+      "story_id": "the-mermaid-who-loved-the-stars",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-mermaid-who-loved-the-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mermaid-who-loved-the-stars_1.png",
+          "size_bytes": 2958235,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-mermaid-who-loved-the-stars_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mermaid-who-loved-the-stars_2.png",
+          "size_bytes": 2507049,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-mermaid-who-loved-the-stars_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mermaid-who-loved-the-stars_3.png",
+          "size_bytes": 3030085,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-mermaid-who-loved-the-stars_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-mermaid-who-loved-the-stars_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 75,
+      "story_id": "the-mermaids-forgotten-song",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-mermaids-forgotten-song_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mermaids-forgotten-song_1.png",
+          "size_bytes": 2741667,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-mermaids-forgotten-song_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mermaids-forgotten-song_2.png",
+          "size_bytes": 1924623,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-mermaids-forgotten-song_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mermaids-forgotten-song_3.png",
+          "size_bytes": 2783522,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-mermaids-forgotten-song_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-mermaids-forgotten-song_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 76,
+      "story_id": "the-mirror-that-showed-tomorrow",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-mirror-that-showed-tomorrow_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mirror-that-showed-tomorrow_1.png",
+          "size_bytes": 2824126,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-mirror-that-showed-tomorrow_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mirror-that-showed-tomorrow_2.png",
+          "size_bytes": 2812668,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-mirror-that-showed-tomorrow_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mirror-that-showed-tomorrow_3.png",
+          "size_bytes": 2570201,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-mirror-that-showed-tomorrow_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-mirror-that-showed-tomorrow_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 77,
+      "story_id": "the-mirror-that-showed-who-you-could-be",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-mirror-that-showed-who-you-could-be_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mirror-that-showed-who-you-could-be_1.png",
+          "size_bytes": 2984682,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-mirror-that-showed-who-you-could-be_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mirror-that-showed-who-you-could-be_2.png",
+          "size_bytes": 2095769,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-mirror-that-showed-who-you-could-be_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mirror-that-showed-who-you-could-be_3.png",
+          "size_bytes": 3249666,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-mirror-that-showed-who-you-could-be_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-mirror-that-showed-who-you-could-be_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 78,
+      "story_id": "the-moon-that-waited",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-moon-that-waited_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-moon-that-waited_1.png",
+          "size_bytes": 2935541,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-moon-that-waited_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-moon-that-waited_2.png",
+          "size_bytes": 3264520,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-moon-that-waited_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-moon-that-waited_3.png",
+          "size_bytes": 2906349,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-moon-that-waited_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-moon-that-waited_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 79,
+      "story_id": "the-mountain-that-could-feel-feelings",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-mountain-that-could-feel-feelings_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mountain-that-could-feel-feelings_1.png",
+          "size_bytes": 3168096,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-mountain-that-could-feel-feelings_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mountain-that-could-feel-feelings_2.png",
+          "size_bytes": 2960764,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-mountain-that-could-feel-feelings_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-mountain-that-could-feel-feelings_3.png",
+          "size_bytes": 1825953,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-mountain-that-could-feel-feelings_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-mountain-that-could-feel-feelings_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 80,
+      "story_id": "the-painter-of-forgotten-dreams",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-painter-of-forgotten-dreams_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-painter-of-forgotten-dreams_1.png",
+          "size_bytes": 3174790,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-painter-of-forgotten-dreams_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-painter-of-forgotten-dreams_2.png",
+          "size_bytes": 3199207,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-painter-of-forgotten-dreams_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-painter-of-forgotten-dreams_3.png",
+          "size_bytes": 2985601,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-painter-of-forgotten-dreams_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-painter-of-forgotten-dreams_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 81,
+      "story_id": "the-paper-swans-wish",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-paper-swans-wish_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-paper-swans-wish_1.png",
+          "size_bytes": 1751124,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-paper-swans-wish_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-paper-swans-wish_2.png",
+          "size_bytes": 2570093,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-paper-swans-wish_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-paper-swans-wish_3.png",
+          "size_bytes": 2780346,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-paper-swans-wish_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-paper-swans-wish_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 82,
+      "story_id": "the-pebble-that-changed-the-world",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-pebble-that-changed-the-world_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-pebble-that-changed-the-world_1.png",
+          "size_bytes": 2958583,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-pebble-that-changed-the-world_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-pebble-that-changed-the-world_2.png",
+          "size_bytes": 3007589,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-pebble-that-changed-the-world_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-pebble-that-changed-the-world_3.png",
+          "size_bytes": 3039723,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-pebble-that-changed-the-world_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-pebble-that-changed-the-world_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 83,
+      "story_id": "the-pencil-that-could-draw-the-future",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-pencil-that-could-draw-the-future_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-pencil-that-could-draw-the-future_1.png",
+          "size_bytes": 3452257,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-pencil-that-could-draw-the-future_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-pencil-that-could-draw-the-future_2.png",
+          "size_bytes": 2127809,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-pencil-that-could-draw-the-future_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-pencil-that-could-draw-the-future_3.png",
+          "size_bytes": 2089870,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-pencil-that-could-draw-the-future_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-pencil-that-could-draw-the-future_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 84,
+      "story_id": "the-rain-that-remembered-her-name",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-rain-that-remembered-her-name_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-rain-that-remembered-her-name_1.png",
+          "size_bytes": 3214658,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-rain-that-remembered-her-name_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-rain-that-remembered-her-name_2.png",
+          "size_bytes": 1962762,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-rain-that-remembered-her-name_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-rain-that-remembered-her-name_3.png",
+          "size_bytes": 3394763,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-rain-that-remembered-her-name_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-rain-that-remembered-her-name_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 85,
+      "story_id": "the-robot-with-a-heart",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-robot-with-a-heart_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-robot-with-a-heart_1.png",
+          "size_bytes": 2338650,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-robot-with-a-heart_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-robot-with-a-heart_2.png",
+          "size_bytes": 3425493,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-robot-with-a-heart_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-robot-with-a-heart_3.png",
+          "size_bytes": 2141520,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-robot-with-a-heart_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-robot-with-a-heart_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 86,
+      "story_id": "the-sandcastle-kings-crown",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-sandcastle-kings-crown_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-sandcastle-kings-crown_1.png",
+          "size_bytes": 3021774,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-sandcastle-kings-crown_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-sandcastle-kings-crown_2.png",
+          "size_bytes": 2190971,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-sandcastle-kings-crown_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-sandcastle-kings-crown_3.png",
+          "size_bytes": 2895192,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-sandcastle-kings-crown_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-sandcastle-kings-crown_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 87,
+      "story_id": "the-sandcastle-that-stayed",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-sandcastle-that-stayed_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-sandcastle-that-stayed_1.png",
+          "size_bytes": 3129694,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-sandcastle-that-stayed_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-sandcastle-that-stayed_2.png",
+          "size_bytes": 2961045,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-sandcastle-that-stayed_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-sandcastle-that-stayed_3.png",
+          "size_bytes": 1925785,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-sandcastle-that-stayed_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-sandcastle-that-stayed_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 88,
+      "story_id": "the-secret-suitcase",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-secret-suitcase_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-suitcase_1.png",
+          "size_bytes": 3311931,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-secret-suitcase_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-suitcase_2.png",
+          "size_bytes": 2278809,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-secret-suitcase_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-suitcase_3.png",
+          "size_bytes": 2819084,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-secret-suitcase_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-secret-suitcase_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 89,
+      "story_id": "the-secret-that-lived-in-the-tree",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-secret-that-lived-in-the-tree_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-that-lived-in-the-tree_1.png",
+          "size_bytes": 3194712,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-secret-that-lived-in-the-tree_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-that-lived-in-the-tree_2.png",
+          "size_bytes": 2740150,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-secret-that-lived-in-the-tree_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-that-lived-in-the-tree_3.png",
+          "size_bytes": 2109855,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-secret-that-lived-in-the-tree_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-secret-that-lived-in-the-tree_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 90,
+      "story_id": "the-secret-of-snowflake",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-secret-of-snowflake_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-of-snowflake_1.png",
+          "size_bytes": 3285735,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-secret-of-snowflake_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-of-snowflake_2.png",
+          "size_bytes": 3284802,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-secret-of-snowflake_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-of-snowflake_3.png",
+          "size_bytes": 2179320,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-secret-of-snowflake_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-secret-of-snowflake_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 91,
+      "story_id": "the-secret-of-the-singing-stones",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-secret-of-the-singing-stones_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-of-the-singing-stones_1.png",
+          "size_bytes": 3027047,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-secret-of-the-singing-stones_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-of-the-singing-stones_2.png",
+          "size_bytes": 2172960,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-secret-of-the-singing-stones_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-secret-of-the-singing-stones_3.png",
+          "size_bytes": 3110273,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-secret-of-the-singing-stones_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-secret-of-the-singing-stones_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 92,
+      "story_id": "the-shoes-that-danced-without-feet",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-shoes-that-danced-without-feet_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-shoes-that-danced-without-feet_1.png",
+          "size_bytes": 3259404,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-shoes-that-danced-without-feet_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-shoes-that-danced-without-feet_2.png",
+          "size_bytes": 2166544,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-shoes-that-danced-without-feet_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-shoes-that-danced-without-feet_3.png",
+          "size_bytes": 2222421,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-shoes-that-danced-without-feet_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-shoes-that-danced-without-feet_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 93,
+      "story_id": "the-silver-star-and-the-golden-bell",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-silver-star-and-the-golden-bell_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-silver-star-and-the-golden-bell_1.png",
+          "size_bytes": 3181071,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-silver-star-and-the-golden-bell_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-silver-star-and-the-golden-bell_2.png",
+          "size_bytes": 2270706,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-silver-star-and-the-golden-bell_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-silver-star-and-the-golden-bell_3.png",
+          "size_bytes": 2193570,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-silver-star-and-the-golden-bell_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-silver-star-and-the-golden-bell_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 94,
+      "story_id": "the-song-the-wind-carried",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-song-the-wind-carried_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-song-the-wind-carried_1.png",
+          "size_bytes": 2826812,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-song-the-wind-carried_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-song-the-wind-carried_2.png",
+          "size_bytes": 2790450,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-song-the-wind-carried_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-song-the-wind-carried_3.png",
+          "size_bytes": 2679562,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-song-the-wind-carried_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-song-the-wind-carried_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 95,
+      "story_id": "the-squirrels-mischievous-quest",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-squirrels-mischievous-quest_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-squirrels-mischievous-quest_1.png",
+          "size_bytes": 2057838,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-squirrels-mischievous-quest_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-squirrels-mischievous-quest_2.png",
+          "size_bytes": 3135335,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-squirrels-mischievous-quest_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-squirrels-mischievous-quest_3.png",
+          "size_bytes": 2259759,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-squirrels-mischievous-quest_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-squirrels-mischievous-quest_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 96,
+      "story_id": "the-star-that-followed-her-home",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-star-that-followed-her-home_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-that-followed-her-home_1.png",
+          "size_bytes": 3479621,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-star-that-followed-her-home_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-that-followed-her-home_2.png",
+          "size_bytes": 2626304,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-star-that-followed-her-home_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-that-followed-her-home_3.png",
+          "size_bytes": 1791908,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-star-that-followed-her-home_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-star-that-followed-her-home_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 97,
+      "story_id": "the-star-who-felt-lonely",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-star-who-felt-lonely_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-who-felt-lonely_1.png",
+          "size_bytes": 1731662,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-star-who-felt-lonely_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-who-felt-lonely_2.png",
+          "size_bytes": 2020194,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-star-who-felt-lonely_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-who-felt-lonely_3.png",
+          "size_bytes": 2115375,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-star-who-felt-lonely_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-star-who-felt-lonely_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 98,
+      "story_id": "the-star-in-the-jar",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-star-in-the-jar_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-in-the-jar_1.png",
+          "size_bytes": 2958887,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-star-in-the-jar_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-in-the-jar_2.png",
+          "size_bytes": 2195714,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-star-in-the-jar_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-star-in-the-jar_3.png",
+          "size_bytes": 3240262,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-star-in-the-jar_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-star-in-the-jar_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 99,
+      "story_id": "the-tale-of-the-talking-teacup",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-tale-of-the-talking-teacup_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-tale-of-the-talking-teacup_1.png",
+          "size_bytes": 2033099,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-tale-of-the-talking-teacup_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-tale-of-the-talking-teacup_2.png",
+          "size_bytes": 2484587,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-tale-of-the-talking-teacup_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-tale-of-the-talking-teacup_3.png",
+          "size_bytes": 2341409,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-tale-of-the-talking-teacup_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-tale-of-the-talking-teacup_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 100,
+      "story_id": "the-talking-tortoise",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-talking-tortoise_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-talking-tortoise_1.png",
+          "size_bytes": 3085222,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-talking-tortoise_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-talking-tortoise_2.png",
+          "size_bytes": 2336763,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-talking-tortoise_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-talking-tortoise_3.png",
+          "size_bytes": 2319710,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-talking-tortoise_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-talking-tortoise_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 101,
+      "story_id": "the-teddy-bears-secret-mission",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-teddy-bears-secret-mission_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-teddy-bears-secret-mission_1.png",
+          "size_bytes": 3130900,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-teddy-bears-secret-mission_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-teddy-bears-secret-mission_2.png",
+          "size_bytes": 2411068,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-teddy-bears-secret-mission_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-teddy-bears-secret-mission_3.png",
+          "size_bytes": 2325903,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-teddy-bears-secret-mission_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-teddy-bears-secret-mission_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 102,
+      "story_id": "the-tree-that-wrote-poems",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-tree-that-wrote-poems_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-tree-that-wrote-poems_1.png",
+          "size_bytes": 2060081,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-tree-that-wrote-poems_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-tree-that-wrote-poems_2.png",
+          "size_bytes": 2121026,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-tree-that-wrote-poems_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-tree-that-wrote-poems_3.png",
+          "size_bytes": 2231865,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-tree-that-wrote-poems_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-tree-that-wrote-poems_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 103,
+      "story_id": "the-treehouse-at-the-end-of-the-rainbow",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-treehouse-at-the-end-of-the-rainbow_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-treehouse-at-the-end-of-the-rainbow_1.png",
+          "size_bytes": 3142272,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-treehouse-at-the-end-of-the-rainbow_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-treehouse-at-the-end-of-the-rainbow_2.png",
+          "size_bytes": 2270872,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-treehouse-at-the-end-of-the-rainbow_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-treehouse-at-the-end-of-the-rainbow_3.png",
+          "size_bytes": 2378286,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-treehouse-at-the-end-of-the-rainbow_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-treehouse-at-the-end-of-the-rainbow_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 104,
+      "story_id": "the-umbrella-that-carried-wishes",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-umbrella-that-carried-wishes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-umbrella-that-carried-wishes_1.png",
+          "size_bytes": 3454675,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-umbrella-that-carried-wishes_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-umbrella-that-carried-wishes_2.png",
+          "size_bytes": 2822963,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-umbrella-that-carried-wishes_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-umbrella-that-carried-wishes_3.png",
+          "size_bytes": 2974074,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-umbrella-that-carried-wishes_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-umbrella-that-carried-wishes_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 105,
+      "story_id": "the-umbrella-that-knew-the-weather",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-umbrella-that-knew-the-weather_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-umbrella-that-knew-the-weather_1.png",
+          "size_bytes": 3080506,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-umbrella-that-knew-the-weather_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-umbrella-that-knew-the-weather_2.png",
+          "size_bytes": 2274070,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-umbrella-that-knew-the-weather_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-umbrella-that-knew-the-weather_3.png",
+          "size_bytes": 3145137,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-umbrella-that-knew-the-weather_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-umbrella-that-knew-the-weather_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 106,
+      "story_id": "the-voice-that-could-calm-storms",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-voice-that-could-calm-storms_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-voice-that-could-calm-storms_1.png",
+          "size_bytes": 3644965,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-voice-that-could-calm-storms_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-voice-that-could-calm-storms_2.png",
+          "size_bytes": 2455102,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-voice-that-could-calm-storms_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-voice-that-could-calm-storms_3.png",
+          "size_bytes": 3080277,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-voice-that-could-calm-storms_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-voice-that-could-calm-storms_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 107,
+      "story_id": "the-whispering-willow-tree",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-whispering-willow-tree_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-whispering-willow-tree_1.png",
+          "size_bytes": 2950468,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-whispering-willow-tree_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-whispering-willow-tree_2.png",
+          "size_bytes": 3216133,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-whispering-willow-tree_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-whispering-willow-tree_3.png",
+          "size_bytes": 3306992,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-whispering-willow-tree_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-whispering-willow-tree_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 108,
+      "story_id": "ruby-and-the-glow-worms",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "ruby-and-the-glow-worms_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\ruby-and-the-glow-worms_1.png",
+          "size_bytes": 1957945,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "ruby-and-the-glow-worms_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\ruby-and-the-glow-worms_2.png",
+          "size_bytes": 2946304,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "ruby-and-the-glow-worms_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\ruby-and-the-glow-worms_3.png",
+          "size_bytes": 2706366,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/ruby-and-the-glow-worms_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/ruby-and-the-glow-worms_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 109,
+      "story_id": "sophie-and-the-gentle-giant",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "sophie-and-the-gentle-giant_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\sophie-and-the-gentle-giant_1.png",
+          "size_bytes": 1935177,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "sophie-and-the-gentle-giant_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\sophie-and-the-gentle-giant_2.png",
+          "size_bytes": 2944433,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "sophie-and-the-gentle-giant_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\sophie-and-the-gentle-giant_3.png",
+          "size_bytes": 1941022,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/sophie-and-the-gentle-giant_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/sophie-and-the-gentle-giant_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 110,
+      "story_id": "the-balloon-that-knew-the-way",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-balloon-that-knew-the-way_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-balloon-that-knew-the-way_1.png",
+          "size_bytes": 3047483,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-balloon-that-knew-the-way_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-balloon-that-knew-the-way_2.png",
+          "size_bytes": 2165281,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-balloon-that-knew-the-way_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-balloon-that-knew-the-way_3.png",
+          "size_bytes": 2045496,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-balloon-that-knew-the-way_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-balloon-that-knew-the-way_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 111,
+      "story_id": "the-bee-and-the-birthday-wish",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-bee-and-the-birthday-wish_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bee-and-the-birthday-wish_1.png",
+          "size_bytes": 2998629,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-bee-and-the-birthday-wish_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bee-and-the-birthday-wish_2.png",
+          "size_bytes": 2147633,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-bee-and-the-birthday-wish_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bee-and-the-birthday-wish_3.png",
+          "size_bytes": 2155768,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-bee-and-the-birthday-wish_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-bee-and-the-birthday-wish_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 112,
+      "story_id": "the-bee-and-the-sunflower",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-bee-and-the-sunflower_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bee-and-the-sunflower_1.png",
+          "size_bytes": 3127613,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-bee-and-the-sunflower_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bee-and-the-sunflower_2.png",
+          "size_bytes": 2178749,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-bee-and-the-sunflower_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-bee-and-the-sunflower_3.png",
+          "size_bytes": 2186680,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-bee-and-the-sunflower_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-bee-and-the-sunflower_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 113,
+      "story_id": "the-boy-who-befriended-a-cloud",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-befriended-a-cloud_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-befriended-a-cloud_1.png",
+          "size_bytes": 3119745,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-befriended-a-cloud_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-befriended-a-cloud_2.png",
+          "size_bytes": 2225137,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-befriended-a-cloud_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-befriended-a-cloud_3.png",
+          "size_bytes": 2173650,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-befriended-a-cloud_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-befriended-a-cloud_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 114,
+      "story_id": "the-boy-who-borrowed-the-moon",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-borrowed-the-moon_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-borrowed-the-moon_1.png",
+          "size_bytes": 2479924,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-borrowed-the-moon_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-borrowed-the-moon_2.png",
+          "size_bytes": 3494842,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-borrowed-the-moon_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-borrowed-the-moon_3.png",
+          "size_bytes": 2940133,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-borrowed-the-moon_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-borrowed-the-moon_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 115,
+      "story_id": "the-boy-who-could-speak-colors",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-could-speak-colors_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-could-speak-colors_1.png",
+          "size_bytes": 3273982,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-could-speak-colors_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-could-speak-colors_2.png",
+          "size_bytes": 3070930,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-could-speak-colors_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-could-speak-colors_3.png",
+          "size_bytes": 2796220,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-could-speak-colors_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-could-speak-colors_1.png",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "story_index": 116,
+      "story_id": "the-boy-who-danced-with-fireflies",
+      "checked_images": [
+        {
+          "field": "cover_image",
+          "img_name": "the-boy-who-danced-with-fireflies_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-danced-with-fireflies_1.png",
+          "size_bytes": 3286620,
+          "status": "ok"
+        },
+        {
+          "field": "mid_image",
+          "img_name": "the-boy-who-danced-with-fireflies_2.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-danced-with-fireflies_2.png",
+          "size_bytes": 3123964,
+          "status": "ok"
+        },
+        {
+          "field": "end_image",
+          "img_name": "the-boy-who-danced-with-fireflies_3.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\the-boy-who-danced-with-fireflies_3.png",
+          "size_bytes": 2825983,
+          "status": "ok"
+        },
+        {
+          "field": "thumbnail",
+          "img_name": "images/the-boy-who-danced-with-fireflies_1.png",
+          "img_path": "C:\\Users\\Dell Latitude 5420\\Documents\\belutales\\images\\images/the-boy-who-danced-with-fireflies_1.png",
+          "status": "missing"
+        }
+      ]
+    }
+  ],
+  "unreferenced_images": [
+    "katleho-the-kid-from-outer-space_end.png",
+    "katleho-the-kid-from-outer-space_mid.png",
+    "nina-and-the-night-sky_end.png",
+    "nina-and-the-night-sky_mid.png",
+    "ruby-and-the-glow-worms_end.png",
+    "ruby-and-the-glow-worms_mid.png",
+    "sophie-and-the-gentle-giant_end.png",
+    "sophie-and-the-gentle-giant_mid.png",
+    "the-balloon-that-knew-the-way_end.png",
+    "the-balloon-that-knew-the-way_mid.png",
+    "the-little-llana-who-learnend-to-dance_1.png",
+    "the-little-llana-who-learnend-to-dance_2.png",
+    "the-little-llana-who-learnend-to-dance_3.png"
+  ]
+}

@@ -54,6 +54,13 @@ def load_story_index() -> List[Dict]:
             # Generate unique ID from title
             story_id = hashlib.md5(story.get("title", "").encode()).hexdigest()[:8]
             
+            # Inject thumbnail from cover_image (first image) if not already present
+            thumbnail = story.get("thumbnail")
+            if not thumbnail:
+                cover_image = story.get("cover_image", "")
+                if cover_image:
+                    thumbnail = cover_image
+            
             # Extract essential fields only
             index_entry = {
                 "id": story_id,
@@ -62,7 +69,8 @@ def load_story_index() -> List[Dict]:
                 "cover_path": story.get("cover_image", ""),
                 "is_premium": story.get("is_premium", False),
                 "snippet": story.get("text", story.get("content", ""))[:200] + "..." if len(story.get("text", story.get("content", ""))) > 200 else story.get("text", story.get("content", "")),
-                "original_index": len(index)  # Store original index for full loading
+                "original_index": len(index),  # Store original index for full loading
+                "thumbnail": thumbnail  # Add thumbnail field
             }
             index.append(index_entry)
         

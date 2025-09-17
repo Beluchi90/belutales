@@ -149,7 +149,8 @@ def create_paypal_button(story_title="Premium Stories"):
                 st.error("❌ Cannot connect to payment service. Please ensure the backend server is running.")
                 st.code("To start the backend: uvicorn server:app --reload")
                 
-            except requests.exceptions.Timeout:
+            except requests.exceptions.RequestException as e:
+                st.warning("⚠️ PayPal backend is not available. Premium unlock may not work right now.")
                 st.error("❌ Payment service timeout. Please try again.")
                 
             except Exception as e:
@@ -222,8 +223,9 @@ def render_premium_unlock_page(story):
             </div>
             """, unsafe_allow_html=True)
         else:
-            st.error("Payment service is currently unavailable. Please try again later.")
+            st.warning("⚠️ PayPal backend is not available. Premium unlock may not work right now.")
     except requests.exceptions.RequestException:
+        st.warning("⚠️ PayPal backend is not available. Premium unlock may not work right now.")
         st.error("Cannot connect to payment service. Please ensure the backend server is running.")
         st.code("To start the backend: uvicorn server:app --reload")
 
