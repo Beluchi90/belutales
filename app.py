@@ -2604,16 +2604,12 @@ else:
                         # Show cover image thumbnail using story slug
                         import os
                         
-                        story_slug = story.get("slug", "")
-                        if story_slug:
-                            thumbnail_path = f"images/{story_slug}_1.png"
-                            
-                            if os.path.exists(thumbnail_path):
-                                st.image(thumbnail_path, use_container_width=True)
-                            else:
-                                st.warning(f"No cover image found for {story_slug}")
+                        thumbnail_path = f"images/{story['slug']}_1.png"
+                        
+                        if os.path.exists(thumbnail_path):
+                            st.image(thumbnail_path, use_container_width=True)
                         else:
-                            st.warning("Story slug not found")
+                            st.warning(f"No cover image found for {story['title']}")
                     
                     with col2:
                         # Translate title and category
