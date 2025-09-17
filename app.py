@@ -2324,13 +2324,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        import os
-
-        thumb_name = story.get("thumbnail")
-        if thumb_name and os.path.exists(thumb_name):
-            st.image(thumb_name, use_container_width=True, caption="📖 Story Cover")
-        else:
-            st.warning(f"No thumbnail available for {story.get('title','Untitled')}")
+        thumb_path = story.get("thumbnail", "images/logo.png")
+        st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2605,13 +2600,9 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        import os
-
-                        thumb_name = story.get("thumbnail")
-                        if thumb_name and os.path.exists(thumb_name):
-                            st.image(thumb_name, use_container_width=True, caption="📖 Story Cover")
-                        else:
-                            st.warning(f"No thumbnail available for {story.get('title','Untitled')}")
+                        # Load thumbnail directly from story data
+                        thumb_path = story.get("thumbnail", "images/logo.png")
+                        st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
                     
                     with col2:
                         # Translate title and category
