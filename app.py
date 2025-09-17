@@ -2601,10 +2601,20 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Show cover image thumbnail using story slug
+                        # Show cover image thumbnail
                         import os
+                        import re
                         
-                        thumbnail_path = f"images/{story['slug']}_1.png"
+                        def slugify(title):
+                            return re.sub(r'[^a-z0-9-]', '', title.lower().replace(" ", "-"))
+                        
+                        # Use cover_image if available, otherwise generate from title
+                        if 'cover_image' in story and story['cover_image']:
+                            thumbnail_path = f"images/{story['cover_image']}"
+                        else:
+                            # Generate slug from title as fallback
+                            story_id = story.get("filename") or slugify(story["title"])
+                            thumbnail_path = f"images/{story_id}_1.png"
                         
                         if os.path.exists(thumbnail_path):
                             st.image(thumbnail_path, use_container_width=True)
