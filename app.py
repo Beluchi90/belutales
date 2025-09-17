@@ -2610,10 +2610,10 @@ else:
                             if thumbnail_bytes:
                                 try:
                                     st.image(thumbnail_bytes, use_container_width=True)
-                                except Exception as e:
-                                    st.warning("Could not load thumbnail.")
+                                except:
+                                    st.image("assets/images/default_thumbnail.png", use_container_width=True)
                             else:
-                                st.warning("No thumbnail available.")
+                                st.image("assets/images/default_thumbnail.png", use_container_width=True)
                     
                     with col2:
                         # Translate title and category
