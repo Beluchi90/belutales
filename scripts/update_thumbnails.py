@@ -1,46 +1,35 @@
-# scripts/update_thumbnails.py
-import os, json, datetime
-
-JSON_PATH = "stories.json"
-IMAGES_DIR = "images"
-
-def find_thumbnail_for_slug(slug: str) -> str:
-    """Find thumbnail for a story slug with fallback logic"""
-    
-    # Rule 1: Try {slug}_1.png first (always the first cover image)
-    primary = os.path.join(IMAGES_DIR, f"{slug}_1.png")
-    if os.path.exists(primary):
-        return f"images/{slug}_1.png"
-    
-    # Rule 2: Try {slug}.png
-    secondary = os.path.join(IMAGES_DIR, f"{slug}.png")
-    if os.path.exists(secondary):
-        return f"images/{slug}.png"
-    
-    # Rule 3: Try {slug}_mid.png
-    tertiary = os.path.join(IMAGES_DIR, f"{slug}_mid.png")
-    if os.path.exists(tertiary):
-        return f"images/{slug}_mid.png"
-    
-    # Rule 4: Fallback to logo.png
-    return "images/logo.png"
+import os
+import json
+import datetime
 
 def main():
+    JSON_PATH = "stories.json"
+    IMAGES_DIR = "images"
+    
+    # Load stories.json
     if not os.path.exists(JSON_PATH):
-        raise SystemExit(f"stories.json not found at {JSON_PATH}")
-
+        print(f"Error: {JSON_PATH} not found")
+        return
+    
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         stories = json.load(f)
-
-    # Rule 5: Make a backup before writing
-    backup_name = f"stories.backup.{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-    with open(backup_name, "w", encoding="utf-8") as b:
-        json.dump(stories, b, ensure_ascii=False, indent=2)
-
-    updated = 0
+    
+    # Save backup before writing
+    timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+    backup_path = f"stories.backup.{timestamp}.json"
+    
+    with open(backup_path, "w", encoding="utf-8") as f:
+        json.dump(stories, f, ensure_ascii=False, indent=2)
+    
+    # Process each story
+    updated_count = 0
     fallback_count = 0
-
+    
     for story in stories:
+        # Check if it already has a "thumbnail" field
+        if "thumbnail" in story:
+            continue
+        
         # Get the slug for this story
         slug = story.get("slug", "")
         if not slug:
@@ -50,22 +39,41 @@ def main():
                 slug = title.lower().replace(" ", "-")
                 slug = ''.join(c for c in slug if c.isalnum() or c == '-')
         
-        if slug:
-            # Rule 6: Do not change any other story fields, only add thumbnail
-            thumbnail_path = find_thumbnail_for_slug(slug)
-            story["thumbnail"] = thumbnail_path
-            updated += 1
-            
-            if thumbnail_path == "images/logo.png":
-                fallback_count += 1
-
-    # Rule 4: Overwrite stories.json with the updated data
-    with open(JSON_PATH, "w", encoding="utf-8") as out:
-        json.dump(stories, out, ensure_ascii=False, indent=2)
-
-    print(f"Updated {updated} stories with thumbnails.")
-    print(f"Used fallback logo.png for {fallback_count} stories.")
-    print(f"Backup saved as {backup_name}")
+        if not slug:
+            continue
+        
+        # Generate thumbnail automatically with fallback logic
+        thumbnail_path = None
+        
+        # Preferred: "images/{slug}_1.png"
+        preferred = os.path.join(IMAGES_DIR, f"{slug}_1.png")
+        if os.path.exists(preferred):
+            thumbnail_path = f"images/{slug}_1.png"
+        else:
+            # If not found: "images/{slug}.png"
+            secondary = os.path.join(IMAGES_DIR, f"{slug}.png")
+            if os.path.exists(secondary):
+                thumbnail_path = f"images/{slug}.png"
+            else:
+                # If not found: "images/{slug}_mid.png"
+                tertiary = os.path.join(IMAGES_DIR, f"{slug}_mid.png")
+                if os.path.exists(tertiary):
+                    thumbnail_path = f"images/{slug}_mid.png"
+                else:
+                    # If none exist: fallback to "images/logo.png"
+                    thumbnail_path = "images/logo.png"
+                    fallback_count += 1
+        
+        # Set the thumbnail field (do not touch other fields)
+        story["thumbnail"] = thumbnail_path
+        updated_count += 1
+    
+    # Write the updated stories.json back to disk
+    with open(JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(stories, f, ensure_ascii=False, indent=2)
+    
+    # Print summary
+    print(f"✅ Thumbnails set for {updated_count} stories ({fallback_count} fallback used).")
 
 if __name__ == "__main__":
     main()
