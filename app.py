@@ -2601,11 +2601,19 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Show cover image thumbnail - each story uses its own cover image
-                        cover_image = story.get("cover_image", "")
-                        if cover_image:
-                            thumbnail_path = f"images/{cover_image}"
-                            st.image(thumbnail_path, use_container_width=True)
+                        # Show cover image thumbnail using story slug
+                        import os
+                        
+                        story_slug = story.get("slug", "")
+                        if story_slug:
+                            thumbnail_path = f"images/{story_slug}_1.png"
+                            
+                            if os.path.exists(thumbnail_path):
+                                st.image(thumbnail_path, use_container_width=True)
+                            else:
+                                st.warning(f"No cover image found for {story_slug}")
+                        else:
+                            st.warning("Story slug not found")
                     
                     with col2:
                         # Translate title and category
