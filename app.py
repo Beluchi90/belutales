@@ -31,38 +31,33 @@ from utils.performance import (
 
 # Image path helper function for correct absolute paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMAGES_DIR = os.path.join(BASE_DIR, "images")
 
-def get_image_path(filename: str) -> str:
+def safe_get_image(filename: str, fallback: str = "placeholder.png") -> str:
     """
-    Ensure correct image path regardless of where Streamlit runs.
+    Returns the absolute path to an image if it exists.
+    Falls back to placeholder.png if not.
     """
     if not filename:
-        return os.path.join(BASE_DIR, "images", "placeholder.png")
-    candidate = os.path.join(BASE_DIR, "images", filename)
+        return os.path.join(IMAGES_DIR, fallback)
+    candidate = os.path.join(IMAGES_DIR, filename)
     if os.path.exists(candidate):
         return candidate
-    return os.path.join(BASE_DIR, "images", "placeholder.png")
+    return os.path.join(IMAGES_DIR, fallback)
 
 # Safe image loading helper function
 def safe_show_image(filename, caption=""):
     """
-    Safely show an image using get_image_path for correct absolute paths.
-    - Uses get_image_path to resolve filename to absolute path
-    - Shows placeholder.png if file is missing or invalid
+    Safely show an image using safe_get_image for correct absolute paths.
+    - Uses safe_get_image to resolve filename to absolute path with fallback
     - Never crashes due to image issues
     """
     try:
-        img_path = get_image_path(filename)
+        img_path = safe_get_image(filename)
         img = Image.open(img_path)
         st.image(img, use_container_width=True, caption=caption)
     except Exception:
-        # get_image_path already handles fallback to placeholder.png
-        placeholder_path = os.path.join(BASE_DIR, "images", "placeholder.png")
-        try:
-            img = Image.open(placeholder_path)
-            st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
-        except Exception:
-            st.warning("🖼 Illustration coming soon")
+        st.warning("🖼 Illustration coming soon")
 
 # Development helper function for cache management
 def reset_cache():
