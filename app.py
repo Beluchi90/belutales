@@ -2604,14 +2604,12 @@ else:
                         # Show cover image thumbnail
                         import os
                         
-                        # Use the cover_image field from story JSON
-                        if 'cover_image' in story and story['cover_image']:
-                            thumbnail_path = f"images/{story['cover_image']}"
-                            
+                        if "thumbnail" in story:
+                            thumbnail_path = f"images/{story['thumbnail']}"
                             if os.path.exists(thumbnail_path):
                                 st.image(thumbnail_path, use_container_width=True)
                             else:
-                                st.warning(f"Thumbnail missing for {story['title']}")
+                                st.warning(f"Thumbnail not found: {thumbnail_path}")
                         else:
                             st.warning(f"No thumbnail specified for {story['title']}")
                     
