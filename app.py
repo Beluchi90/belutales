@@ -2623,14 +2623,14 @@ else:
                                 if os.path.exists(fallback):
                                     st.image(fallback, use_container_width=True)
                                 else:
-                                    st.warning("Thumbnail not available.")
+                                    st.warning("Default thumbnail missing.")
                         else:
                             # Story image doesn't exist, use fallback
                             fallback = "assets/images/default_thumbnail.png"
                             if os.path.exists(fallback):
                                 st.image(fallback, use_container_width=True)
                             else:
-                                st.warning("Thumbnail not available.")
+                                st.warning("Default thumbnail missing.")
                     
                     with col2:
                         # Translate title and category
