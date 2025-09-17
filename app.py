@@ -30,15 +30,31 @@ from utils.performance import (
 )
 
 # Safe image loading helper function
-def safe_show_image(img_name, caption=None):
-    if img_name:
-        img_path = os.path.join("images", img_name)
-        if os.path.exists(img_path):
-            st.image(img_path, use_container_width=True, caption=caption)
+def safe_show_image(img_path, caption=""):
+    """
+    Safely show an image in Streamlit.
+    - If img_path is valid and the file exists → display it.
+    - If missing/invalid → display placeholder.png instead.
+    - If even placeholder.png is missing → show a warning message.
+    """
+    try:
+        if img_path and os.path.exists(img_path):
+            img = Image.open(img_path)
+            st.image(img, use_container_width=True, caption=caption)
         else:
-            st.warning(f"🚨 Missing image file: {img_path}")
-    else:
-        st.info("No image available")
+            placeholder = "images/placeholder.png"
+            if os.path.exists(placeholder):
+                img = Image.open(placeholder)
+                st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
+            else:
+                st.warning("🖼 Illustration coming soon")
+    except Exception:
+        placeholder = "images/placeholder.png"
+        if os.path.exists(placeholder):
+            img = Image.open(placeholder)
+            st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
+        else:
+            st.warning("🖼 Illustration coming soon")
 
 # Development helper function for cache management
 def reset_cache():
@@ -2344,7 +2360,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        safe_show_image(story.get("cover_image"), caption="📖 Story Cover")
+        cover_image = story.get("cover_image")
+        if cover_image:
+            safe_show_image(f"images/{cover_image}", caption="📖 Story Cover")
+        else:
+            safe_show_image(None, caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2425,7 +2445,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                safe_show_image(story.get("mid_image"), caption="🎨 Mid-story Illustration")
+                mid_image = story.get("mid_image")
+                if mid_image:
+                    safe_show_image(f"images/{mid_image}", caption="🎨 Mid-story Illustration")
+                else:
+                    safe_show_image(None, caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2439,7 +2463,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            safe_show_image(story.get("end_image"), caption="🌟 Story Ending")
+            end_image = story.get("end_image")
+            if end_image:
+                safe_show_image(f"images/{end_image}", caption="🌟 Story Ending")
+            else:
+                safe_show_image(None, caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2616,7 +2644,11 @@ else:
                     
                     with col1:
                         # Display story thumbnail
-                        safe_show_image(story.get("thumbnail"), caption="📖 Story Cover")
+                        thumbnail = story.get("thumbnail")
+                        if thumbnail:
+                            safe_show_image(thumbnail, caption="📖 Story Cover")
+                        else:
+                            safe_show_image(None, caption="📖 Story Cover")
                     
                     with col2:
                         # Translate title and category
