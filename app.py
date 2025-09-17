@@ -2606,8 +2606,8 @@ else:
                         
                         def slugify(title):
                             slug = title.lower()
-                            slug = re.sub(r'[^a-z0-9 ]', '', slug)  # remove non-alphanumeric
-                            slug = re.sub(r'\s+', '-', slug.strip())  # replace spaces with hyphens
+                            slug = re.sub(r'[^a-z0-9 ]', '', slug)  # keep only letters, numbers, spaces
+                            slug = re.sub(r'\s+', '-', slug.strip())  # spaces -> hyphens
                             return slug
                         
                         slug = slugify(story["title"])
