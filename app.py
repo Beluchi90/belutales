@@ -2327,14 +2327,10 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         import os
 
         thumb_name = story.get("thumbnail")
-        if thumb_name:
-            thumb_path = os.path.join("images", thumb_name)
-            if os.path.exists(thumb_path):
-                st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
-            else:
-                st.warning(f"Thumbnail not found: {thumb_path}")
+        if thumb_name and os.path.exists(thumb_name):
+            st.image(thumb_name, use_container_width=True, caption="📖 Story Cover")
         else:
-            st.warning(f"No thumbnail specified for {story.get('title','Untitled')}")
+            st.warning(f"No thumbnail available for {story.get('title','Untitled')}")
         
         st.markdown("---")
         
@@ -2612,14 +2608,10 @@ else:
                         import os
 
                         thumb_name = story.get("thumbnail")
-                        if thumb_name:
-                            thumb_path = os.path.join("images", thumb_name)
-                            if os.path.exists(thumb_path):
-                                st.image(thumb_path, use_container_width=True, caption="📖 Story Cover")
-                            else:
-                                st.warning(f"Thumbnail not found: {thumb_path}")
+                        if thumb_name and os.path.exists(thumb_name):
+                            st.image(thumb_name, use_container_width=True, caption="📖 Story Cover")
                         else:
-                            st.warning(f"No thumbnail specified for {story.get('title','Untitled')}")
+                            st.warning(f"No thumbnail available for {story.get('title','Untitled')}")
                     
                     with col2:
                         # Translate title and category
