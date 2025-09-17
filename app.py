@@ -2608,7 +2608,10 @@ else:
                             full_cover_path = f"images/{cover_path}"
                             thumbnail_bytes = get_thumbnail(full_cover_path, max_w=400)
                             if thumbnail_bytes:
-                                st.image(thumbnail_bytes, use_container_width=True)
+                                try:
+                                    st.image(thumbnail_bytes, use_container_width=True)
+                                except Exception as e:
+                                    st.warning("Could not load thumbnail.")
                             else:
                                 st.warning("No thumbnail available.")
                     
