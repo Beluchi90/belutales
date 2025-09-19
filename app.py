@@ -2700,40 +2700,60 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Display story cover image
-                        cover_image = story.get("cover_image")
-                        if cover_image:
-                            image_path = os.path.join("images", cover_image)
+                        # Display story thumbnail image
+                        thumbnail = story.get("thumbnail")
+                        if thumbnail:
+                            image_path = os.path.join("images", thumbnail)
                             
-                            # Check if file exists on disk
-                            if os.path.exists(image_path):
-                                st.image(image_path, use_container_width=True, caption="📖 Story Cover")
+                            # Check if file exists on disk and is a valid PNG
+                            if (os.path.exists(image_path) and 
+                                thumbnail.lower().endswith('.png')):
+                                try:
+                                    st.image(image_path, use_container_width=True)
+                                except Exception:
+                                    # Styled placeholder box for render errors
+                                    st.markdown("""
+                                    <div style="
+                                        background-color: #f8f9fa;
+                                        border-radius: 12px;
+                                        padding: 25px;
+                                        text-align: center;
+                                        color: #6c757d;
+                                        font-style: italic;
+                                        border: 2px dashed #dee2e6;
+                                        font-family: 'Comic Sans MS', cursive;
+                                    ">
+                                        📖 Illustration coming soon
+                                    </div>
+                                    """, unsafe_allow_html=True)
                             else:
-                                # Styled placeholder box
+                                # Styled placeholder box for missing/invalid files
                                 st.markdown("""
                                 <div style="
-                                    background-color: #f0f0f0;
-                                    border-radius: 10px;
-                                    padding: 20px;
+                                    background-color: #f8f9fa;
+                                    border-radius: 12px;
+                                    padding: 25px;
                                     text-align: center;
-                                    color: #666;
+                                    color: #6c757d;
                                     font-style: italic;
-                                    border: 2px dashed #ccc;
+                                    border: 2px dashed #dee2e6;
+                                    font-family: 'Comic Sans MS', cursive;
                                 ">
                                     📖 Illustration coming soon
                                 </div>
                                 """, unsafe_allow_html=True)
                         else:
-                            # Styled placeholder box for missing cover_image field
+                            # Styled placeholder box for missing thumbnail field
                             st.markdown("""
                             <div style="
-                                background-color: #f0f0f0;
-                                border-radius: 10px;
-                                padding: 20px;
+                                background-color: #f8f9fa;
+                                border-radius: 12px;
+                                padding: 25px;
                                 text-align: center;
-                                color: #666;
+                                color: #6c757d;
                                 font-style: italic;
-                                border: 2px dashed #ccc;
+                                border: 2px dashed #dee2e6;
+                                font-family: 'Comic Sans MS', cursive;
                             ">
                                 📖 Illustration coming soon
                             </div>
