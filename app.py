@@ -21,9 +21,19 @@ import hmac
 import secrets
 from contextlib import closing
 
-# Define base paths for cross-platform compatibility
-BASE_DIR = Path(__file__).parent
-IMAGES_DIR = BASE_DIR / "images"
+# Define base paths for Streamlit Cloud compatibility
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMAGES_DIR = os.path.join(BASE_DIR, "images")
+
+def get_image_path(filename):
+    """
+    Get the full path to an image file, with fallback to placeholder.png.
+    This ensures images always display correctly on Streamlit Cloud.
+    """
+    if not filename:
+        return os.path.join(IMAGES_DIR, "placeholder.png")
+    path = os.path.join(IMAGES_DIR, filename)
+    return path if os.path.exists(path) else os.path.join(IMAGES_DIR, "placeholder.png")
 
 # Import performance optimizations
 from utils.performance import (
@@ -39,11 +49,11 @@ def safe_get_image(filename: str, fallback: str = "placeholder.png") -> str:
     Falls back to placeholder.png if not.
     """
     if not filename:
-        return str(IMAGES_DIR / fallback)
-    candidate = IMAGES_DIR / filename
-    if candidate.exists():
-        return str(candidate)
-    return str(IMAGES_DIR / fallback)
+        return os.path.join(IMAGES_DIR, fallback)
+    candidate = os.path.join(IMAGES_DIR, filename)
+    if os.path.exists(candidate):
+        return candidate
+    return os.path.join(IMAGES_DIR, fallback)
 
 # Safe image loading helper function
 def safe_show_image(filename, caption=""):
@@ -1815,16 +1825,16 @@ def show_image_resilient(image_path, caption=""):
             img = Image.open(image_path)
             st.image(img, use_container_width=True, caption=caption)
         else:
-            placeholder = IMAGES_DIR / "placeholder.png"
-            if placeholder.exists():
-                img = Image.open(str(placeholder))
+            placeholder = os.path.join(IMAGES_DIR, "placeholder.png")
+            if os.path.exists(placeholder):
+                img = Image.open(placeholder)
                 st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
             else:
                 st.warning("🖼 Illustration coming soon")
     except Exception:
-        placeholder = IMAGES_DIR / "placeholder.png"
-        if placeholder.exists():
-            img = Image.open(str(placeholder))
+        placeholder = os.path.join(IMAGES_DIR, "placeholder.png")
+        if os.path.exists(placeholder):
+            img = Image.open(placeholder)
             st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
         else:
             st.warning("🖼 Illustration coming soon")
@@ -2363,25 +2373,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        cover_image = story.get("cover_image")
-        if cover_image:
-            image_path = IMAGES_DIR / cover_image
-            
-            # Check if file exists, fallback to placeholder if not
-            if not image_path.exists():
-                image_path = IMAGES_DIR / "placeholder.png"
-            
-            if image_path.exists():
-                st.image(str(image_path), use_container_width=True, caption="📖 Story Cover")
-            else:
-                st.warning("🖼 Illustration coming soon")
-        else:
-            # Use placeholder for missing cover_image field
-            placeholder_path = IMAGES_DIR / "placeholder.png"
-            if placeholder_path.exists():
-                st.image(str(placeholder_path), use_container_width=True, caption="📖 Story Cover")
-            else:
-                st.warning("🖼 Illustration coming soon")
+        image_path = get_image_path(story.get("cover_image", ""))
+        st.image(image_path, use_container_width=True, caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2462,25 +2455,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                mid_image = story.get("mid_image")
-                if mid_image:
-                    image_path = IMAGES_DIR / mid_image
-                    
-                    # Check if file exists, fallback to placeholder if not
-                    if not image_path.exists():
-                        image_path = IMAGES_DIR / "placeholder.png"
-                    
-                    if image_path.exists():
-                        try:
-                            st.image(str(image_path), use_container_width=True, caption="🎨 Mid-story Illustration")
-                        except Exception:
-                            placeholder_path = IMAGES_DIR / "placeholder.png"
-                            if placeholder_path.exists():
-                                st.image(str(placeholder_path), use_container_width=True, caption="🎨 Mid-story Illustration")
-                            else:
-                                st.warning("🖼️ Illustration coming soon")
-                    else:
-                        st.warning("🖼️ Illustration coming soon")
+                image_path = get_image_path(story.get("mid_image", ""))
+                st.image(image_path, use_container_width=True, caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2494,25 +2470,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            end_image = story.get("end_image")
-            if end_image:
-                image_path = IMAGES_DIR / end_image
-                
-                # Check if file exists, fallback to placeholder if not
-                if not image_path.exists():
-                    image_path = IMAGES_DIR / "placeholder.png"
-                
-                if image_path.exists():
-                    try:
-                        st.image(str(image_path), use_container_width=True, caption="🌟 Story Ending")
-                    except Exception:
-                        placeholder_path = IMAGES_DIR / "placeholder.png"
-                        if placeholder_path.exists():
-                            st.image(str(placeholder_path), use_container_width=True, caption="🌟 Story Ending")
-                        else:
-                            st.warning("🖼️ Illustration coming soon")
-                else:
-                    st.warning("🖼️ Illustration coming soon")
+            image_path = get_image_path(story.get("end_image", ""))
+            st.image(image_path, use_container_width=True, caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2689,36 +2648,8 @@ else:
                     
                     with col1:
                         # Display story thumbnail image
-                        thumbnail = story.get("thumbnail")
-                        if thumbnail:
-                            image_path = IMAGES_DIR / thumbnail
-                            
-                            # Check if file exists and is a valid PNG
-                            if (image_path.exists() and 
-                                thumbnail.lower().endswith('.png')):
-                                try:
-                                    st.image(str(image_path), use_container_width=True)
-                                except Exception:
-                                    # Use placeholder image for render errors
-                                    placeholder_path = IMAGES_DIR / "placeholder.png"
-                                    if placeholder_path.exists():
-                                        st.image(str(placeholder_path), use_container_width=True)
-                                    else:
-                                        st.warning("🖼 Illustration coming soon")
-                            else:
-                                # Use placeholder image for missing/invalid files
-                                placeholder_path = IMAGES_DIR / "placeholder.png"
-                                if placeholder_path.exists():
-                                    st.image(str(placeholder_path), use_container_width=True)
-                                else:
-                                    st.warning("🖼 Illustration coming soon")
-                        else:
-                            # Use placeholder image for missing thumbnail field
-                            placeholder_path = IMAGES_DIR / "placeholder.png"
-                            if placeholder_path.exists():
-                                st.image(str(placeholder_path), use_container_width=True)
-                            else:
-                                st.warning("🖼 Illustration coming soon")
+                        image_path = get_image_path(story.get("thumbnail", ""))
+                        st.image(image_path, use_container_width=True)
                     
                     with col2:
                         # Translate title and category
