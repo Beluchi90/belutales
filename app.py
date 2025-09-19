@@ -2363,7 +2363,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        safe_show_image(story.get("cover_image"), caption="📖 Story Cover")
+        cover_image = story.get("cover_image")
+        if cover_image:
+            image_path = os.path.join("images", cover_image)
+            if os.path.exists(image_path):
+                st.image(image_path, use_container_width=True, caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2444,7 +2448,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                safe_show_image(story.get("mid_image"), caption="🎨 Mid-story Illustration")
+                mid_image = story.get("mid_image")
+                if mid_image:
+                    image_path = os.path.join("images", mid_image)
+                    if os.path.exists(image_path):
+                        st.image(image_path, use_container_width=True, caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2458,7 +2466,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            safe_show_image(story.get("end_image"), caption="🌟 Story Ending")
+            end_image = story.get("end_image")
+            if end_image:
+                image_path = os.path.join("images", end_image)
+                if os.path.exists(image_path):
+                    st.image(image_path, use_container_width=True, caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2640,10 +2652,6 @@ else:
                             image_path = os.path.join("images", cover_image)
                             if os.path.exists(image_path):
                                 st.image(image_path, use_container_width=True)
-                            else:
-                                st.warning("🖼 Illustration coming soon")
-                        else:
-                            st.warning("🖼 Illustration coming soon")
                     
                     with col2:
                         # Translate title and category
