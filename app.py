@@ -32,15 +32,6 @@ from utils.performance import (
     clear_cache, PAGE_SIZE
 )
 
-# Simple image display function
-def show_image(filename, caption=""):
-    """
-    Display an image directly from the images folder.
-    """
-    if filename:
-        image_path = IMAGES_DIR / filename
-        st.image(str(image_path), use_container_width=True, caption=caption)
-
 # Development helper function for cache management
 def reset_cache():
     """
@@ -2308,7 +2299,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        show_image(story.get("cover_image", ""), caption="📖 Story Cover")
+        image_path = IMAGES_DIR / story.get("image", "")
+        st.image(str(image_path), use_container_width=True, caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2389,7 +2381,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                show_image(story.get("mid_image", ""), caption="🎨 Mid-story Illustration")
+                image_path = IMAGES_DIR / story.get("image", "")
+                st.image(str(image_path), use_container_width=True, caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2403,7 +2396,8 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            show_image(story.get("end_image", ""), caption="🌟 Story Ending")
+            image_path = IMAGES_DIR / story.get("image", "")
+            st.image(str(image_path), use_container_width=True, caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2579,8 +2573,9 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Display story thumbnail image
-                        show_image(story.get("thumbnail", ""))
+                        # Display story image
+                        image_path = IMAGES_DIR / story.get("image", "")
+                        st.image(str(image_path), use_container_width=True)
                     
                     with col2:
                         # Translate title and category
