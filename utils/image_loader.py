@@ -2,7 +2,9 @@ from pathlib import Path
 from typing import Optional, Union
 from PIL import Image, UnidentifiedImageError
 import io
+import os
 try:
+    import streamlit as st
     import pillow_avif  # noqa: F401  # enables AVIF support if installed
 except Exception:
     pass
@@ -36,3 +38,38 @@ def load_image_safe(src: Union[str, Path, bytes, io.BytesIO]) -> Optional[Image.
         return img.convert("RGBA")
     except (UnidentifiedImageError, OSError, ValueError):
         return None
+
+def safe_image(path, **kwargs):
+    """
+    Safely display an image with automatic fallback to placeholder.png.
+    
+    Args:
+        path: Path to the image file
+        **kwargs: Additional arguments to pass to st.image()
+    """
+    # Set default use_container_width if not provided
+    if 'use_container_width' not in kwargs:
+        kwargs['use_container_width'] = True
+    
+    # Try to load the requested image
+    img = load_image_safe(path) if path else None
+    if img:
+        st.image(img, **kwargs)
+        return
+    
+    # Fallback to placeholder
+    # Get the base directory (assuming this is called from the main app directory)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    placeholder_path = os.path.join(base_dir, "images", "placeholder.png")
+    placeholder = load_image_safe(placeholder_path)
+    
+    if placeholder:
+        # Preserve caption but indicate it's a placeholder
+        if 'caption' in kwargs:
+            original_caption = kwargs['caption']
+            kwargs['caption'] = f"{original_caption} (placeholder)"
+        else:
+            kwargs['caption'] = "🖼 Illustration coming soon"
+        st.image(placeholder, **kwargs)
+    else:
+        st.warning("🖼 Illustration coming soon")
