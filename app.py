@@ -2366,8 +2366,16 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         cover_image = story.get("cover_image")
         if cover_image:
             image_path = os.path.join("images", cover_image)
-            if image_path and os.path.exists(image_path):
-                st.image(image_path, use_container_width=True, caption="📖 Story Cover")
+            
+            # Check if path exists and has valid extension
+            valid_extensions = [".png", ".jpg", ".jpeg"]
+            is_valid_extension = any(image_path.lower().endswith(ext) for ext in valid_extensions)
+            
+            if image_path and os.path.exists(image_path) and is_valid_extension:
+                try:
+                    st.image(image_path, use_container_width=True, caption="📖 Story Cover")
+                except Exception:
+                    st.markdown("🖼️ Illustration coming soon")
             else:
                 st.markdown("🖼️ Illustration coming soon")
         else:
@@ -2455,8 +2463,16 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 mid_image = story.get("mid_image")
                 if mid_image:
                     image_path = os.path.join("images", mid_image)
-                    if image_path and os.path.exists(image_path):
-                        st.image(image_path, use_container_width=True, caption="🎨 Mid-story Illustration")
+                    
+                    # Check if path exists and has valid extension
+                    valid_extensions = [".png", ".jpg", ".jpeg"]
+                    is_valid_extension = any(image_path.lower().endswith(ext) for ext in valid_extensions)
+                    
+                    if image_path and os.path.exists(image_path) and is_valid_extension:
+                        try:
+                            st.image(image_path, use_container_width=True, caption="🎨 Mid-story Illustration")
+                        except Exception:
+                            st.markdown("🖼️ Illustration coming soon")
                     else:
                         st.markdown("🖼️ Illustration coming soon")
                 
@@ -2475,8 +2491,16 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
             end_image = story.get("end_image")
             if end_image:
                 image_path = os.path.join("images", end_image)
-                if image_path and os.path.exists(image_path):
-                    st.image(image_path, use_container_width=True, caption="🌟 Story Ending")
+                
+                # Check if path exists and has valid extension
+                valid_extensions = [".png", ".jpg", ".jpeg"]
+                is_valid_extension = any(image_path.lower().endswith(ext) for ext in valid_extensions)
+                
+                if image_path and os.path.exists(image_path) and is_valid_extension:
+                    try:
+                        st.image(image_path, use_container_width=True, caption="🌟 Story Ending")
+                    except Exception:
+                        st.markdown("🖼️ Illustration coming soon")
                 else:
                     st.markdown("🖼️ Illustration coming soon")
         
@@ -2654,12 +2678,20 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Display story cover image
+                        # Display story cover image with comprehensive error handling
                         cover_image = story.get("cover_image")
                         if cover_image:
                             image_path = os.path.join("images", cover_image)
-                            if image_path and os.path.exists(image_path):
-                                st.image(image_path, use_container_width=True)
+                            
+                            # Check if path exists and has valid extension
+                            valid_extensions = [".png", ".jpg", ".jpeg"]
+                            is_valid_extension = any(image_path.lower().endswith(ext) for ext in valid_extensions)
+                            
+                            if image_path and os.path.exists(image_path) and is_valid_extension:
+                                try:
+                                    st.image(image_path, use_container_width=True, caption="🖼️ Story Cover")
+                                except Exception:
+                                    st.markdown("🖼️ Illustration coming soon")
                             else:
                                 st.markdown("🖼️ Illustration coming soon")
                         else:
