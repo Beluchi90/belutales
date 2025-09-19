@@ -25,16 +25,6 @@ from contextlib import closing
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGES_DIR = os.path.join(BASE_DIR, "images")
 
-def get_image_path(filename):
-    """
-    Get the full path to an image file, with fallback to placeholder.png.
-    This ensures images always display correctly on Streamlit Cloud.
-    """
-    if not filename:
-        return os.path.join(IMAGES_DIR, "placeholder.png")
-    path = os.path.join(IMAGES_DIR, filename)
-    return path if os.path.exists(path) else os.path.join(IMAGES_DIR, "placeholder.png")
-
 # Import performance optimizations
 from utils.performance import (
     load_story_index, load_story_full, get_thumbnail, get_clients,
@@ -42,31 +32,29 @@ from utils.performance import (
     get_categories_optimized, render_pagination_controls, get_current_page,
     clear_cache, PAGE_SIZE
 )
-
-def safe_get_image(filename: str, fallback: str = "placeholder.png") -> str:
-    """
-    Returns the absolute path to an image if it exists.
-    Falls back to placeholder.png if not.
-    """
-    if not filename:
-        return os.path.join(IMAGES_DIR, fallback)
-    candidate = os.path.join(IMAGES_DIR, filename)
-    if os.path.exists(candidate):
-        return candidate
-    return os.path.join(IMAGES_DIR, fallback)
+from utils.image_loader import load_image_safe
 
 # Safe image loading helper function
 def safe_show_image(filename, caption=""):
     """
-    Safely show an image using safe_get_image for correct absolute paths.
-    - Uses safe_get_image to resolve filename to absolute path with fallback
+    Safely show an image using load_image_safe with automatic fallback.
+    - Uses load_image_safe for robust image loading
     - Never crashes due to image issues
     """
-    try:
-        img_path = safe_get_image(filename)
-        img = Image.open(img_path)
-        st.image(img, use_container_width=True, caption=caption)
-    except Exception:
+    if filename:
+        # Try to load the requested image
+        image_path = os.path.join(IMAGES_DIR, filename)
+        img = load_image_safe(image_path)
+        if img:
+            st.image(img, use_container_width=True, caption=caption)
+            return
+    
+    # Fallback to placeholder
+    placeholder_path = os.path.join(IMAGES_DIR, "placeholder.png")
+    placeholder = load_image_safe(placeholder_path)
+    if placeholder:
+        st.image(placeholder, use_container_width=True, caption=caption or "🖼 Illustration coming soon")
+    else:
         st.warning("🖼 Illustration coming soon")
 
 # Development helper function for cache management
@@ -1803,12 +1791,9 @@ def save_favorites(favorites: set):
 @st.cache_resource
 def load_image(image_path: str, size=(800, 600)):
     """Load image or return placeholder if not found"""
-    if image_path and Path(image_path).exists():
-        try:
-            img = Image.open(image_path)
-            return img
-        except Exception:
-            pass
+    img = load_image_safe(image_path) if image_path else None
+    if img:
+        return img
     # Create placeholder image
     img = Image.new("RGB", size, (30, 27, 75))  # Dark blue placeholder
     return img
@@ -1819,25 +1804,21 @@ def show_image_resilient(image_path, caption=""):
     """
     Show an image if it exists, else fallback to placeholder.png.
     Prevents Streamlit crashes from missing/invalid images.
+    Uses load_image_safe for robust image loading.
     """
-    try:
-        if image_path and os.path.exists(image_path):
-            img = Image.open(image_path)
-            st.image(img, use_container_width=True, caption=caption)
-        else:
-            placeholder = os.path.join(IMAGES_DIR, "placeholder.png")
-            if os.path.exists(placeholder):
-                img = Image.open(placeholder)
-                st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
-            else:
-                st.warning("🖼 Illustration coming soon")
-    except Exception:
-        placeholder = os.path.join(IMAGES_DIR, "placeholder.png")
-        if os.path.exists(placeholder):
-            img = Image.open(placeholder)
-            st.image(img, use_container_width=True, caption="🖼 Illustration coming soon")
-        else:
-            st.warning("🖼 Illustration coming soon")
+    # Try to load the requested image
+    img = load_image_safe(image_path) if image_path else None
+    if img:
+        st.image(img, use_container_width=True, caption=caption)
+        return
+    
+    # Fallback to placeholder
+    placeholder_path = os.path.join(IMAGES_DIR, "placeholder.png")
+    placeholder = load_image_safe(placeholder_path)
+    if placeholder:
+        st.image(placeholder, use_container_width=True, caption=caption or "🖼 Illustration coming soon")
+    else:
+        st.warning("🖼 Illustration coming soon")
 
 @st.cache_data
 def translate_text(text: str, target_language: str) -> str:
