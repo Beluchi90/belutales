@@ -2366,8 +2366,12 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         cover_image = story.get("cover_image")
         if cover_image:
             image_path = os.path.join("images", cover_image)
-            if os.path.exists(image_path):
+            if image_path and os.path.exists(image_path):
                 st.image(image_path, use_container_width=True, caption="📖 Story Cover")
+            else:
+                st.markdown("🖼️ Illustration coming soon")
+        else:
+            st.markdown("🖼️ Illustration coming soon")
         
         st.markdown("---")
         
@@ -2451,8 +2455,10 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 mid_image = story.get("mid_image")
                 if mid_image:
                     image_path = os.path.join("images", mid_image)
-                    if os.path.exists(image_path):
+                    if image_path and os.path.exists(image_path):
                         st.image(image_path, use_container_width=True, caption="🎨 Mid-story Illustration")
+                    else:
+                        st.markdown("🖼️ Illustration coming soon")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2469,8 +2475,10 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
             end_image = story.get("end_image")
             if end_image:
                 image_path = os.path.join("images", end_image)
-                if os.path.exists(image_path):
+                if image_path and os.path.exists(image_path):
                     st.image(image_path, use_container_width=True, caption="🌟 Story Ending")
+                else:
+                    st.markdown("🖼️ Illustration coming soon")
         
         st.markdown("---")
         
@@ -2650,8 +2658,12 @@ else:
                         cover_image = story.get("cover_image")
                         if cover_image:
                             image_path = os.path.join("images", cover_image)
-                            if os.path.exists(image_path):
+                            if image_path and os.path.exists(image_path):
                                 st.image(image_path, use_container_width=True)
+                            else:
+                                st.markdown("🖼️ Illustration coming soon")
+                        else:
+                            st.markdown("🖼️ Illustration coming soon")
                     
                     with col2:
                         # Translate title and category
