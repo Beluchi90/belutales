@@ -2367,19 +2367,41 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         if cover_image:
             image_path = os.path.join("images", cover_image)
             
-            # Check if path exists and has valid extension
-            valid_extensions = [".png", ".jpg", ".jpeg"]
-            is_valid_extension = any(image_path.lower().endswith(ext) for ext in valid_extensions)
-            
-            if image_path and os.path.exists(image_path) and is_valid_extension:
-                try:
-                    st.image(image_path, use_container_width=True, caption="📖 Story Cover")
-                except Exception:
-                    st.markdown("🖼️ Illustration coming soon")
+            # Check if file exists on disk
+            if os.path.exists(image_path):
+                st.image(image_path, use_container_width=True, caption="📖 Story Cover")
             else:
-                st.markdown("🖼️ Illustration coming soon")
+                # Styled placeholder box
+                st.markdown("""
+                <div style="
+                    background-color: #f0f0f0;
+                    border-radius: 10px;
+                    padding: 30px;
+                    text-align: center;
+                    color: #666;
+                    font-style: italic;
+                    border: 2px dashed #ccc;
+                    margin: 10px 0;
+                ">
+                    📖 Illustration coming soon
+                </div>
+                """, unsafe_allow_html=True)
         else:
-            st.markdown("🖼️ Illustration coming soon")
+            # Styled placeholder box for missing cover_image field
+            st.markdown("""
+            <div style="
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                padding: 30px;
+                text-align: center;
+                color: #666;
+                font-style: italic;
+                border: 2px dashed #ccc;
+                margin: 10px 0;
+            ">
+                📖 Illustration coming soon
+            </div>
+            """, unsafe_allow_html=True)
         
         st.markdown("---")
         
@@ -2678,24 +2700,44 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Display story cover image with comprehensive error handling
+                        # Display story cover image
                         cover_image = story.get("cover_image")
                         if cover_image:
                             image_path = os.path.join("images", cover_image)
                             
-                            # Check if path exists and has valid extension
-                            valid_extensions = [".png", ".jpg", ".jpeg"]
-                            is_valid_extension = any(image_path.lower().endswith(ext) for ext in valid_extensions)
-                            
-                            if image_path and os.path.exists(image_path) and is_valid_extension:
-                                try:
-                                    st.image(image_path, use_container_width=True, caption="🖼️ Story Cover")
-                                except Exception:
-                                    st.markdown("🖼️ Illustration coming soon")
+                            # Check if file exists on disk
+                            if os.path.exists(image_path):
+                                st.image(image_path, use_container_width=True, caption="📖 Story Cover")
                             else:
-                                st.markdown("🖼️ Illustration coming soon")
+                                # Styled placeholder box
+                                st.markdown("""
+                                <div style="
+                                    background-color: #f0f0f0;
+                                    border-radius: 10px;
+                                    padding: 20px;
+                                    text-align: center;
+                                    color: #666;
+                                    font-style: italic;
+                                    border: 2px dashed #ccc;
+                                ">
+                                    📖 Illustration coming soon
+                                </div>
+                                """, unsafe_allow_html=True)
                         else:
-                            st.markdown("🖼️ Illustration coming soon")
+                            # Styled placeholder box for missing cover_image field
+                            st.markdown("""
+                            <div style="
+                                background-color: #f0f0f0;
+                                border-radius: 10px;
+                                padding: 20px;
+                                text-align: center;
+                                color: #666;
+                                font-style: italic;
+                                border: 2px dashed #ccc;
+                            ">
+                                📖 Illustration coming soon
+                            </div>
+                            """, unsafe_allow_html=True)
                     
                     with col2:
                         # Translate title and category
