@@ -21,9 +21,8 @@ import hmac
 import secrets
 from contextlib import closing
 
-# Define base paths for Streamlit Cloud compatibility
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGES_DIR = os.path.join(BASE_DIR, "images")
+# Define base paths using pathlib
+IMAGES_DIR = Path(__file__).parent / "images"
 
 # Import performance optimizations
 from utils.performance import (
@@ -32,22 +31,15 @@ from utils.performance import (
     get_categories_optimized, render_pagination_controls, get_current_page,
     clear_cache, PAGE_SIZE
 )
-from utils.image_loader import load_image_safe, safe_image
 
-# Safe image loading helper function
-def safe_show_image(filename, caption=""):
+# Simple image display function
+def show_image(filename, caption=""):
     """
-    Safely show an image using safe_image with automatic fallback.
-    - Uses safe_image for robust image loading
-    - Never crashes due to image issues
+    Display an image directly from the images folder.
     """
     if filename:
-        image_path = os.path.join(IMAGES_DIR, filename)
-        safe_image(image_path, caption=caption)
-    else:
-        # Show placeholder directly
-        placeholder_path = os.path.join(IMAGES_DIR, "placeholder.png")
-        safe_image(placeholder_path, caption=caption or "🖼 Illustration coming soon")
+        image_path = IMAGES_DIR / filename
+        st.image(str(image_path), use_container_width=True, caption=caption)
 
 # Development helper function for cache management
 def reset_cache():
@@ -1780,25 +1772,7 @@ def save_favorites(favorites: set):
     except Exception as e:
         st.error(f"Failed to save favorites: {e}")
 
-@st.cache_resource
-def load_image(image_path: str, size=(800, 600)):
-    """Load image or return placeholder if not found"""
-    img = load_image_safe(image_path) if image_path else None
-    if img:
-        return img
-    # Create placeholder image
-    img = Image.new("RGB", size, (30, 27, 75))  # Dark blue placeholder
-    return img
-
 # get_thumbnail function moved to utils/performance.py for better organization
-
-def show_image_resilient(image_path, caption=""):
-    """
-    Show an image if it exists, else fallback to placeholder.png.
-    Prevents Streamlit crashes from missing/invalid images.
-    Uses safe_image for robust image loading.
-    """
-    safe_image(image_path, caption=caption)
 
 @st.cache_data
 def translate_text(text: str, target_language: str) -> str:
@@ -2334,7 +2308,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        safe_show_image(story.get("cover_image", ""), caption="📖 Story Cover")
+        show_image(story.get("cover_image", ""), caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2415,7 +2389,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                safe_show_image(story.get("mid_image", ""), caption="🎨 Mid-story Illustration")
+                show_image(story.get("mid_image", ""), caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2429,7 +2403,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            safe_show_image(story.get("end_image", ""), caption="🌟 Story Ending")
+            show_image(story.get("end_image", ""), caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2606,7 +2580,7 @@ else:
                     
                     with col1:
                         # Display story thumbnail image
-                        safe_show_image(story.get("thumbnail", ""))
+                        show_image(story.get("thumbnail", ""))
                     
                     with col2:
                         # Translate title and category
