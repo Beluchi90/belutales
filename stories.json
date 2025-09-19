@@ -902,12 +902,12 @@
     "is_premium": true,
     "slug": "the-little-llama-who-learned-to-dance",
     "text": "",
-    "cover_image": "",
-    "mid_image": "",
-    "end_image": "",
+    "cover_image": "placeholder.png",
+    "mid_image": "placeholder.png",
+    "end_image": "placeholder.png",
     "category": "Dreams",
     "language": "English",
-    "thumbnail": null
+    "thumbnail": "placeholder.png"
   },
   {
     "title": "The Lost Button’s Journey",
