@@ -2634,12 +2634,12 @@ else:
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
                     with col1:
-                        # Display story thumbnail
+                        # Display story cover image
                         cover_image = story.get("cover_image")
                         if cover_image:
-                            image_path = os.path.join("images", cover_image)
+                            image_path = f"images/{cover_image}"
                             if os.path.exists(image_path):
-                                st.image(image_path, use_container_width=True)
+                                st.image(image_path)
                             else:
                                 st.warning("🖼 Illustration coming soon")
                         else:
