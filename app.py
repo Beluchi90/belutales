@@ -2373,8 +2373,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        image_path = get_image_path(story.get("cover_image", ""))
-        st.image(image_path, use_container_width=True, caption="📖 Story Cover")
+        safe_show_image(story.get("cover_image", ""), caption="📖 Story Cover")
         
         st.markdown("---")
         
@@ -2455,8 +2454,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                image_path = get_image_path(story.get("mid_image", ""))
-                st.image(image_path, use_container_width=True, caption="🎨 Mid-story Illustration")
+                safe_show_image(story.get("mid_image", ""), caption="🎨 Mid-story Illustration")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2470,8 +2468,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            image_path = get_image_path(story.get("end_image", ""))
-            st.image(image_path, use_container_width=True, caption="🌟 Story Ending")
+            safe_show_image(story.get("end_image", ""), caption="🌟 Story Ending")
         
         st.markdown("---")
         
@@ -2648,8 +2645,7 @@ else:
                     
                     with col1:
                         # Display story thumbnail image
-                        image_path = get_image_path(story.get("thumbnail", ""))
-                        st.image(image_path, use_container_width=True)
+                        safe_show_image(story.get("thumbnail", ""))
                     
                     with col2:
                         # Translate title and category
