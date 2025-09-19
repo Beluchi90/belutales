@@ -2635,7 +2635,15 @@ else:
                     
                     with col1:
                         # Display story thumbnail
-                        safe_show_image(story.get("thumbnail"), caption="📖 Story Cover")
+                        cover_image = story.get("cover_image")
+                        if cover_image:
+                            image_path = os.path.join("images", cover_image)
+                            if os.path.exists(image_path):
+                                st.image(image_path, use_container_width=True)
+                            else:
+                                st.warning("🖼 Illustration coming soon")
+                        else:
+                            st.warning("🖼 Illustration coming soon")
                     
                     with col2:
                         # Translate title and category
