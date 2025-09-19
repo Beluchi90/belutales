@@ -2711,53 +2711,26 @@ else:
                                 try:
                                     st.image(image_path, use_container_width=True)
                                 except Exception:
-                                    # Styled placeholder box for render errors
-                                    st.markdown("""
-                                    <div style="
-                                        background-color: #f8f9fa;
-                                        border-radius: 12px;
-                                        padding: 25px;
-                                        text-align: center;
-                                        color: #6c757d;
-                                        font-style: italic;
-                                        border: 2px dashed #dee2e6;
-                                        font-family: 'Comic Sans MS', cursive;
-                                    ">
-                                        📖 Illustration coming soon
-                                    </div>
-                                    """, unsafe_allow_html=True)
+                                    # Use placeholder image for render errors
+                                    placeholder_path = os.path.join("images", "placeholder.png")
+                                    if os.path.exists(placeholder_path):
+                                        st.image(placeholder_path, use_container_width=True)
+                                    else:
+                                        st.warning("🖼 Illustration coming soon")
                             else:
-                                # Styled placeholder box for missing/invalid files
-                                st.markdown("""
-                                <div style="
-                                    background-color: #f8f9fa;
-                                    border-radius: 12px;
-                                    padding: 25px;
-                                    text-align: center;
-                                    color: #6c757d;
-                                    font-style: italic;
-                                    border: 2px dashed #dee2e6;
-                                    font-family: 'Comic Sans MS', cursive;
-                                ">
-                                    📖 Illustration coming soon
-                                </div>
-                                """, unsafe_allow_html=True)
+                                # Use placeholder image for missing/invalid files
+                                placeholder_path = os.path.join("images", "placeholder.png")
+                                if os.path.exists(placeholder_path):
+                                    st.image(placeholder_path, use_container_width=True)
+                                else:
+                                    st.warning("🖼 Illustration coming soon")
                         else:
-                            # Styled placeholder box for missing thumbnail field
-                            st.markdown("""
-                            <div style="
-                                background-color: #f8f9fa;
-                                border-radius: 12px;
-                                padding: 25px;
-                                text-align: center;
-                                color: #6c757d;
-                                font-style: italic;
-                                border: 2px dashed #dee2e6;
-                                font-family: 'Comic Sans MS', cursive;
-                            ">
-                                📖 Illustration coming soon
-                            </div>
-                            """, unsafe_allow_html=True)
+                            # Use placeholder image for missing thumbnail field
+                            placeholder_path = os.path.join("images", "placeholder.png")
+                            if os.path.exists(placeholder_path):
+                                st.image(placeholder_path, use_container_width=True)
+                            else:
+                                st.warning("🖼 Illustration coming soon")
                     
                     with col2:
                         # Translate title and category
