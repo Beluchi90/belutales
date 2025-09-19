@@ -1,37 +1,56 @@
 import os
 import json
 import re
+from datetime import datetime
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-stories_file = os.path.join(BASE_DIR, "stories.json")
-images_dir = os.path.join(BASE_DIR, "images")
+# Paths
+STORIES_FILE = "stories.json"
+IMAGES_DIR = "images"
 
-with open(stories_file, "r", encoding="utf-8") as f:
+# Backup
+backup_file = f"stories.backup.{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+os.rename(STORIES_FILE, backup_file)
+print(f"📦 Backup created: {backup_file}")
+
+# Load stories.json
+with open(backup_file, "r", encoding="utf-8") as f:
     stories = json.load(f)
 
-def normalize(title):
-    return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+# Get all available image files in /images
+available_images = set(os.listdir(IMAGES_DIR))
 
-available_images = os.listdir(images_dir)
-available_set = {img.lower(): img for img in available_images}
+# Slugify helper
+def slugify(title: str) -> str:
+    slug = title.lower()
+    slug = re.sub(r"[^a-z0-9]+", "-", slug)  # replace non-alphanumeric with "-"
+    slug = re.sub(r"-+", "-", slug)          # collapse multiple "-"
+    return slug.strip("-")
 
-fixed = []
-
+# Fix references
+updated_count = 0
 for story in stories:
-    title_norm = normalize(story["title"])
-    expected = {
-        "cover_image": f"{title_norm}_1.png",
-        "mid_image": f"{title_norm}_mid.png",
-        "end_image": f"{title_norm}_end.png"
-    }
-    for key, filename in expected.items():
-        if filename in available_set:
-            story[key] = available_set[filename]
-            fixed.append((story["title"], key, filename))
+    title = story.get("title", "")
+    slug = slugify(title)
 
-with open(stories_file, "w", encoding="utf-8") as f:
+    expected = {
+        "cover_image": f"{slug}_1.png",
+        "mid_image": f"{slug}_2.png",
+        "end_image": f"{slug}_3.png",
+        "thumbnail": f"{slug}_1.png",
+    }
+
+    fixed = {}
+    for key, filename in expected.items():
+        if filename in available_images:
+            story[key] = filename
+            fixed[key] = filename
+
+    if fixed:
+        updated_count += 1
+        print(f"✅ {title} → {fixed}")
+
+# Save fixed stories.json
+with open(STORIES_FILE, "w", encoding="utf-8") as f:
     json.dump(stories, f, indent=2, ensure_ascii=False)
 
-print(f"✔ Updated {len(fixed)} image references")
-for t, k, fimg in fixed:
-    print(f"  {t} → {k} = {fimg}")
+print(f"\n🎉 Fixed image references for {updated_count} stories")
