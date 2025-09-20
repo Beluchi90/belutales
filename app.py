@@ -522,7 +522,7 @@ def apply_filters(stories: List[Dict], fs: FilterState, ignore_category: bool = 
     
     return filtered
 
-from utils.image_loader import load_image_safe
+from utils.image_loader import safe_image
 from utils.categories import load_stories_json, category_counts
 
 # Import language support
