@@ -1,38 +1,25 @@
+import os
+import streamlit as st
 from pathlib import Path
-from typing import Optional, Union
-from PIL import Image, UnidentifiedImageError
-import io
-try:
-    import pillow_avif  # noqa: F401  # enables AVIF support if installed
-except Exception:
-    pass
 
-SUPPORTED_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".gif", ".tiff", ".avif"}
+BASE_DIR = Path(__file__).resolve().parent.parent
+IMAGES_DIR = BASE_DIR / "images"
+PLACEHOLDER = IMAGES_DIR / "placeholder.png"
 
-def load_image_safe(src: Union[str, Path, bytes, io.BytesIO]) -> Optional[Image.Image]:
+def safe_image(image_path: str, caption: str = "", **kwargs):
     """
-    Attempts to open an image robustly:
-    - Accepts path, bytes, or BytesIO.
-    - Normalizes WEBP/AVIF if Pillow supports it.
-    - Returns a PIL Image or None if it can't be opened.
+    Try to load and display an image safely.
+    Falls back to placeholder.png if anything fails.
     """
     try:
-        if isinstance(src, (bytes, io.BytesIO)):
-            data = src if isinstance(src, bytes) else src.getvalue()
-            return Image.open(io.BytesIO(data)).convert("RGBA")
+        if not image_path:
+            raise ValueError("Empty image path")
 
-        p = Path(src)
-        if not p.exists() or not p.is_file():
-            return None
+        full_path = IMAGES_DIR / os.path.basename(image_path)
 
-        # Quick extension sanity check (helps catch mislabeled files)
-        if p.suffix.lower() not in SUPPORTED_EXTS:
-            # Still try to open—extension might be wrong but bytes valid
-            img = Image.open(p)
-            return img.convert("RGBA")
+        if not full_path.exists():
+            raise FileNotFoundError(f"Missing image: {full_path}")
 
-        img = Image.open(p)
-        img.load()  # force decode to surface errors early
-        return img.convert("RGBA")
-    except (UnidentifiedImageError, OSError, ValueError):
-        return None
+        st.image(str(full_path), caption=caption, use_container_width=True, **kwargs)
+    except Exception:
+        st.image(str(PLACEHOLDER), caption="Image missing", use_container_width=True)

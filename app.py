@@ -31,38 +31,6 @@ def debug_image_path(path: str):
     print(f"[DEBUG] Image check → {abs_path} | Exists: {exists}")
     return abs_path if exists else None
 
-def safe_show_image(image_filename, caption=""):
-    """
-    Safely display an image with debug logging and fallback.
-    
-    1. Always joins images folder path with filename
-    2. If image exists on disk - display it
-    3. If missing - fall back to placeholder.png
-    4. Debug logs show existence status for both cases
-    """
-    if image_filename:
-        # Always join the images folder path with filename
-        full_path = os.path.join("images", image_filename)
-        
-        # Check if file exists with debug logging
-        if os.path.exists(full_path):
-            print(f"[DEBUG] Image exists: {full_path} | Displaying actual image")
-            st.image(full_path, use_container_width=True, caption=caption)
-            return
-        else:
-            print(f"[DEBUG] Image missing: {full_path} | Falling back to placeholder")
-    else:
-        print(f"[DEBUG] No filename provided | Falling back to placeholder")
-    
-    # Fallback to placeholder
-    placeholder_path = os.path.join("images", "placeholder.png")
-    if os.path.exists(placeholder_path):
-        print(f"[DEBUG] Using placeholder: {placeholder_path}")
-        st.image(placeholder_path, use_container_width=True, caption="Missing image")
-    else:
-        print(f"[DEBUG] Placeholder missing: {placeholder_path}")
-        st.warning("🖼 Illustration coming soon")
-
 # Import performance optimizations
 from utils.performance import (
     load_story_index, load_story_full, get_thumbnail, get_clients,
@@ -70,6 +38,7 @@ from utils.performance import (
     get_categories_optimized, render_pagination_controls, get_current_page,
     clear_cache, PAGE_SIZE
 )
+from utils.image_loader import safe_image
 
 # Development helper function for cache management
 def reset_cache():
@@ -2338,7 +2307,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        safe_show_image(story.get("thumbnail", ""), caption="📘 Story Cover")
+        safe_image(story.get("thumbnail", ""), story.get("title", ""))
         
         st.markdown("---")
         
@@ -2419,7 +2388,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                safe_show_image(story.get("thumbnail", ""), caption="🎨 Mid-story Illustration")
+                safe_image(story.get("thumbnail", ""), story.get("title", ""))
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2433,7 +2402,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            safe_show_image(story.get("thumbnail", ""), caption="🌟 Story Ending")
+            safe_image(story.get("thumbnail", ""), story.get("title", ""))
         
         st.markdown("---")
         
@@ -2610,7 +2579,7 @@ else:
                     
                     with col1:
                         # Display story image
-                        safe_show_image(story.get("thumbnail", ""))
+                        safe_image(story.get("thumbnail", ""), story.get("title", ""))
                     
                     with col2:
                         # Translate title and category
