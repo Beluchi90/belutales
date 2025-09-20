@@ -8,20 +8,33 @@ PLACEHOLDER = IMAGES_DIR / "placeholder.png"
 
 def safe_image(image_path: str, caption: str = "", **kwargs):
     """
-    Always loads a valid image - either the real image or placeholder.
+    Never crashes - always displays either the real image or placeholder.
     
-    1. If image_path is None, empty, or does not exist → show PLACEHOLDER
-    2. If image_path exists → load it with st.image
-    3. Never crashes - always displays something
+    1. If image_path is None or empty → use PLACEHOLDER
+    2. If image_path is relative name → join with IMAGES_DIR  
+    3. If file exists → display it with st.image
+    4. If file does not exist → display PLACEHOLDER
     """
     try:
-        # Check if we have a valid image path that exists
-        if not image_path or not Path(image_path).exists():
-            # Use PLACEHOLDER
-            st.image(str(PLACEHOLDER), caption=caption or "Image missing", use_container_width=True, **kwargs)
+        # Handle None or empty image_path
+        if not image_path:
+            st.image(str(PLACEHOLDER), caption=caption, use_container_width=True, **kwargs)
+            return
+        
+        # If image_path is a relative name, join with IMAGES_DIR
+        if not os.path.isabs(image_path):
+            full_path = IMAGES_DIR / image_path
         else:
-            # Show the real image
-            st.image(image_path, caption=caption, use_container_width=True, **kwargs)
+            full_path = Path(image_path)
+        
+        # Check if file exists
+        if full_path.exists():
+            # Display the real image
+            st.image(str(full_path), caption=caption, use_container_width=True, **kwargs)
+        else:
+            # Display PLACEHOLDER
+            st.image(str(PLACEHOLDER), caption=caption, use_container_width=True, **kwargs)
+            
     except Exception:
-        # Ultimate fallback - always show placeholder if anything goes wrong
-        st.image(str(PLACEHOLDER), caption="Image missing", use_container_width=True)
+        # Always fallback to PLACEHOLDER instead of raising errors
+        st.image(str(PLACEHOLDER), caption=caption, use_container_width=True, **kwargs)
