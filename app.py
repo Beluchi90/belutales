@@ -35,26 +35,32 @@ def safe_show_image(image_filename, caption=""):
     """
     Safely display an image with debug logging and fallback.
     
-    1. If image exists on disk - display it
-    2. If image missing - fall back to placeholder.png
-    3. Debug logs show existence status
+    1. Always joins images folder path with filename
+    2. If image exists on disk - display it
+    3. If missing - fall back to placeholder.png
+    4. Debug logs show existence status for both cases
     """
     if image_filename:
-        # Construct full path
-        image_path = f"images/{image_filename}"
-        resolved_path = debug_image_path(image_path)
+        # Always join the images folder path with filename
+        full_path = os.path.join("images", image_filename)
         
-        if resolved_path:
-            # Image exists - display it
-            st.image(resolved_path, use_container_width=True, caption=caption)
+        # Check if file exists with debug logging
+        if os.path.exists(full_path):
+            print(f"[DEBUG] Image exists: {full_path} | Displaying actual image")
+            st.image(full_path, use_container_width=True, caption=caption)
             return
+        else:
+            print(f"[DEBUG] Image missing: {full_path} | Falling back to placeholder")
+    else:
+        print(f"[DEBUG] No filename provided | Falling back to placeholder")
     
     # Fallback to placeholder
-    print(f"[DEBUG] Falling back to placeholder for: {image_filename}")
-    placeholder_path = debug_image_path("images/placeholder.png")
-    if placeholder_path:
-        st.image(placeholder_path, use_container_width=True, caption="🚧 Placeholder")
+    placeholder_path = os.path.join("images", "placeholder.png")
+    if os.path.exists(placeholder_path):
+        print(f"[DEBUG] Using placeholder: {placeholder_path}")
+        st.image(placeholder_path, use_container_width=True, caption="Missing image")
     else:
+        print(f"[DEBUG] Placeholder missing: {placeholder_path}")
         st.warning("🖼 Illustration coming soon")
 
 # Import performance optimizations
