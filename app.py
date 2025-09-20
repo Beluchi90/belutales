@@ -24,6 +24,13 @@ from contextlib import closing
 # Define base paths using pathlib
 IMAGES_DIR = Path(__file__).parent / "images"
 
+def debug_image_path(path: str):
+    """Log and verify whether image exists on server."""
+    abs_path = os.path.abspath(path)
+    exists = os.path.exists(abs_path)
+    print(f"[DEBUG] Image check → {abs_path} | Exists: {exists}")
+    return abs_path if exists else None
+
 # Import performance optimizations
 from utils.performance import (
     load_story_index, load_story_full, get_thumbnail, get_clients,
@@ -2299,8 +2306,15 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.rerun()
         
         # Show cover image
-        image_path = IMAGES_DIR / story.get("image", "")
-        st.image(str(image_path), use_container_width=True, caption="📖 Story Cover")
+        image_filename = story.get("thumbnail", "")
+        image_path = f"images/{image_filename}" if image_filename else ""
+        resolved_path = debug_image_path(image_path)
+        
+        if resolved_path:
+            st.image(resolved_path, use_container_width=True, caption="📘 Story Cover")
+        else:
+            st.warning(f"⚠️ Missing image for story: {story.get('title', 'Unknown')}")
+            st.image("images/placeholder.png", use_container_width=True, caption="🚧 Placeholder")
         
         st.markdown("---")
         
@@ -2381,8 +2395,15 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                             st.markdown(f'<div class="story-text">{para.strip()}</div>', unsafe_allow_html=True)
                 
                 # Show mid image
-                image_path = IMAGES_DIR / story.get("image", "")
-                st.image(str(image_path), use_container_width=True, caption="🎨 Mid-story Illustration")
+                image_filename = story.get("thumbnail", "")
+                image_path = f"images/{image_filename}" if image_filename else ""
+                resolved_path = debug_image_path(image_path)
+                
+                if resolved_path:
+                    st.image(resolved_path, use_container_width=True, caption="🎨 Mid-story Illustration")
+                else:
+                    st.warning(f"⚠️ Missing image for story: {story.get('title', 'Unknown')}")
+                    st.image("images/placeholder.png", use_container_width=True, caption="🚧 Placeholder")
                 
                 # Show second half
                 second_half = paragraphs[len(paragraphs)//2:]
@@ -2396,8 +2417,15 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                 st.markdown('</div>', unsafe_allow_html=True)
             
             # Show end image
-            image_path = IMAGES_DIR / story.get("image", "")
-            st.image(str(image_path), use_container_width=True, caption="🌟 Story Ending")
+            image_filename = story.get("thumbnail", "")
+            image_path = f"images/{image_filename}" if image_filename else ""
+            resolved_path = debug_image_path(image_path)
+            
+            if resolved_path:
+                st.image(resolved_path, use_container_width=True, caption="🌟 Story Ending")
+            else:
+                st.warning(f"⚠️ Missing image for story: {story.get('title', 'Unknown')}")
+                st.image("images/placeholder.png", use_container_width=True, caption="🚧 Placeholder")
         
         st.markdown("---")
         
@@ -2574,8 +2602,15 @@ else:
                     
                     with col1:
                         # Display story image
-                        image_path = IMAGES_DIR / story.get("image", "")
-                        st.image(str(image_path), use_container_width=True)
+                        image_filename = story.get("thumbnail", "")
+                        image_path = f"images/{image_filename}" if image_filename else ""
+                        resolved_path = debug_image_path(image_path)
+                        
+                        if resolved_path:
+                            st.image(resolved_path, use_container_width=True, caption="📘 Story Cover")
+                        else:
+                            st.warning(f"⚠️ Missing image for story: {story.get('title', 'Unknown')}")
+                            st.image("images/placeholder.png", use_container_width=True, caption="🚧 Placeholder")
                     
                     with col2:
                         # Translate title and category
