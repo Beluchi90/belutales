@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BeluTales Font & Sound Test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            color: white;
+            padding: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        h1 {
+            font-family: 'Baloo 2', cursive, sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #facc15, #38bdf8, #f472b6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .test-button {
+            background: linear-gradient(135deg, #facc15, #38bdf8);
+            color: #1e1b4b;
+            border: none;
+            border-radius: 16px;
+            padding: 15px 30px;
+            font-family: 'Baloo 2', cursive, sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4);
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        
+        .status {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 BeluTales Font Test</h1>
+    
+    <div class="status">
+        <p><strong>Font Status:</strong></p>
+        <p id="font-status">Loading fonts...</p>
+    </div>
+    
+    <div class="status">
+        <p><strong>Sound Status:</strong></p>
+        <p id="sound-status">Ready to test</p>
+    </div>
+    
+    <p>This text should be in <strong>Nunito</strong> (clean, readable)</p>
+    <h2 style="font-family: 'Baloo 2', cursive;">This heading should be in Baloo 2 (rounded, playful)</h2>
+    
+    <button class="test-button" onclick="testSound()">🔊 Test Click Sound</button>
+    <button class="test-button" onclick="testFonts()">🎨 Check Fonts</button>
+    
+    <script>
+        function testSound() {
+            document.getElementById('sound-status').innerHTML = 'Testing sound...';
+            
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+                
+                oscillator.type = 'sine';
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+                
+                document.getElementById('sound-status').innerHTML = '✅ Sound working! Web Audio API';
+            } catch (e) {
+                document.getElementById('sound-status').innerHTML = '❌ Sound failed: ' + e.message;
+            }
+        }
+        
+        function testFonts() {
+            document.getElementById('font-status').innerHTML = 'Checking fonts...';
+            
+            setTimeout(() => {
+                const heading = document.querySelector('h1');
+                const computed = window.getComputedStyle(heading);
+                const fontFamily = computed.fontFamily;
+                
+                if (fontFamily.includes('Baloo') || fontFamily.includes('baloo')) {
+                    document.getElementById('font-status').innerHTML = '✅ Baloo 2 loaded! Font: ' + fontFamily;
+                } else {
+                    document.getElementById('font-status').innerHTML = '❌ Baloo 2 not loaded. Font: ' + fontFamily;
+                }
+            }, 1000);
+        }
+        
+        // Auto-test fonts on load
+        window.onload = function() {
+            setTimeout(testFonts, 2000);
+        };
+    </script>
+</body>
+</html>
+

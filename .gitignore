@@ -1,0 +1,12 @@
+# Ignore environment secrets
+.env
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore SQLite local DB
+*.db
+
+# Ignore system files
+.DS_Store
