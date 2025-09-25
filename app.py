@@ -138,11 +138,12 @@ def load_users():
     try:
         with open(USERS_FILE, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            return data if isinstance(data, dict) else {}
+            return data if isinstance(data, list) else []
     except (FileNotFoundError, json.JSONDecodeError):
         # Create empty users.json in root folder if file doesn't exist or is corrupted
-        save_users({})
-        return {}
+        with open("users.json", "w") as f:
+            json.dump([], f)
+        return []
 
 def save_users(users):
     """Save users to JSON file in root folder"""
@@ -159,14 +160,20 @@ def create_user(email: str, pw: str) -> tuple[bool, str]:
         users = load_users()
         email = email.strip().lower()
         
-        if email in users:
-            return False, "User already exists."
+        # Check if user already exists
+        for user in users:
+            if user.get("email") == email:
+                return False, "User already exists."
         
-        users[email] = {
+        # Create new user
+        new_user = {
             "email": email,
             "password": hash_password(pw),  # Store hashed password
             "premium": False
         }
+        
+        # Append user to list
+        users.append(new_user)
         
         # Save immediately to users.json in root folder to ensure persistence
         save_users(users)
@@ -178,15 +185,20 @@ def get_user(email: str):
     """Get user data from JSON file"""
     users = load_users()
     email = email.strip().lower()
-    return users.get(email)
+    for user in users:
+        if user.get("email") == email:
+            return user
+    return None
 
 def set_premium(email: str, value: bool = True):
     """Set premium status for user"""
     users = load_users()
     email = email.strip().lower()
-    if email in users:
-        users[email]["premium"] = value
-        save_users(users)
+    for user in users:
+        if user.get("email") == email:
+            user["premium"] = value
+            save_users(users)
+            break
 
 def verify_login(email: str, pw: str) -> tuple[bool, dict | None, str]:
     """Verify user login credentials by reading from users.json in root folder"""
@@ -205,17 +217,18 @@ def change_password(email: str, old_password: str, new_password: str) -> tuple[b
     users = load_users()
     email = email.strip().lower()
     
-    if email not in users:
-        return False, "User not found."
+    for user in users:
+        if user.get("email") == email:
+            # Verify old password
+            if not verify_password(old_password, user["password"]):
+                return False, "Current password is incorrect."
+            
+            # Update with new hashed password
+            user["password"] = hash_password(new_password)
+            save_users(users)
+            return True, "Password changed successfully!"
     
-    # Verify old password
-    if not verify_password(old_password, users[email]["password"]):
-        return False, "Current password is incorrect."
-    
-    # Update with new hashed password
-    users[email]["password"] = hash_password(new_password)
-    save_users(users)
-    return True, "Password changed successfully!"
+    return False, "User not found."
 
 def restore_user_session():
     """Restore user session from users.json file on startup - ensures accounts persist on Streamlit Cloud"""
