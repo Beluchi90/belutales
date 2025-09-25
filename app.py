@@ -1784,7 +1784,7 @@ def show_image_resilient(path_or_bytes, caption=None):
             fallback = Image.open(fallback_path)
             st.warning("Some illustrations couldn't be decoded. Showing a placeholder instead.")
             st.image(fallback, use_container_width=True, caption=caption)
-        except Exception:
+    except Exception:
             st.warning("Image failed to load and no fallback available.")
         return
     st.image(img, use_container_width=True, caption=caption)
@@ -2594,8 +2594,8 @@ else:
                             full_cover_path = f"images/{cover_path}"
                             thumbnail_bytes = get_thumbnail(full_cover_path, max_w=400)
                             if thumbnail_bytes:
-                                st.image(thumbnail_bytes, use_container_width=True)
-                            else:
+                                st.image(thumbnail_bytes, use_column_width=True)
+                        else:
                                 # Fallback to original image if thumbnail generation fails
                                 show_image_resilient(full_cover_path)
                     
