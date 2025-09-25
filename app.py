@@ -134,23 +134,27 @@ def verify_password(password: str, hashed: str) -> bool:
     return hash_password(password) == hashed
 
 def load_users():
-    """Load users from JSON file, create file if it doesn't exist"""
+    """Load users from JSON file in root folder, create file if it doesn't exist"""
     try:
         with open(USERS_FILE, 'r', encoding='utf-8') as f:
             data = json.load(f)
             return data if isinstance(data, dict) else {}
     except (FileNotFoundError, json.JSONDecodeError):
-        # Create empty users.json if file doesn't exist or is corrupted
+        # Create empty users.json in root folder if file doesn't exist or is corrupted
         save_users({})
         return {}
 
 def save_users(users):
-    """Save users to JSON file"""
-    with open(USERS_FILE, 'w', encoding='utf-8') as f:
-        json.dump(users, f, indent=2, ensure_ascii=False)
+    """Save users to JSON file in root folder"""
+    try:
+        with open(USERS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(users, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        st.error(f"Error saving users: {str(e)}")
+        raise
 
 def create_user(email: str, pw: str) -> tuple[bool, str]:
-    """Create a new user account with hashed password and save immediately to users.json"""
+    """Create a new user account with hashed password and save immediately to users.json in root folder"""
     try:
         users = load_users()
         email = email.strip().lower()
@@ -164,9 +168,9 @@ def create_user(email: str, pw: str) -> tuple[bool, str]:
             "premium": False
         }
         
-        # Save immediately to ensure persistence
+        # Save immediately to users.json in root folder to ensure persistence
         save_users(users)
-        return True, "Account created."
+        return True, "Account created and saved to users.json."
     except Exception as e:
         return False, f"Error creating account: {str(e)}"
 
@@ -185,11 +189,11 @@ def set_premium(email: str, value: bool = True):
         save_users(users)
 
 def verify_login(email: str, pw: str) -> tuple[bool, dict | None, str]:
-    """Verify user login credentials from users.json"""
+    """Verify user login credentials by reading from users.json in root folder"""
     try:
         user = get_user(email)
         if not user:
-            return False, None, "No account found."
+            return False, None, "No account found in users.json."
         if not verify_password(pw, user["password"]):
             return False, None, "Wrong password."
         return True, user, "Welcome back!"
