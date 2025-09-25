@@ -1,4 +1,4 @@
-import streamlit as st
+﻿import streamlit as st
 import json
 from pathlib import Path
 import unicodedata
@@ -522,10 +522,12 @@ except ImportError:
 
 # Import translation support
 try:
-    from deep_translator import GoogleTranslator
+    from utils.translator import translate_text
     TRANSLATION_AVAILABLE = True
 except ImportError:
     TRANSLATION_AVAILABLE = False
+    def translate_text(text: str, target_language: str) -> str:
+        return text
 
 # Import TTS support
 try:
@@ -1787,21 +1789,6 @@ def show_image_resilient(path_or_bytes, caption=None):
         return
     st.image(img, use_container_width=True, caption=caption)
 
-@st.cache_data
-def translate_text(text: str, target_language: str) -> str:
-    """Translate text to target language"""
-    if not TRANSLATION_AVAILABLE or target_language == "English":
-        return text
-    
-    try:
-        lang_code = LANGUAGES.get(target_language, {}).get("code", "en")
-        if lang_code == "en":
-            return text
-        
-        translator = GoogleTranslator(source="auto", target=lang_code)
-        return translator.translate(text)
-    except Exception:
-        return text
 
 @st.cache_resource
 def get_tts_engine(lang_code: str):
@@ -2287,12 +2274,13 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         selected_language = st.session_state.get("selected_language", "English")
         
         # Translate title
-        translated_title = translate_text(story.get("title", "Untitled"), selected_language)
+        lang_code = LANGUAGES.get(selected_language, {}).get("code", "en")
+        translated_title = translate_text(story.get("title", "Untitled"), lang_code)
         st.title(translated_title)
         
         # Story metadata
         category = story.get("category", "General")
-        translated_category = translate_text(category, selected_language)
+        translated_category = translate_text(category, lang_code)
         is_premium = story.get("is_premium", False)
         
         col1, col2 = st.columns([3, 1])
@@ -2361,7 +2349,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         else:
             # Get and translate story text
             story_text = story.get("text", story.get("content", "No content available."))
-            translated_text = translate_text(story_text, selected_language)
+            translated_text = translate_text(story_text, lang_code)
             
             # Audio narration section
             st.subheader("🔊 Audio Narration")
@@ -2594,6 +2582,7 @@ else:
                     
                     # Get selected language for translation
                     selected_language = st.session_state.get("selected_language", "English")
+                    lang_code = LANGUAGES.get(selected_language, {}).get("code", "en")
                     
                     col1, col2, col3, col4 = st.columns([1, 2, 1, 1])
                     
@@ -2612,15 +2601,15 @@ else:
                     
                     with col2:
                         # Translate title and category
-                        translated_title = translate_text(story.get("title", "Untitled"), selected_language)
-                        translated_category = translate_text(story.get('category', 'General'), selected_language)
+                        translated_title = translate_text(story.get("title", "Untitled"), lang_code)
+                        translated_category = translate_text(story.get('category', 'General'), lang_code)
                         
                         st.subheader(translated_title)
                         st.caption(f"📚 {translated_category} {'• 💎 Premium' if story.get('is_premium', False) else '• 🆓 Free'}")
                         
                         # Show translated excerpt from lightweight index
                         snippet = story.get("snippet", "")
-                        translated_excerpt = translate_text(snippet, selected_language)
+                        translated_excerpt = translate_text(snippet, lang_code)
                         st.write(translated_excerpt)
                     
                     with col3:
