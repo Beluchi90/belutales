@@ -1784,7 +1784,7 @@ def show_image_resilient(path_or_bytes, caption=None):
             fallback = Image.open(fallback_path)
             st.warning("Some illustrations couldn't be decoded. Showing a placeholder instead.")
             st.image(fallback, use_container_width=True, caption=caption)
-    except Exception:
+        except Exception:
             st.warning("Image failed to load and no fallback available.")
         return
     st.image(img, use_container_width=True, caption=caption)
