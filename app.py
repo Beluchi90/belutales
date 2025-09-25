@@ -122,110 +122,78 @@ def check_premium_from_payments():
             return True
     return False
 
-# SQLite Database and Authentication Functions
-DB_PATH = "belutales.db"
+# JSON-based User Authentication Functions
+USERS_FILE = "users.json"
 
-def db_conn():
-    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-    conn.row_factory = sqlite3.Row
-    return conn
-
-def db_migrate():
-    with closing(db_conn()) as conn, conn:
-        conn.execute("""
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            email TEXT UNIQUE NOT NULL,
-            password_hash TEXT NOT NULL,
-            premium INTEGER NOT NULL DEFAULT 0,
-            created_at INTEGER NOT NULL
-        );
-        """)
-
-def _hash_password(pw: str) -> str:
-    """Generate a secure password hash using PBKDF2 with random salt"""
-    salt = os.urandom(16).hex()
-    hash_val = hashlib.pbkdf2_hmac("sha256", pw.encode(), bytes.fromhex(salt), 100_000).hex()
-    return f"{salt}:{hash_val}"
-
-def _check_password(pw: str, stored: str) -> bool:
-    """Verify password against stored hash with proper error handling"""
+def load_users():
+    """Load users from JSON file"""
     try:
-        # Check if password_hash contains the new format separator
-        if ":" not in stored:
-            # Old format or invalid hash - treat as invalid
-            return False
-        
-        salt, stored_hash = stored.split(":", 1)
-        
-        # Validate salt is hexadecimal
-        try:
-            salt_bytes = bytes.fromhex(salt)
-        except ValueError:
-            # Invalid salt format
-            return False
-        
-        # Recompute hash
-        calc = hashlib.pbkdf2_hmac("sha256", pw.encode(), salt_bytes, 100_000).hex()
-        return hmac.compare_digest(calc, stored_hash)
-        
-    except (ValueError, IndexError) as e:
-        # Handle any parsing errors gracefully
-        return False
+        with open(USERS_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+def save_users(users):
+    """Save users to JSON file"""
+    with open(USERS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(users, f, indent=2, ensure_ascii=False)
 
 def create_user(email: str, pw: str) -> tuple[bool, str]:
-    try:
-        with closing(db_conn()) as conn, conn:
-            conn.execute(
-                "INSERT INTO users(email, password_hash, premium, created_at) VALUES(?,?,0,?)",
-                (email.strip().lower(), _hash_password(pw), int(time.time())),
-            )
-        return True, "Account created."
-    except sqlite3.IntegrityError:
+    """Create a new user account"""
+    users = load_users()
+    email = email.strip().lower()
+    
+    if email in users:
         return False, "User already exists."
+    
+    users[email] = {
+        "email": email,
+        "password": pw,  # Plain text for now as requested
+        "premium": False
+    }
+    
+    save_users(users)
+    return True, "Account created."
 
 def get_user(email: str):
-    with closing(db_conn()) as conn:
-        row = conn.execute("SELECT * FROM users WHERE email = ?", (email.strip().lower(),)).fetchone()
-    return dict(row) if row else None
+    """Get user data from JSON file"""
+    users = load_users()
+    email = email.strip().lower()
+    return users.get(email)
 
 def set_premium(email: str, value: bool = True):
-    with closing(db_conn()) as conn, conn:
-        conn.execute("UPDATE users SET premium = ? WHERE email = ?", (1 if value else 0, email.strip().lower()))
+    """Set premium status for user"""
+    users = load_users()
+    email = email.strip().lower()
+    if email in users:
+        users[email]["premium"] = value
+        save_users(users)
 
 def verify_login(email: str, pw: str) -> tuple[bool, dict | None, str]:
-    u = get_user(email)
-    if not u:
+    """Verify user login credentials"""
+    user = get_user(email)
+    if not user:
         return False, None, "No account found."
-    
-    # Check if password hash is in old format (doesn't contain ":")
-    if ":" not in u["password_hash"]:
-        return False, None, "Account needs password reset. Please re-register with a new password."
-    
-    if not _check_password(pw, u["password_hash"]):
+    if user["password"] != pw:
         return False, None, "Wrong password."
-    return True, u, "Welcome back!"
+    return True, user, "Welcome back!"
 
 def change_password(email: str, old_password: str, new_password: str) -> tuple[bool, str]:
     """Change user password after verifying old password"""
-    u = get_user(email)
-    if not u:
+    users = load_users()
+    email = email.strip().lower()
+    
+    if email not in users:
         return False, "User not found."
     
     # Verify old password
-    if not _check_password(old_password, u["password_hash"]):
+    if users[email]["password"] != old_password:
         return False, "Current password is incorrect."
     
     # Update with new password
-    try:
-        with closing(db_conn()) as conn, conn:
-            conn.execute(
-                "UPDATE users SET password_hash = ? WHERE email = ?",
-                (_hash_password(new_password), email.strip().lower())
-            )
-        return True, "Password changed successfully!"
-    except Exception as e:
-        return False, f"Error updating password: {str(e)}"
+    users[email]["password"] = new_password
+    save_users(users)
+    return True, "Password changed successfully!"
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
@@ -2115,8 +2083,7 @@ st.session_state.setdefault("volume", 0.3)
 # Initialize pagination
 st.session_state.setdefault("page", 1)
 
-# Initialize database and authentication
-db_migrate()
+# Initialize authentication system
 
 # Initialize session state keys
 if "logged_in" not in st.session_state:
@@ -2128,12 +2095,17 @@ if "premium" not in st.session_state:
 if "active_tab" not in st.session_state:
     st.session_state.active_tab = st.query_params.get("tab", ["stories"])[0]
 
-# Check for existing premium status on startup
+# Reload user data from JSON file on startup to persist after reloads
 if st.session_state.get("email"):
     user = get_user(st.session_state["email"])
-    if user and user["premium"] == 1:
-        st.session_state["premium"] = True
+    if user:
         st.session_state["logged_in"] = True
+        st.session_state["premium"] = bool(user.get("premium", False))
+    else:
+        # User not found in JSON, clear session
+        st.session_state["logged_in"] = False
+        st.session_state["email"] = None
+        st.session_state["premium"] = False
 
 def _go(tab: str):
     st.session_state.active_tab = tab
@@ -2242,8 +2214,7 @@ if is_success:
     st.stop()
 # ---- end success handler ----
 
-# Initialize database
-db_migrate()
+# Initialize authentication system
 
 # Load stories using optimized performance functions
 stories_index = load_story_index()  # Lightweight index for list view
