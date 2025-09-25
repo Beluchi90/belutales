@@ -1787,7 +1787,7 @@ def show_image_resilient(path_or_bytes, caption=None):
         except Exception:
             st.warning("Image failed to load and no fallback available.")
         return
-    st.image(img, use_container_width=True, caption=caption)
+    st.image(img, use_column_width=True, caption=caption)
 
 
 @st.cache_resource
