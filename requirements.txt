@@ -8,5 +8,5 @@ deep-translator==1.11.4
 python-dotenv==1.0.1
 fastapi==0.111.0
 uvicorn[standard]==0.30.0
-httpx>=0.13.3,<0.28
+httpx==0.13.3
 orjson==3.10.7
