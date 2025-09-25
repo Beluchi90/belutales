@@ -125,6 +125,14 @@ def check_premium_from_payments():
 # JSON-based User Authentication Functions
 USERS_FILE = "users.json"
 
+def hash_password(password: str) -> str:
+    """Hash password using SHA-256"""
+    return hashlib.sha256(password.encode()).hexdigest()
+
+def verify_password(password: str, hashed: str) -> bool:
+    """Verify password against hash"""
+    return hash_password(password) == hashed
+
 def load_users():
     """Load users from JSON file, create file if it doesn't exist"""
     try:
@@ -142,7 +150,7 @@ def save_users(users):
         json.dump(users, f, indent=2, ensure_ascii=False)
 
 def create_user(email: str, pw: str) -> tuple[bool, str]:
-    """Create a new user account and save immediately to users.json"""
+    """Create a new user account with hashed password and save immediately to users.json"""
     try:
         users = load_users()
         email = email.strip().lower()
@@ -152,7 +160,7 @@ def create_user(email: str, pw: str) -> tuple[bool, str]:
         
         users[email] = {
             "email": email,
-            "password": pw,  # Plain text for now as requested
+            "password": hash_password(pw),  # Store hashed password
             "premium": False
         }
         
@@ -182,7 +190,7 @@ def verify_login(email: str, pw: str) -> tuple[bool, dict | None, str]:
         user = get_user(email)
         if not user:
             return False, None, "No account found."
-        if user["password"] != pw:
+        if not verify_password(pw, user["password"]):
             return False, None, "Wrong password."
         return True, user, "Welcome back!"
     except Exception as e:
@@ -197,25 +205,25 @@ def change_password(email: str, old_password: str, new_password: str) -> tuple[b
         return False, "User not found."
     
     # Verify old password
-    if users[email]["password"] != old_password:
+    if not verify_password(old_password, users[email]["password"]):
         return False, "Current password is incorrect."
     
-    # Update with new password
-    users[email]["password"] = new_password
+    # Update with new hashed password
+    users[email]["password"] = hash_password(new_password)
     save_users(users)
     return True, "Password changed successfully!"
 
 def restore_user_session():
-    """Restore user session from users.json file on startup"""
+    """Restore user session from users.json file on startup - ensures accounts persist on Streamlit Cloud"""
     # Always ensure users.json exists
     if not os.path.exists(USERS_FILE):
         save_users({})
     
-    # If there's an email in session state, try to restore from JSON
+    # Always sync with users.json - don't rely on session state alone
     if st.session_state.get("email"):
         user = get_user(st.session_state["email"])
         if user:
-            # User found in JSON, restore session
+            # User found in JSON, restore session from JSON data
             st.session_state["logged_in"] = True
             st.session_state["premium"] = bool(user.get("premium", False))
             return True
@@ -225,7 +233,11 @@ def restore_user_session():
             st.session_state["email"] = None
             st.session_state["premium"] = False
             return False
-    return False
+    else:
+        # No email in session, ensure logged out state
+        st.session_state["logged_in"] = False
+        st.session_state["premium"] = False
+        return False
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
