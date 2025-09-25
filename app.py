@@ -126,11 +126,14 @@ def check_premium_from_payments():
 USERS_FILE = "users.json"
 
 def load_users():
-    """Load users from JSON file"""
+    """Load users from JSON file, create file if it doesn't exist"""
     try:
         with open(USERS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
+            data = json.load(f)
+            return data if isinstance(data, dict) else {}
+    except (FileNotFoundError, json.JSONDecodeError):
+        # Create empty users.json if file doesn't exist or is corrupted
+        save_users({})
         return {}
 
 def save_users(users):
@@ -139,21 +142,25 @@ def save_users(users):
         json.dump(users, f, indent=2, ensure_ascii=False)
 
 def create_user(email: str, pw: str) -> tuple[bool, str]:
-    """Create a new user account"""
-    users = load_users()
-    email = email.strip().lower()
-    
-    if email in users:
-        return False, "User already exists."
-    
-    users[email] = {
-        "email": email,
-        "password": pw,  # Plain text for now as requested
-        "premium": False
-    }
-    
-    save_users(users)
-    return True, "Account created."
+    """Create a new user account and save immediately to users.json"""
+    try:
+        users = load_users()
+        email = email.strip().lower()
+        
+        if email in users:
+            return False, "User already exists."
+        
+        users[email] = {
+            "email": email,
+            "password": pw,  # Plain text for now as requested
+            "premium": False
+        }
+        
+        # Save immediately to ensure persistence
+        save_users(users)
+        return True, "Account created."
+    except Exception as e:
+        return False, f"Error creating account: {str(e)}"
 
 def get_user(email: str):
     """Get user data from JSON file"""
@@ -170,13 +177,16 @@ def set_premium(email: str, value: bool = True):
         save_users(users)
 
 def verify_login(email: str, pw: str) -> tuple[bool, dict | None, str]:
-    """Verify user login credentials"""
-    user = get_user(email)
-    if not user:
-        return False, None, "No account found."
-    if user["password"] != pw:
-        return False, None, "Wrong password."
-    return True, user, "Welcome back!"
+    """Verify user login credentials from users.json"""
+    try:
+        user = get_user(email)
+        if not user:
+            return False, None, "No account found."
+        if user["password"] != pw:
+            return False, None, "Wrong password."
+        return True, user, "Welcome back!"
+    except Exception as e:
+        return False, None, f"Login error: {str(e)}"
 
 def change_password(email: str, old_password: str, new_password: str) -> tuple[bool, str]:
     """Change user password after verifying old password"""
@@ -194,6 +204,28 @@ def change_password(email: str, old_password: str, new_password: str) -> tuple[b
     users[email]["password"] = new_password
     save_users(users)
     return True, "Password changed successfully!"
+
+def restore_user_session():
+    """Restore user session from users.json file on startup"""
+    # Always ensure users.json exists
+    if not os.path.exists(USERS_FILE):
+        save_users({})
+    
+    # If there's an email in session state, try to restore from JSON
+    if st.session_state.get("email"):
+        user = get_user(st.session_state["email"])
+        if user:
+            # User found in JSON, restore session
+            st.session_state["logged_in"] = True
+            st.session_state["premium"] = bool(user.get("premium", False))
+            return True
+        else:
+            # User not found in JSON, clear session
+            st.session_state["logged_in"] = False
+            st.session_state["email"] = None
+            st.session_state["premium"] = False
+            return False
+    return False
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
@@ -2095,17 +2127,9 @@ if "premium" not in st.session_state:
 if "active_tab" not in st.session_state:
     st.session_state.active_tab = st.query_params.get("tab", ["stories"])[0]
 
-# Reload user data from JSON file on startup to persist after reloads
-if st.session_state.get("email"):
-    user = get_user(st.session_state["email"])
-    if user:
-        st.session_state["logged_in"] = True
-        st.session_state["premium"] = bool(user.get("premium", False))
-    else:
-        # User not found in JSON, clear session
-        st.session_state["logged_in"] = False
-        st.session_state["email"] = None
-        st.session_state["premium"] = False
+# Restore user session from users.json file on startup
+# This ensures accounts persist after reload
+restore_user_session()
 
 def _go(tab: str):
     st.session_state.active_tab = tab
