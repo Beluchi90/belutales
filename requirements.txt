@@ -2,11 +2,11 @@ streamlit==1.37.0
 gtts==2.5.1
 Pillow==10.4.0
 pillow-avif-plugin==1.4.6
-googletrans==4.0.0-rc1
 markdown==3.6
 deep-translator==1.11.4
 python-dotenv==1.0.1
 fastapi==0.111.0
 uvicorn[standard]==0.30.0
-httpx==0.13.3
+httpx==0.27.0
 orjson==3.10.7
+
