@@ -16,6 +16,7 @@ import threading
 import requests
 import atexit
 import pyrebase4 as pyrebase
+print("Using pyrebase version:", pyrebase.__version__)
 import hashlib
 import hmac
 import secrets
