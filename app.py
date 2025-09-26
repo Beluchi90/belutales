@@ -15,7 +15,7 @@ import subprocess
 import threading
 import requests
 import atexit
-import pyrebase as pyrebase
+import pyrebase4 as pyrebase
 import hashlib
 import hmac
 import secrets
