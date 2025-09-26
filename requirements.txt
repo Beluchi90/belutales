@@ -12,6 +12,6 @@ orjson==3.10.7
 pyrebase4==4.7.1
 google-cloud-storage==2.18.2
 pyrebase4
-gcloud
+google-cloud-storage
 pyrebase4
 
