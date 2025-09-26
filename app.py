@@ -15,12 +15,12 @@ import subprocess
 import threading
 import requests
 import atexit
-import sqlite3
+import pyrebase
 import hashlib
 import hmac
 import secrets
 from contextlib import closing
-# SQLite database functions will be defined below
+# Firebase Authentication functions will be defined below
 
 # Import performance optimizations
 from utils.performance import (
@@ -122,68 +122,67 @@ def check_premium_from_payments():
             return True
     return False
 
-# SQLite-based User Authentication Functions
-DB_PATH = "users.db"
+# Firebase Authentication Functions
+firebase_config = {
+    "apiKey": "AIzaSyBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",  # Replace with your Firebase API key
+    "authDomain": "belutales-xxxxx.firebaseapp.com",  # Replace with your Firebase auth domain
+    "projectId": "belutales-xxxxx",  # Replace with your Firebase project ID
+    "storageBucket": "belutales-xxxxx.appspot.com",  # Replace with your Firebase storage bucket
+    "messagingSenderId": "123456789012",  # Replace with your Firebase messaging sender ID
+    "appId": "1:123456789012:web:abcdefghijklmnop"  # Replace with your Firebase app ID
+}
 
-def init_db():
-    """Initialize SQLite database with users table"""
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute('''
-            CREATE TABLE IF NOT EXISTS users (
-                email TEXT PRIMARY KEY,
-                password TEXT
-            )
-        ''')
-        conn.commit()
-        conn.close()
-    except Exception as e:
-        st.error(f"Database initialization error: {str(e)}")
+# Initialize Firebase
+try:
+    firebase = pyrebase.initialize_app(firebase_config)
+    auth = firebase.auth()
+except Exception as e:
+    st.error(f"Firebase initialization error: {str(e)}")
+    auth = None
 
 def create_user(email: str, password: str):
-    """Create a new user in SQLite database"""
+    """Create a new user with Firebase Authentication"""
     try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        hashed_password = hashlib.sha256(password.encode()).hexdigest()
-        c.execute("INSERT INTO users (email, password) VALUES (?, ?)",
-                  (email.lower(), hashed_password))
-        conn.commit()
-        conn.close()
+        if auth is None:
+            return False, "Firebase not initialized"
+        
+        user = auth.create_user_with_email_and_password(email, password)
         return True, "User created successfully"
-    except sqlite3.IntegrityError:
-        return False, "Email already registered"
     except Exception as e:
-        return False, f"Error creating user: {str(e)}"
+        error_message = str(e)
+        if "EMAIL_EXISTS" in error_message:
+            return False, "Email already registered"
+        elif "INVALID_EMAIL" in error_message:
+            return False, "Invalid email format"
+        elif "WEAK_PASSWORD" in error_message:
+            return False, "Password should be at least 6 characters"
+        else:
+            return False, f"Error creating user: {error_message}"
 
 def authenticate_user(email: str, password: str):
-    """Authenticate user against SQLite database"""
+    """Authenticate user with Firebase Authentication"""
     try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        hashed_password = hashlib.sha256(password.encode()).hexdigest()
-        c.execute("SELECT email FROM users WHERE email=? AND password=?",
-                  (email.lower(), hashed_password))
-        user = c.fetchone()
-        conn.close()
-        if user:
-            return True, {"email": user[0]}
-        return False, None
+        if auth is None:
+            return False, None
+        
+        user = auth.sign_in_with_email_and_password(email, password)
+        return True, {"email": user['email'], "uid": user['localId']}
     except Exception as e:
-        return False, None
+        error_message = str(e)
+        if "INVALID_EMAIL" in error_message:
+            return False, "Invalid email format"
+        elif "EMAIL_NOT_FOUND" in error_message:
+            return False, "Email not found"
+        elif "INVALID_PASSWORD" in error_message:
+            return False, "Invalid password"
+        else:
+            return False, None
 
 def get_user_by_email(email: str):
-    """Get user data from SQLite database"""
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute("SELECT email FROM users WHERE email=?", (email.lower(),))
-        user = c.fetchone()
-        conn.close()
-        return user
-    except Exception as e:
-        return None
+    """Get user data from Firebase (placeholder - Firebase handles this internally)"""
+    # Firebase doesn't provide a direct way to get user by email without authentication
+    # This function is kept for compatibility but returns None
+    return None
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
@@ -613,20 +612,21 @@ atexit.register(stop_backend_server)
 # Page configuration
 st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
 
-# Initialize database
-init_db()
+# Firebase is initialized above, no database initialization needed
 
 def restore_user_session():
+    """Restore user session from Firebase (simplified for Firebase)"""
+    # Firebase handles session persistence internally
+    # We just check if user is already logged in via session state
     if "email" in st.session_state and st.session_state["email"]:
-        email = st.session_state["email"].strip().lower()
-        user = get_user_by_email(email)
-        if user:
-            st.session_state["logged_in"] = True
-            st.session_state["user"] = {
-                "email": user[0]
-            }
-        else:
-            st.session_state.clear()
+        # User is already logged in, keep session active
+        st.session_state["logged_in"] = True
+        if "user" not in st.session_state:
+            st.session_state["user"] = {"email": st.session_state["email"]}
+    else:
+        # No user in session, ensure logged out state
+        st.session_state["logged_in"] = False
+        st.session_state["user"] = None
 
 # Restore user session
 restore_user_session()
