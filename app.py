@@ -15,7 +15,7 @@ import subprocess
 import threading
 import requests
 import atexit
-import pyrebase
+import pyrebase4 as pyrebase
 import hashlib
 import hmac
 import secrets
@@ -136,6 +136,8 @@ firebase_config = {
 try:
     firebase = pyrebase.initialize_app(firebase_config)
     auth = firebase.auth()
+    db = firebase.database()
+    storage = firebase.storage()
 except Exception as e:
     st.error(f"Firebase initialization error: {str(e)}")
     auth = None
