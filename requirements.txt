@@ -9,6 +9,6 @@ fastapi==0.111.0
 uvicorn[standard]==0.30.0
 httpx==0.27.0
 orjson==3.10.7
-pyrebase4==4.7.1
+git+https://github.com/nhorvath/Pyrebase4.git
 google-cloud-storage
 
