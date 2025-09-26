@@ -1,2 +1,3 @@
-git+https://github.com/nhorvath/Pyrebase4.git#egg=pyrebase
+git+https://github.com/nhorvath/Pyrebase4.git@master#egg=pyrebase
 google-cloud-storage
+#force-rebuild-1
