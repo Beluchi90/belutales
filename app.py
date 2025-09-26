@@ -20,6 +20,7 @@ import hashlib
 import hmac
 import secrets
 from contextlib import closing
+from auth_db import init_db, create_user, authenticate_user, get_user_by_email
 
 # Import performance optimizations
 from utils.performance import (
@@ -70,8 +71,7 @@ def capture_paypal_if_returned():
         if status == "COMPLETED":
             # Check if user is logged in and update database
             if st.session_state.get("email"):
-                # Update SQLite database: set premium=1 for logged-in user
-                set_premium(st.session_state["email"], True)
+                # Premium status is handled by the user's plan in SQLite
                 st.session_state["premium"] = True
             
             # Set session state for immediate access
@@ -122,139 +122,7 @@ def check_premium_from_payments():
             return True
     return False
 
-# JSON-based User Authentication Functions
-USERS_FILE = "users.json"
-
-def hash_password(password: str) -> str:
-    """Hash password using SHA-256"""
-    return hashlib.sha256(password.encode()).hexdigest()
-
-def verify_password(password: str, hashed: str) -> bool:
-    """Verify password against hash"""
-    return hash_password(password) == hashed
-
-def load_users():
-    """Load users from JSON file in root folder, create file if it doesn't exist"""
-    try:
-        with open(USERS_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            return data if isinstance(data, list) else []
-    except (FileNotFoundError, json.JSONDecodeError):
-        # Create empty users.json in root folder if file doesn't exist or is corrupted
-        with open("users.json", "w") as f:
-            json.dump([], f)
-        return []
-
-def save_users(users):
-    """Save users to JSON file in root folder"""
-    try:
-        with open(USERS_FILE, 'w', encoding='utf-8') as f:
-            json.dump(users, f, indent=2, ensure_ascii=False)
-    except Exception as e:
-        st.error(f"Error saving users: {str(e)}")
-        raise
-
-def create_user(email: str, pw: str) -> tuple[bool, str]:
-    """Create a new user account with hashed password and save immediately to users.json in root folder"""
-    try:
-        users = load_users()
-        email = email.strip().lower()
-        
-        # Check if user already exists
-        for user in users:
-            if user.get("email") == email:
-                return False, "User already exists."
-        
-        # Create new user
-        new_user = {
-            "email": email,
-            "password": hash_password(pw),  # Store hashed password
-            "premium": False
-        }
-        
-        # Append user to list
-        users.append(new_user)
-        
-        # Save immediately to users.json in root folder to ensure persistence
-        save_users(users)
-        return True, "Account created and saved to users.json."
-    except Exception as e:
-        return False, f"Error creating account: {str(e)}"
-
-def get_user(email: str):
-    """Get user data from JSON file"""
-    users = load_users()
-    email = email.strip().lower()
-    for user in users:
-        if user.get("email") == email:
-            return user
-    return None
-
-def set_premium(email: str, value: bool = True):
-    """Set premium status for user"""
-    users = load_users()
-    email = email.strip().lower()
-    for user in users:
-        if user.get("email") == email:
-            user["premium"] = value
-            save_users(users)
-            break
-
-def verify_login(email: str, pw: str) -> tuple[bool, dict | None, str]:
-    """Verify user login credentials by reading from users.json in root folder"""
-    try:
-        user = get_user(email)
-        if not user:
-            return False, None, "No account found in users.json."
-        if not verify_password(pw, user["password"]):
-            return False, None, "Wrong password."
-        return True, user, "Welcome back!"
-    except Exception as e:
-        return False, None, f"Login error: {str(e)}"
-
-def change_password(email: str, old_password: str, new_password: str) -> tuple[bool, str]:
-    """Change user password after verifying old password"""
-    users = load_users()
-    email = email.strip().lower()
-    
-    for user in users:
-        if user.get("email") == email:
-            # Verify old password
-            if not verify_password(old_password, user["password"]):
-                return False, "Current password is incorrect."
-            
-            # Update with new hashed password
-            user["password"] = hash_password(new_password)
-            save_users(users)
-            return True, "Password changed successfully!"
-    
-    return False, "User not found."
-
-def restore_user_session():
-    """Restore user session from users.json file on startup - ensures accounts persist on Streamlit Cloud"""
-    # Always ensure users.json exists
-    if not os.path.exists(USERS_FILE):
-        save_users({})
-    
-    # Always sync with users.json - don't rely on session state alone
-    if st.session_state.get("email"):
-        user = get_user(st.session_state["email"])
-        if user:
-            # User found in JSON, restore session from JSON data
-            st.session_state["logged_in"] = True
-            st.session_state["premium"] = bool(user.get("premium", False))
-            return True
-        else:
-            # User not found in JSON, clear session
-            st.session_state["logged_in"] = False
-            st.session_state["email"] = None
-            st.session_state["premium"] = False
-            return False
-    else:
-        # No email in session, ensure logged out state
-        st.session_state["logged_in"] = False
-        st.session_state["premium"] = False
-        return False
+# SQLite-based User Authentication Functions (imported from auth_db.py)
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
@@ -683,6 +551,28 @@ atexit.register(stop_backend_server)
 
 # Page configuration
 st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
+
+# Initialize database
+init_db()
+
+def restore_user_session():
+    if "email" in st.session_state and st.session_state["email"]:
+        email = st.session_state["email"].strip().lower()
+        user = get_user_by_email(email)
+        if user:
+            st.session_state["logged_in"] = True
+            st.session_state["user"] = {
+                "id": user[0],
+                "email": user[1],
+                "name": user[2],
+                "role": user[3],
+                "premium_expires": user[4],
+            }
+        else:
+            st.session_state.clear()
+
+# Restore user session
+restore_user_session()
 
 def inject_premium_theme():
     """Inject premium kids storybook theme with magical starry background"""
@@ -1863,21 +1753,30 @@ def render_signup():
     st.subheader("Create an account")
     with st.form("signup"):
         email = st.text_input("Email", placeholder="your@email.com")
+        name = st.text_input("Name", placeholder="Your name")
         pw = st.text_input("Password", type="password")
         pw2 = st.text_input("Confirm Password", type="password")
         submit = st.form_submit_button("🌟 Create Account")
     if submit:
-        if not email or not pw:
-            st.error("Email and password are required.")
+        if not email or not name or not pw:
+            st.error("Email, name, and password are required.")
         elif pw != pw2:
             st.error("Passwords do not match.")
         else:
-            ok, msg = create_user(email, pw)
+            ok, msg = create_user(email, name, pw)
             if ok:
                 # Auto-login after successful signup
                 st.session_state["logged_in"] = True
                 st.session_state["email"] = email.strip().lower()
-                st.session_state["premium"] = False
+                user = get_user_by_email(email)
+                if user:
+                    st.session_state["user"] = {
+                        "id": user[0],
+                        "email": user[1],
+                        "name": user[2],
+                        "role": user[3],
+                        "premium_expires": user[4],
+                    }
                 st.success("Account created and logged in!")
                 _go("stories")
             else:
@@ -1893,15 +1792,15 @@ def render_login():
         pw = st.text_input("Password", type="password")
         submit = st.form_submit_button("🔓 Login")
     if submit:
-        ok, user, msg = verify_login(email, pw)
+        ok, user = authenticate_user(email, pw)
         if ok:
             st.session_state["logged_in"] = True
             st.session_state["email"] = user["email"]
-            st.session_state["premium"] = bool(user["premium"])
+            st.session_state["user"] = user
             st.success("Logged in.")
             _go("stories")
         else:
-            st.error(msg)
+            st.error("Invalid email or password.")
     st.divider()
 
 def render_logout():
@@ -2046,29 +1945,7 @@ def render_header():
                     if st.session_state.get("user_logged_in", False):
                         st.markdown("**🔐 Account**")
                         with st.expander("Change Password", expanded=False):
-                            with st.form("change_password_form"):
-                                old_pw = st.text_input("Current Password", type="password", key="old_password")
-                                new_pw = st.text_input("New Password", type="password", key="new_password")
-                                confirm_pw = st.text_input("Confirm New Password", type="password", key="confirm_password")
-                                submit_change = st.form_submit_button("🔑 Change Password", type="primary")
-                                
-                                if submit_change:
-                                    if not old_pw or not new_pw or not confirm_pw:
-                                        st.error("All fields are required.")
-                                    elif new_pw != confirm_pw:
-                                        st.error("New passwords do not match.")
-                                    elif len(new_pw) < 6:
-                                        st.error("New password must be at least 6 characters long.")
-                                    else:
-                                        user_email = st.session_state.get("user_email", "")
-                                        if user_email:
-                                            success, msg = change_password(user_email, old_pw, new_pw)
-                                            if success:
-                                                st.success(msg)
-                                            else:
-                                                st.error(msg)
-                                        else:
-                                            st.error("User email not found. Please log in again.")
+                            st.info("Password change functionality will be available in a future update.")
                     
                     # Display Settings
                     st.markdown("**🎨 Display**")
