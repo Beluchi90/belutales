@@ -15,7 +15,7 @@ import subprocess
 import threading
 import requests
 import atexit
-import pyrebase as pyrebase
+import pyrebase
 print("Using pyrebase version:", pyrebase.__version__)
 import hashlib
 import hmac
