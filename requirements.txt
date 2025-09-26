@@ -13,4 +13,5 @@ pyrebase4==4.7.1
 google-cloud-storage==2.18.2
 pyrebase4
 gcloud
+pyrebase4
 
