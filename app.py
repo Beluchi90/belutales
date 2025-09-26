@@ -20,7 +20,7 @@ import hashlib
 import hmac
 import secrets
 from contextlib import closing
-from auth_db import init_db, create_user, authenticate_user, get_user_by_email
+# SQLite database functions will be defined below
 
 # Import performance optimizations
 from utils.performance import (
@@ -122,7 +122,68 @@ def check_premium_from_payments():
             return True
     return False
 
-# SQLite-based User Authentication Functions (imported from auth_db.py)
+# SQLite-based User Authentication Functions
+DB_PATH = "users.db"
+
+def init_db():
+    """Initialize SQLite database with users table"""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                email TEXT PRIMARY KEY,
+                password TEXT
+            )
+        ''')
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        st.error(f"Database initialization error: {str(e)}")
+
+def create_user(email: str, password: str):
+    """Create a new user in SQLite database"""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        hashed_password = hashlib.sha256(password.encode()).hexdigest()
+        c.execute("INSERT INTO users (email, password) VALUES (?, ?)",
+                  (email.lower(), hashed_password))
+        conn.commit()
+        conn.close()
+        return True, "User created successfully"
+    except sqlite3.IntegrityError:
+        return False, "Email already registered"
+    except Exception as e:
+        return False, f"Error creating user: {str(e)}"
+
+def authenticate_user(email: str, password: str):
+    """Authenticate user against SQLite database"""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        hashed_password = hashlib.sha256(password.encode()).hexdigest()
+        c.execute("SELECT email FROM users WHERE email=? AND password=?",
+                  (email.lower(), hashed_password))
+        user = c.fetchone()
+        conn.close()
+        if user:
+            return True, {"email": user[0]}
+        return False, None
+    except Exception as e:
+        return False, None
+
+def get_user_by_email(email: str):
+    """Get user data from SQLite database"""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("SELECT email FROM users WHERE email=?", (email.lower(),))
+        user = c.fetchone()
+        conn.close()
+        return user
+    except Exception as e:
+        return None
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
@@ -562,11 +623,7 @@ def restore_user_session():
         if user:
             st.session_state["logged_in"] = True
             st.session_state["user"] = {
-                "id": user[0],
-                "email": user[1],
-                "name": user[2],
-                "role": user[3],
-                "premium_expires": user[4],
+                "email": user[0]
             }
         else:
             st.session_state.clear()
@@ -1753,30 +1810,21 @@ def render_signup():
     st.subheader("Create an account")
     with st.form("signup"):
         email = st.text_input("Email", placeholder="your@email.com")
-        name = st.text_input("Name", placeholder="Your name")
         pw = st.text_input("Password", type="password")
         pw2 = st.text_input("Confirm Password", type="password")
         submit = st.form_submit_button("🌟 Create Account")
     if submit:
-        if not email or not name or not pw:
-            st.error("Email, name, and password are required.")
+        if not email or not pw:
+            st.error("Email and password are required.")
         elif pw != pw2:
             st.error("Passwords do not match.")
         else:
-            ok, msg = create_user(email, name, pw)
+            ok, msg = create_user(email, pw)
             if ok:
                 # Auto-login after successful signup
                 st.session_state["logged_in"] = True
                 st.session_state["email"] = email.strip().lower()
-                user = get_user_by_email(email)
-                if user:
-                    st.session_state["user"] = {
-                        "id": user[0],
-                        "email": user[1],
-                        "name": user[2],
-                        "role": user[3],
-                        "premium_expires": user[4],
-                    }
+                st.session_state["user"] = {"email": email.strip().lower()}
                 st.success("Account created and logged in!")
                 _go("stories")
             else:
