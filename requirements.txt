@@ -1,4 +1,4 @@
-git+https://github.com/nhorvath/Pyrebase4.git#egg=pyrebase
+git+https://github.com/nhorvath/Pyrebase4.git
 google-cloud-storage
 streamlit
-#force-rebuild-ultimate
+#force-rebuild-final
