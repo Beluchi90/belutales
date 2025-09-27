@@ -1,5 +1,8 @@
 ﻿import streamlit as st
 import json
+
+# Page configuration
+st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
 from pathlib import Path
 import unicodedata
 import re
@@ -37,88 +40,6 @@ def reset_cache():
     clear_cache()
     st.rerun()
 
-# PayPal capture helper functions
-def _get_query_params():
-    # Use new Streamlit query params API
-    params = dict(st.query_params)
-    return {k: (v[0] if isinstance(v, list) else v) for k, v in params.items()}
-
-
-def capture_paypal_if_returned():
-    """
-    If URL contains ?token=... (PayPal order_id), call the backend capture endpoint exactly once.
-    On COMPLETED, extract payer email, update database, and set session state.
-    """
-    params = _get_query_params()
-    token = params.get("token")
-    if not token:
-        return
-
-    # prevent double capture on reruns
-    if st.session_state.get("paypal_captured_token") == token:
-        return
-
-    try:
-        capture_url = f"http://localhost:8000/paypal/capture-order/{token}"
-        r = requests.post(capture_url, timeout=20)
-        r.raise_for_status()
-        data = r.json()
-
-        status = str(data.get("status", "")).upper()
-        # PayPal marks final state "COMPLETED"
-        if status == "COMPLETED":
-            # Check if user is logged in and update database
-            if st.session_state.get("email"):
-                # Premium status is handled by the user's plan in SQLite
-                st.session_state["premium"] = True
-            
-            # Set session state for immediate access
-            st.session_state["logged_in"] = True
-            st.session_state["premium"] = True
-            st.session_state["paypal_captured_token"] = token
-            
-            # Clear query so capture doesn't fire again on rerun
-            st.query_params.clear()
-        else:
-            st.error("❌ Payment verification failed. Please try again.")
-    except Exception as e:
-        st.error(f"❌ Could not verify payment: {e}")
-
-# Payment storage helper functions
-PAYMENTS_FILE = "payments.json"
-
-def load_payments():
-    """Load payments from JSON file"""
-    if os.path.exists(PAYMENTS_FILE):
-        try:
-            with open(PAYMENTS_FILE, "r") as f:
-                return json.load(f)
-        except Exception as e:
-            st.error(f"Error loading payments: {e}")
-            return {}
-    return {}
-
-def save_payment(user_email):
-    """Save user payment to JSON file"""
-    try:
-        data = load_payments()
-        data[user_email] = {"premium": True}
-        with open(PAYMENTS_FILE, "w") as f:
-            json.dump(data, f, indent=2)
-        return True
-    except Exception as e:
-        st.error(f"Error saving payment: {e}")
-        return False
-
-def check_premium_from_payments():
-    """Check if current user has premium access from saved payments"""
-    # For now, we'll use a simple approach - check if any user has premium
-    # In a real app, you'd identify the current user (session, login, etc.)
-    payments = load_payments()
-    for email, data in payments.items():
-        if data.get("premium", False):
-            return True
-    return False
 
 
 
@@ -463,10 +384,6 @@ except ImportError:
     def check_payment_status(): pass
     def get_premium_stats(): return {"active": False}
 
-# Premium access check function
-def check_premium_access():
-    """Check if user has premium access using session state"""
-    return st.session_state.get("premium", False)
 
 # Backend server management
 BACKEND_URL = "http://localhost:8000"
@@ -547,23 +464,9 @@ def ensure_backend_running():
 # Register cleanup function
 atexit.register(stop_backend_server)
 
-# Page configuration
-st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
 
 
 
-def inject_premium_theme():
-    """Inject premium kids storybook theme with magical starry background"""
-    try:
-        with open("assets/premium_kids.css", "r", encoding="utf-8") as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    except Exception:
-        pass
-    
-    # Inject magical storybook text styling
-    storybook_css = """
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Baloo+2:wght@600;700;800&family=Comic+Neue:wght@400;700&display=swap');
     
     /* Story title styling - magical and bold */
     .stApp .story-card h3,
