@@ -15,13 +15,10 @@ import subprocess
 import threading
 import requests
 import atexit
-import pyrebase
-print("Using pyrebase version:", pyrebase.__version__)
 import hashlib
 import hmac
 import secrets
 from contextlib import closing
-# Firebase Authentication functions will be defined below
 
 # Import performance optimizations
 from utils.performance import (
@@ -123,66 +120,7 @@ def check_premium_from_payments():
             return True
     return False
 
-# Firebase Authentication Functions
-firebase_config = {
-    "apiKey": "AIzaSyBXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",  # Replace with your Firebase API key
-    "authDomain": "belutales-xxxxx.firebaseapp.com",  # Replace with your Firebase auth domain
-    "projectId": "belutales-xxxxx",  # Replace with your Firebase project ID
-    "storageBucket": "belutales-xxxxx.appspot.com",  # Replace with your Firebase storage bucket
-    "messagingSenderId": "123456789012",  # Replace with your Firebase messaging sender ID
-    "appId": "1:123456789012:web:abcdefghijklmnop"  # Replace with your Firebase app ID
-}
 
-# Initialize Firebase
-firebase = pyrebase.initialize_app(firebaseConfig)
-
-auth = firebase.auth()
-db = firebase.database()
-storage = firebase.storage()
-
-def create_user(email: str, password: str):
-    """Create a new user with Firebase Authentication"""
-    try:
-        if auth is None:
-            return False, "Firebase not initialized"
-        
-        user = auth.create_user_with_email_and_password(email, password)
-        return True, "User created successfully"
-    except Exception as e:
-        error_message = str(e)
-        if "EMAIL_EXISTS" in error_message:
-            return False, "Email already registered"
-        elif "INVALID_EMAIL" in error_message:
-            return False, "Invalid email format"
-        elif "WEAK_PASSWORD" in error_message:
-            return False, "Password should be at least 6 characters"
-        else:
-            return False, f"Error creating user: {error_message}"
-
-def authenticate_user(email: str, password: str):
-    """Authenticate user with Firebase Authentication"""
-    try:
-        if auth is None:
-            return False, None
-        
-        user = auth.sign_in_with_email_and_password(email, password)
-        return True, {"email": user['email'], "uid": user['localId']}
-    except Exception as e:
-        error_message = str(e)
-        if "INVALID_EMAIL" in error_message:
-            return False, "Invalid email format"
-        elif "EMAIL_NOT_FOUND" in error_message:
-            return False, "Email not found"
-        elif "INVALID_PASSWORD" in error_message:
-            return False, "Invalid password"
-        else:
-            return False, None
-
-def get_user_by_email(email: str):
-    """Get user data from Firebase (placeholder - Firebase handles this internally)"""
-    # Firebase doesn't provide a direct way to get user by email without authentication
-    # This function is kept for compatibility but returns None
-    return None
 
 # Quiz helper functions
 def _normalize_id(s: str) -> str:
@@ -438,11 +376,11 @@ def apply_filters(stories: List[Dict], fs: FilterState, ignore_category: bool = 
         # Note: Currently language is applied via translation, not filtering
         # This could be extended to filter by story language if needed
         
-        # Type filter (Free/Premium)
-        if fs.story_type == "Free" and story.get("is_premium", False):
-            continue
-        if fs.story_type == "Premium" and not story.get("is_premium", False):
-            continue
+        # Type filter (Free/Premium) - All stories are now free
+        # if fs.story_type == "Free" and story.get("is_premium", False):
+        #     continue
+        # if fs.story_type == "Premium" and not story.get("is_premium", False):
+        #     continue
         
         # Search text filter
         if fs.search_text:
@@ -612,24 +550,11 @@ atexit.register(stop_backend_server)
 # Page configuration
 st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
 
-# Firebase is initialized above, no database initialization needed
+# Sidebar with donation options
+st.sidebar.markdown("### 💖 Support BeluTales")
+st.sidebar.markdown("[Donate via PayPal](https://www.paypal.com/donate)")
+st.sidebar.markdown("[Buy Me a Coffee](https://www.buymeacoffee.com/)")
 
-def restore_user_session():
-    """Restore user session from Firebase (simplified for Firebase)"""
-    # Firebase handles session persistence internally
-    # We just check if user is already logged in via session state
-    if "email" in st.session_state and st.session_state["email"]:
-        # User is already logged in, keep session active
-        st.session_state["logged_in"] = True
-        if "user" not in st.session_state:
-            st.session_state["user"] = {"email": st.session_state["email"]}
-    else:
-        # No user in session, ensure logged out state
-        st.session_state["logged_in"] = False
-        st.session_state["user"] = None
-
-# Restore user session
-restore_user_session()
 
 def inject_premium_theme():
     """Inject premium kids storybook theme with magical starry background"""
@@ -1806,59 +1731,6 @@ def render_guest_mode():
     # Guest mode button is now handled in render_header() to avoid duplicates
     pass
 
-def render_signup():
-    st.subheader("Create an account")
-    with st.form("signup"):
-        email = st.text_input("Email", placeholder="your@email.com")
-        pw = st.text_input("Password", type="password")
-        pw2 = st.text_input("Confirm Password", type="password")
-        submit = st.form_submit_button("🌟 Create Account")
-    if submit:
-        if not email or not pw:
-            st.error("Email and password are required.")
-        elif pw != pw2:
-            st.error("Passwords do not match.")
-        else:
-            ok, msg = create_user(email, pw)
-            if ok:
-                # Auto-login after successful signup
-                st.session_state["logged_in"] = True
-                st.session_state["email"] = email.strip().lower()
-                st.session_state["user"] = {"email": email.strip().lower()}
-                st.success("Account created and logged in!")
-                _go("stories")
-            else:
-                st.error(msg)
-    st.divider()
-    if st.button("🔐 Go to Login"):
-        _go("login")
-
-def render_login():
-    st.subheader("Login")
-    with st.form("login"):
-        email = st.text_input("Email")
-        pw = st.text_input("Password", type="password")
-        submit = st.form_submit_button("🔓 Login")
-    if submit:
-        ok, user = authenticate_user(email, pw)
-        if ok:
-            st.session_state["logged_in"] = True
-            st.session_state["email"] = user["email"]
-            st.session_state["user"] = user
-            st.success("Logged in.")
-            _go("stories")
-        else:
-            st.error("Invalid email or password.")
-    st.divider()
-
-def render_logout():
-    """Render logout button and handle logout"""
-    if st.button("🚪 Logout", type="secondary"):
-        st.session_state["logged_in"] = False
-        st.session_state["email"] = None
-        st.session_state["premium"] = False
-        st.success("Logged out successfully.")
-        st.rerun()
 
 # Top navigation (replace your current "Stories | Login | Sign Up" row)
 def render_header():
@@ -1886,36 +1758,9 @@ def render_header():
         if st.button("📚 Stories", use_container_width=True):
             _go("stories")
     with c2:
-        if st.session_state.get("logged_in", False):
-            email = st.session_state.get("email", "Unknown")
-            premium_status = "💎 Premium" if st.session_state.get("premium", False) else "👤 Free"
-            st.success(f"Logged in: {email} ({premium_status})")
-            if st.button("🚪 Logout", type="secondary", use_container_width=True):
-                st.session_state["logged_in"] = False
-                st.session_state["email"] = None
-                st.session_state["premium"] = False
-                st.success("Logged out successfully.")
-                st.rerun()
-        else:
-            if st.button("🔑 Login", use_container_width=True):
-                _go("login")
+        st.markdown("### ✨ All Stories Free! ✨")
     with c3:
-        if not st.session_state.get("logged_in", False):
-            if st.button("🌟 Sign Up", use_container_width=True):
-                _go("signup")
-    
-    # Guest mode button below login/signup
-    if not st.session_state.get("logged_in", False):
-        st.markdown("""
-        <div style="text-align: center; margin: 15px 0;">
-        </div>
-        """, unsafe_allow_html=True)
-        
-        if st.button("👤 Guest Mode (limited preview)", type="secondary", use_container_width=False, key="header_guest_mode"):
-            st.session_state["logged_in"] = False
-            st.session_state["email"] = None
-            st.session_state["premium"] = False
-            _go("stories")
+        st.markdown("### 🎉 Enjoy Reading! 🎉")
     
     # Language selector and settings
     if LANGUAGES_AVAILABLE:
@@ -2201,16 +2046,7 @@ stories_full = load_stories()  # Keep for backward compatibility
 # Render header
 render_header()
 
-# Handle page routing
-tab = st.session_state.active_tab
-if tab == "login":
-    render_login()
-elif tab == "signup":
-    render_signup()
-else:
-    # stories/home page goes here (your existing main content)
-    # Guest mode button is handled in render_header()
-    pass
+# All stories are now free - no authentication required
 
 # Check view mode
 if st.session_state.view_mode == "detail" and st.session_state.current_story:
@@ -2279,7 +2115,7 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
                         {0}
                     </h3>
                     <p style="color: #d1d5db; font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                        Please log in or create an account to access premium stories.
+                        All stories are now free to enjoy!
                     </p>
                 </div>
                 """.format(story.get("title", "")), unsafe_allow_html=True)
@@ -2363,13 +2199,12 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         
         st.markdown("---")
         
-        # Quiz section
-        if not is_premium or check_premium_access():
-            # Get current story ID (use slug for consistency)
-            current_story_id = story.get("slug", story.get("title", "")).lower().replace(" ", "-").replace("_", "-")
-            
-            # Render the new polished quiz UI
-            render_quiz(current_story_id)
+        # Quiz section - All quizzes are now free
+        # Get current story ID (use slug for consistency)
+        current_story_id = story.get("slug", story.get("title", "")).lower().replace(" ", "-").replace("_", "-")
+        
+        # Render the new polished quiz UI
+        render_quiz(current_story_id)
         
         st.markdown("---")
         
