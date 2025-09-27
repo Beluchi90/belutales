@@ -2463,9 +2463,3 @@ else:
 #         st.caption(f"📈 Index size: {len(stories_index)} stories")
 #         st.caption(f"💾 Cache status: Active")
         # Clear Cache button removed from UI - available as helper function for development
-
-# Backend startup guard - only start when running as main script
-if __name__ == "__main__":
-    # This ensures the backend starts automatically when running: streamlit run app.py
-    # But won't start when the file is imported
-    pass
