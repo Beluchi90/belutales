@@ -1924,7 +1924,6 @@ if "active_tab" not in st.session_state:
 
 # Restore user session from users.json file on startup
 # This ensures accounts persist after reload
-restore_user_session()
 
 def _go(tab: str):
     st.session_state.active_tab = tab
