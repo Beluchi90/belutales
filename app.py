@@ -2422,17 +2422,6 @@ else:
             
             # Guest Mode upgrade banner
             if is_guest_mode:
-                st.markdown("---")
-                st.markdown("""
-                <div style="text-align: center; margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);">
-                    <h3 style="color: white; margin: 0 0 10px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3); font-family: 'Comic Sans MS', cursive;">
-                        ✨ Upgrade to Premium to unlock 100+ magical stories, quizzes, and narrations!
-                    </h3>
-                    <p style="color: white; margin: 0; opacity: 0.9; font-size: 16px;">
-                        Get unlimited access to all our premium content with one simple payment.
-                    </p>
-                </div>
-                """, unsafe_allow_html=True)
 
 # Sidebar with favorites - HIDDEN (moved to category filter)
 # with st.sidebar:
