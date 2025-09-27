@@ -468,7 +468,7 @@ atexit.register(stop_backend_server)
 
 
     
-    /* Story title styling - magical and bold */
+    # Story title styling - magical and bold
     .stApp .story-card h3,
     .stApp .story-card .stSubheader,
     .stApp h1[data-testid="stMarkdownContainer"],
