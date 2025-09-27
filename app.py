@@ -550,10 +550,6 @@ atexit.register(stop_backend_server)
 # Page configuration
 st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
 
-# Sidebar with donation options
-st.sidebar.markdown("### 💖 Support BeluTales")
-st.sidebar.markdown("[Donate via PayPal](https://www.paypal.com/donate)")
-st.sidebar.markdown("[Buy Me a Coffee](https://www.buymeacoffee.com/)")
 
 
 def inject_premium_theme():
