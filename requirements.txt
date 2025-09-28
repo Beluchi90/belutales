@@ -1,5 +1,7 @@
-git+https://github.com/nhorvath/Pyrebase4.git
-google-cloud-storage
 streamlit
-#force-rebuild-final
+fastapi
+uvicorn[standard]
+httpx
 orjson
+google-cloud-storage
+#force-rebuild-final
