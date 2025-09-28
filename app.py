@@ -870,7 +870,6 @@ button_sounds_js = """
 st.markdown(button_sounds_js, unsafe_allow_html=True)
 
 # Inject premium theme immediately (every run to prevent background disappearing)
-inject_premium_theme()
 
 # Custom fonts and sounds
 from utils.ui import inject_fonts_and_sounds, story_container_open
@@ -1134,7 +1133,7 @@ function playClickSound() {
     } catch (e) {
         // Fallback: try HTML5 audio with a shorter beep
         try {
-            const audio = new Audio('data:audio/wav;base64,UklGRu4CAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YcoCAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSyCz/LdeSQGLIXO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaq');
+            const audio = new Audio('data:audio/wav;base64,UklGRu4CAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YcoCAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSyCz/LdeSQGLIXO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaq');
             audio.volume = parseFloat(window.sessionStorage.getItem('volume') || '0.2');
             audio.play().catch(() => {});
         } catch (e2) {
