@@ -3,6 +3,290 @@ import json
 
 # Page configuration
 st.set_page_config(page_title="BeluTales", page_icon="🦉", layout="wide")
+
+# Custom CSS styling
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Baloo+2:wght@600;700;800&family=Comic+Neue:wght@400;700&display=swap');
+
+/* Story title styling - magical and bold */
+.stApp .story-card h3,
+.stApp .story-card .stSubheader,
+.stApp h1[data-testid="stMarkdownContainer"],
+.stApp h2[data-testid="stMarkdownContainer"],
+.stApp h3[data-testid="stMarkdownContainer"] {
+    font-family: "Fredoka One", "Baloo 2", "Comic Neue", sans-serif !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    font-size: 1.4em !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    letter-spacing: 0.5px !important;
+    animation: gentleFadeIn 0.8s ease-out !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Story body text styling - readable and cute */
+.stApp .story-text,
+.stApp .story-card p,
+.stApp .story-card .stMarkdown,
+.stApp div[data-testid="stMarkdownContainer"] p {
+    font-family: "Baloo 2", "Comic Neue", sans-serif !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 1px 4px rgba(0, 0, 0, 0.3) !important;
+    animation: gentleFadeIn 1.0s ease-out !important;
+    text-align: justify !important;
+    margin-bottom: 1.2rem !important;
+}
+
+/* Story content wrapper for better presentation */
+.stApp .story-text {
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    margin: 0.8rem 0 !important;
+    animation: gentleFadeIn 1.2s ease-out !important;
+}
+
+/* Gentle fade-in animation */
+@keyframes gentleFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Story card title enhancement */
+.stApp .story-card .stSubheader h3 {
+    font-family: "Fredoka One", "Baloo 2", sans-serif !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    font-size: 1.3em !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.25), 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+    animation: gentleFadeIn 0.6s ease-out !important;
+}
+
+/* Detail view story title */
+.stApp div[data-testid="stMarkdownContainer"] h1 {
+    font-family: "Fredoka One", "Baloo 2", sans-serif !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    font-size: 2.2em !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 3px 10px rgba(0, 0, 0, 0.5) !important;
+    text-align: center !important;
+    animation: gentleFadeIn 0.8s ease-out !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .stApp .story-text,
+    .stApp .story-card h3,
+    .stApp .story-card .stSubheader,
+    .stApp h1[data-testid="stMarkdownContainer"],
+    .stApp h2[data-testid="stMarkdownContainer"],
+    .stApp h3[data-testid="stMarkdownContainer"] {
+        animation: none !important;
+    }
+}
+
+/* Ensure good contrast for readability */
+.stApp .story-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Normal-sized kid-friendly buttons with playful styling */
+.stApp .stButton>button,
+.stApp .stDownloadButton>button {
+    border-radius: 18px !important;
+    padding: 0.25rem 0.75rem !important;
+    border: none !important;
+    font-size: 0.875rem !important;
+    min-height: 2rem !important;
+    font-family: "Baloo 2", "Comic Neue", sans-serif !important;
+    font-weight: 600 !important;
+    color: white !important;
+    letter-spacing: 0.2px !important;
+    line-height: 1.4 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    background: linear-gradient(135deg, #ffcc70, #ff6ec4) !important;
+    background-size: 200% 200% !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15), 0 1px 6px rgba(255, 110, 196, 0.2) !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+/* Hover effects */
+.stApp .stButton>button:hover,
+.stApp .stDownloadButton>button:hover {
+    transform: scale(1.03) translateY(-1px) !important;
+    background: linear-gradient(135deg, #ffd580, #ff7ed4) !important;
+    background-position: 100% 0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(255, 110, 196, 0.4), 0 0 15px rgba(255, 204, 112, 0.3) !important;
+    color: white !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Active/pressed state */
+.stApp .stButton>button:active,
+.stApp .stDownloadButton>button:active {
+    transform: scale(1.01) !important;
+    transition: all 0.1s ease !important;
+}
+
+/* Focus states for accessibility */
+.stApp .stButton>button:focus,
+.stApp .stDownloadButton>button:focus {
+    outline: 2px solid rgba(255, 204, 112, 0.8) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 3px rgba(255, 204, 112, 0.2) !important;
+}
+
+/* Navigation buttons */
+.stApp .stButton>button[kind="secondary"],
+.stApp .stButton>button:contains("Previous"),
+.stApp .stButton>button:contains("Next") {
+    padding: 0.2rem 0.6rem !important;
+    font-size: 0.8rem !important;
+    min-height: 1.8rem !important;
+    background: linear-gradient(135deg, #a8e6cf, #88d8c0) !important;
+}
+
+.stApp .stButton>button[kind="secondary"]:hover,
+.stApp .stButton>button:contains("Previous"):hover,
+.stApp .stButton>button:contains("Next"):hover {
+    background: linear-gradient(135deg, #b8f6df, #98e8d0) !important;
+    transform: scale(1.02) translateY(-1px) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(136, 216, 192, 0.3) !important;
+}
+
+/* Special buttons */
+.stApp .stButton>button[data-testid*="read"],
+.stApp .stButton>button[data-testid*="favorite"],
+.stApp .stButton>button[data-testid*="settings"],
+.stApp .stButton>button:contains("Read"),
+.stApp .stButton>button:contains("❤️"),
+.stApp .stButton>button:contains("⚙️") {
+    background: linear-gradient(135deg, #ffcc70, #ff6ec4) !important;
+    padding: 0.375rem 1rem !important;
+    font-size: 0.9rem !important;
+}
+
+/* Ensure all text stays white and bold */
+.stApp .stButton>button *,
+.stApp .stDownloadButton>button * {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* BeluTales Navigation Button Styling */
+.belu-nav-button {
+    width: 200px !important;
+    height: 40px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-family: "Baloo 2", "Comic Neue", sans-serif !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+/* Back to Stories Button */
+.belu-back-button {
+    background: linear-gradient(135deg, #a8e6cf, #88d8c0) !important;
+    color: #2d5a4a !important;
+}
+
+.belu-back-button:hover {
+    transform: scale(1.05) !important;
+    background: linear-gradient(135deg, #b8f6df, #98e8d0) !important;
+    box-shadow: 0 6px 16px rgba(168, 230, 207, 0.4) !important;
+}
+
+/* Pay with PayPal Button */
+.belu-paypal-button {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    color: white !important;
+    width: 280px !important;
+    height: 60px !important;
+    border-radius: 30px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    font-family: "Baloo 2", "Comic Neue", sans-serif !important;
+    border: none !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4), 0 0 20px rgba(118, 75, 162, 0.3) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    letter-spacing: 0.5px !important;
+}
+
+.belu-paypal-button:hover {
+    transform: scale(1.08) !important;
+    background: linear-gradient(135deg, #7c8ef0, #8a5fb8) !important;
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6), 0 0 30px rgba(118, 75, 162, 0.5) !important;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4) !important;
+}
+
+/* Premium Info Button */
+.belu-premium-button {
+    background: linear-gradient(135deg, #dda0dd, #98fb98) !important;
+    color: #4a2c4a !important;
+}
+
+.belu-premium-button:hover {
+    transform: scale(1.05) !important;
+    background: linear-gradient(135deg, #e6b3e6, #a8f5a8) !important;
+    box-shadow: 0 6px 16px rgba(221, 160, 221, 0.4) !important;
+}
+
+/* Button Container Centering */
+.belu-button-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin: 20px 0 !important;
+    flex-wrap: wrap !important;
+}
+
+/* Single Button Centering */
+.belu-single-button-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 20px 0 !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 from pathlib import Path
 import unicodedata
 import re
@@ -467,305 +751,6 @@ atexit.register(stop_backend_server)
 
 
 
-    
-    # Story title styling - magical and bold
-    .stApp .story-card h3,
-    .stApp .story-card .stSubheader,
-    .stApp h1[data-testid="stMarkdownContainer"],
-    .stApp h2[data-testid="stMarkdownContainer"],
-    .stApp h3[data-testid="stMarkdownContainer"] {
-        font-family: "Fredoka One", "Baloo 2", "Comic Neue", sans-serif !important;
-        color: #FFFFFF !important;
-        font-weight: 800 !important;
-        font-size: 1.4em !important;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-        letter-spacing: 0.5px !important;
-        animation: gentleFadeIn 0.8s ease-out !important;
-        text-align: center !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    /* Story body text styling - readable and cute */
-    .stApp .story-text,
-    .stApp .story-card p,
-    .stApp .story-card .stMarkdown,
-    .stApp div[data-testid="stMarkdownContainer"] p {
-        font-family: "Baloo 2", "Comic Neue", sans-serif !important;
-        color: #FFFFFF !important;
-        font-weight: 600 !important;
-        font-size: 1.1em !important;
-        line-height: 1.6 !important;
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 1px 4px rgba(0, 0, 0, 0.3) !important;
-        animation: gentleFadeIn 1.0s ease-out !important;
-        text-align: justify !important;
-        margin-bottom: 1.2rem !important;
-    }
-    
-    /* Story content wrapper for better presentation */
-    .stApp .story-text {
-        background: rgba(255, 255, 255, 0.05) !important;
-        padding: 1.2rem !important;
-        border-radius: 12px !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(5px) !important;
-        margin: 0.8rem 0 !important;
-        animation: gentleFadeIn 1.2s ease-out !important;
-    }
-    
-    /* Gentle fade-in animation */
-    @keyframes gentleFadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Story card title enhancement */
-    .stApp .story-card .stSubheader h3 {
-        font-family: "Fredoka One", "Baloo 2", sans-serif !important;
-        color: #FFFFFF !important;
-        font-weight: 800 !important;
-        font-size: 1.3em !important;
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.25), 0 2px 6px rgba(0, 0, 0, 0.4) !important;
-        animation: gentleFadeIn 0.6s ease-out !important;
-    }
-    
-    /* Detail view story title */
-    .stApp div[data-testid="stMarkdownContainer"] h1 {
-        font-family: "Fredoka One", "Baloo 2", sans-serif !important;
-        color: #FFFFFF !important;
-        font-weight: 800 !important;
-        font-size: 2.2em !important;
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 3px 10px rgba(0, 0, 0, 0.5) !important;
-        text-align: center !important;
-        animation: gentleFadeIn 0.8s ease-out !important;
-        margin-bottom: 1.5rem !important;
-    }
-    
-    /* Accessibility: Respect reduced motion preference */
-    @media (prefers-reduced-motion: reduce) {
-        .stApp .story-text,
-        .stApp .story-card h3,
-        .stApp .story-card .stSubheader,
-        .stApp h1[data-testid="stMarkdownContainer"],
-        .stApp h2[data-testid="stMarkdownContainer"],
-        .stApp h3[data-testid="stMarkdownContainer"] {
-            animation: none !important;
-        }
-    }
-    
-    /* Ensure good contrast for readability */
-    .stApp .story-text::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 12px;
-        z-index: -1;
-        pointer-events: none;
-    }
-    
-                    /* Normal-sized kid-friendly buttons with playful styling */
-                    .stApp .stButton>button,
-                    .stApp .stDownloadButton>button {
-                        /* Normal sizing - back to standard scale */
-                        border-radius: 18px !important;        /* Playful rounded corners */
-                        padding: 0.25rem 0.75rem !important;   /* Normal padding */
-                        border: none !important;               /* Clean edges */
-                        font-size: 0.875rem !important;        /* Normal text size */
-                        min-height: 2rem !important;           /* Standard height */
-                        
-                        /* Kid-friendly typography */
-                        font-family: "Baloo 2", "Comic Neue", sans-serif !important;
-                        font-weight: 600 !important;           /* Bold white text */
-                        color: white !important;               /* Always white and readable */
-                        letter-spacing: 0.2px !important;
-                        line-height: 1.4 !important;
-                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important; /* Text readability */
-                        
-                        /* Vibrant gradient background */
-                        background: linear-gradient(135deg, #ffcc70, #ff6ec4) !important;
-                        background-size: 200% 200% !important; /* For smooth gradient shifts */
-                        
-                        /* Subtle shadow for depth */
-                        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15), 
-                                    0 1px 6px rgba(255, 110, 196, 0.2) !important;
-                        
-                        /* Smooth transitions for all effects */
-                        transition: all 0.25s ease !important;
-                        
-                        /* Ensure consistent appearance */
-                        display: inline-flex !important;
-                        align-items: center !important;
-                        justify-content: center !important;
-                        cursor: pointer !important;
-                    }
-    
-                    /* Hover effects - subtle scaling and glow for normal buttons */
-                    .stApp .stButton>button:hover,
-                    .stApp .stDownloadButton>button:hover {
-                        transform: scale(1.03) translateY(-1px) !important; /* Subtle lift and scale */
-                        background: linear-gradient(135deg, #ffd580, #ff7ed4) !important; /* Brighter gradient */
-                        background-position: 100% 0 !important;            /* Gradient animation */
-                        
-                        /* Enhanced glow effect */
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 
-                                    0 2px 8px rgba(255, 110, 196, 0.4),
-                                    0 0 15px rgba(255, 204, 112, 0.3) !important;
-                        
-                        /* Keep text perfectly readable */
-                        color: white !important;
-                        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
-                    }
-    
-                    /* Active/pressed state */
-                    .stApp .stButton>button:active,
-                    .stApp .stDownloadButton>button:active {
-                        transform: scale(1.01) !important;     /* Subtle press effect */
-                        transition: all 0.1s ease !important;  /* Quick response */
-                    }
-    
-    /* Focus states for accessibility */
-    .stApp .stButton>button:focus,
-    .stApp .stDownloadButton>button:focus {
-        outline: 2px solid rgba(255, 204, 112, 0.8) !important;
-        outline-offset: 2px !important;
-        box-shadow: 0 0 0 3px rgba(255, 204, 112, 0.2) !important;
-    }
-    
-                    /* Navigation buttons (Previous/Next) - compact style */
-                    .stApp .stButton>button[kind="secondary"],
-                    .stApp .stButton>button:contains("Previous"),
-                    .stApp .stButton>button:contains("Next") {
-                        padding: 0.2rem 0.6rem !important;   /* More compact */
-                        font-size: 0.8rem !important;         /* Smaller text */
-                        min-height: 1.8rem !important;        /* Smaller height */
-                        background: linear-gradient(135deg, #a8e6cf, #88d8c0) !important; /* Softer gradient */
-                    }
-                    
-                    .stApp .stButton>button[kind="secondary"]:hover,
-                    .stApp .stButton>button:contains("Previous"):hover,
-                    .stApp .stButton>button:contains("Next"):hover {
-                        background: linear-gradient(135deg, #b8f6df, #98e8d0) !important;
-                        transform: scale(1.02) translateY(-1px) !important; /* Smaller scale for nav */
-                        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15), 
-                                    0 2px 6px rgba(136, 216, 192, 0.3) !important;
-                    }
-    
-    /* Special buttons (Read, Favorite, Settings) - consistent styling */
-    .stApp .stButton>button[data-testid*="read"],
-    .stApp .stButton>button[data-testid*="favorite"],
-    .stApp .stButton>button[data-testid*="settings"],
-    .stApp .stButton>button:contains("Read"),
-    .stApp .stButton>button:contains("❤️"),
-    .stApp .stButton>button:contains("⚙️") {
-        /* Inherit main button styling but ensure consistency */
-        background: linear-gradient(135deg, #ffcc70, #ff6ec4) !important;
-        padding: 0.375rem 1rem !important;
-        font-size: 0.9rem !important;
-    }
-    
-    /* Ensure all text stays white and bold across all button types */
-    .stApp .stButton>button *,
-    .stApp .stDownloadButton>button * {
-        color: white !important;
-        font-weight: 600 !important;
-    }
-    
-    /* BeluTales Navigation Button Styling */
-    .belu-nav-button {
-        width: 200px !important;
-        height: 40px !important;
-        border-radius: 20px !important;
-        font-size: 14px !important;
-        font-weight: 600 !important;
-        font-family: "Baloo 2", "Comic Neue", sans-serif !important;
-        border: none !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-        transition: all 0.3s ease !important;
-        cursor: pointer !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-decoration: none !important;
-    }
-    
-    /* Back to Stories Button */
-    .belu-back-button {
-        background: linear-gradient(135deg, #a8e6cf, #88d8c0) !important;
-        color: #2d5a4a !important;
-    }
-    
-    .belu-back-button:hover {
-        transform: scale(1.05) !important;
-        background: linear-gradient(135deg, #b8f6df, #98e8d0) !important;
-        box-shadow: 0 6px 16px rgba(168, 230, 207, 0.4) !important;
-    }
-    
-    /* Pay with PayPal Button - Enhanced Premium Styling */
-    .belu-paypal-button {
-        background: linear-gradient(135deg, #667eea, #764ba2) !important;
-        color: white !important;
-        width: 280px !important;
-        height: 60px !important;
-        border-radius: 30px !important;
-        font-size: 18px !important;
-        font-weight: 700 !important;
-        font-family: "Baloo 2", "Comic Neue", sans-serif !important;
-        border: none !important;
-        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4), 0 0 20px rgba(118, 75, 162, 0.3) !important;
-        transition: all 0.3s ease !important;
-        cursor: pointer !important;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
-        letter-spacing: 0.5px !important;
-    }
-    
-    .belu-paypal-button:hover {
-        transform: scale(1.08) !important;
-        background: linear-gradient(135deg, #7c8ef0, #8a5fb8) !important;
-        box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6), 0 0 30px rgba(118, 75, 162, 0.5) !important;
-        text-shadow: 0 2px 6px rgba(0,0,0,0.4) !important;
-    }
-    
-    /* Premium Info Button */
-    .belu-premium-button {
-        background: linear-gradient(135deg, #dda0dd, #98fb98) !important;
-        color: #4a2c4a !important;
-    }
-    
-    .belu-premium-button:hover {
-        transform: scale(1.05) !important;
-        background: linear-gradient(135deg, #e6b3e6, #a8f5a8) !important;
-        box-shadow: 0 6px 16px rgba(221, 160, 221, 0.4) !important;
-    }
-    
-    /* Button Container Centering */
-    .belu-button-container {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 15px !important;
-        margin: 20px 0 !important;
-        flex-wrap: wrap !important;
-    }
-    
-    /* Single Button Centering */
-    .belu-single-button-container {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        margin: 20px 0 !important;
-    }
-    </style>
-    """
-    st.markdown(storybook_css, unsafe_allow_html=True)
     
     # Add playful button click sounds
     button_sounds_js = """
@@ -1584,7 +1569,7 @@ def show_image_resilient(path_or_bytes, caption=None):
             fallback = Image.open(fallback_path)
             st.warning("Some illustrations couldn't be decoded. Showing a placeholder instead.")
             st.image(fallback, use_container_width=True, caption=caption)
-        except Exception:
+    except Exception:
             st.warning("Image failed to load and no fallback available.")
         return
     st.image(img, use_column_width=True, caption=caption)
@@ -2098,11 +2083,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         st.markdown("---")
         
         # Quiz section - All quizzes are now free
-        # Get current story ID (use slug for consistency)
-        current_story_id = story.get("slug", story.get("title", "")).lower().replace(" ", "-").replace("_", "-")
-        
-        # Render the new polished quiz UI
-        render_quiz(current_story_id)
+            # Get current story ID (use slug for consistency)
+            current_story_id = story.get("slug", story.get("title", "")).lower().replace(" ", "-").replace("_", "-")
+            
+            # Render the new polished quiz UI
+            render_quiz(current_story_id)
         
         st.markdown("---")
         
