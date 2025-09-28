@@ -1134,7 +1134,7 @@ function playClickSound() {
     } catch (e) {
         // Fallback: try HTML5 audio with a shorter beep
         try {
-            const audio = new Audio('data:audio/wav;base64,UklGRu4CAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YcoCAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSyCz/LdeSQGLIXO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaq');
+            const audio = new Audio('data:audio/wav;base64,UklGRu4CAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YcoCAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSyCz/LdeSQGLIXO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaqfp8LNwJANEoeH1NwUJKo/M8tlxOAoeXqzp8KlYDwNMmt/zxXEqBCuEzfLaeCUGLYHO8tiMOAkZZ7zr7qNBFAREn+DysmETBSJysO7nq1kVCECU4PLJayoUXKzj9Lh4IAYieclxNwtOuO/nsFUVCjeN0PHKdywGHW3d9KJVFUJGn+FxOPNOSnjD9Kx2IAUihM9xOAsJaq');
             audio.volume = parseFloat(window.sessionStorage.getItem('volume') || '0.2');
             audio.play().catch(() => {});
         } catch (e2) {
@@ -2310,6 +2310,7 @@ else:
             
             # Guest Mode upgrade banner
             if is_guest_mode:
+                pass  # Clear Cache button removed from UI – available as helper function for development
 
 # Sidebar with favorites - HIDDEN (moved to category filter)
 # with st.sidebar:
