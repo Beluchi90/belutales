@@ -753,7 +753,7 @@ atexit.register(stop_backend_server)
 
     
     # Add playful button click sounds
-    button_sounds_js = """
+button_sounds_js = """
     <script>
     // Initialize button click sounds for BeluTales
     (function() {
