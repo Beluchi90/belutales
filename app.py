@@ -867,7 +867,7 @@ button_sounds_js = """
     })();
     </script>
     """
-    st.markdown(button_sounds_js, unsafe_allow_html=True)
+st.markdown(button_sounds_js, unsafe_allow_html=True)
 
 # Inject premium theme immediately (every run to prevent background disappearing)
 inject_premium_theme()
