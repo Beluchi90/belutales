@@ -753,7 +753,7 @@ atexit.register(stop_backend_server)
 
     
     # Add playful button click sounds
-button_sounds_js = """
+    button_sounds_js = """
     <script>
     // Initialize button click sounds for BeluTales
     (function() {
@@ -867,7 +867,7 @@ button_sounds_js = """
     })();
     </script>
     """
-st.markdown(button_sounds_js, unsafe_allow_html=True)
+    st.markdown(button_sounds_js, unsafe_allow_html=True)
 
 # Inject premium theme immediately (every run to prevent background disappearing)
 
@@ -1568,7 +1568,7 @@ def show_image_resilient(path_or_bytes, caption=None):
             fallback = Image.open(fallback_path)
             st.warning("Some illustrations couldn't be decoded. Showing a placeholder instead.")
             st.image(fallback, use_container_width=True, caption=caption)
-        except Exception:
+    except Exception:
             st.warning("Image failed to load and no fallback available.")
         return
     st.image(img, use_column_width=True, caption=caption)
@@ -2082,11 +2082,11 @@ if st.session_state.view_mode == "detail" and st.session_state.current_story:
         st.markdown("---")
         
         # Quiz section - All quizzes are now free
-        # Get current story ID (use slug for consistency)
-        current_story_id = story.get("slug", story.get("title", "")).lower().replace(" ", "-").replace("_", "-")
+            # Get current story ID (use slug for consistency)
+            current_story_id = story.get("slug", story.get("title", "")).lower().replace(" ", "-").replace("_", "-")
             
-        # Render the new polished quiz UI
-        render_quiz(current_story_id)
+            # Render the new polished quiz UI
+            render_quiz(current_story_id)
         
         st.markdown("---")
         
